@@ -125,7 +125,7 @@ following sequence of steps:
 #. From the popup list of available update sets, select and run updates in the 
    sequence AREV, TOOLS, CONTACTS, EXCHANGE, and WARES. 
 #. Highlight an update to perform and press :kbd:`<Enter>`. When asked to 
-   install the update, type :kbd:`Y` and press :kd:`<Enter>`. 
+   install the update, type :kbd:`Y` and press :kbd:`<Enter>`. 
 #. Your WARES session will terminate when each update finishes.
  
 QUICKDEX ERROR INSTRUCTIONS
@@ -309,7 +309,7 @@ employee code :kbd:`PN` for Programmer Notes.
 || replaces || :menuselection:`Setup --> Rates`                                 |
 || replaces || :menuselection:`Setup --> Profiles`                              |
 +-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Billing --> Batch Billing --> Recurring Calc     |
+||          ||:menuselection:`Billing --> Batch Billing --> Recurring Calculate`|
 || replaces || :menuselection:`Billing --> Batch Billing --> Recurring Invoices`|
 +-----------+-------------------------------------------------------------------+
 ||          || :menuselection:`Billing --> Batch Billing --> Invoice Charges`   |
