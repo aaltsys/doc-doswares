@@ -3,16 +3,23 @@
 DOS WARES Site Index
 ==================================================
 
+:ref:`resources:downloads`
+
+This page consolidates the various DOS support files for WARES, including:
+
++  Batch execution files
++  Program patch updates
++  A demo copy of WARES Warehousing
++  EDI standards table data
+
+:ref:`updates:upd-450e`
+
++  Upgrade files and instructions to convert from version 4.34B to 4.50E
+
 Contents:
 
 .. toctree::
    :maxdepth: 0
-
-:ref:`resources:index`
-
-:ref:`updates:index`
-
-----------
 
 :ref:`search`
 
