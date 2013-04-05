@@ -309,7 +309,7 @@ employee code :kbd:`PN` for Programmer Notes.
 || replaces || :menuselection:`Setup --> Rates`                                 |
 || replaces || :menuselection:`Setup --> Profiles`                              |
 +-----------+-------------------------------------------------------------------+
-||          ||:menuselection:`Billing --> Batch Billing --> Recurring Calculate`|
+||          | :menuselection:`Billing --> Batch Billing --> Recurring Calculate`|
 || replaces || :menuselection:`Billing --> Batch Billing --> Recurring Invoices`|
 +-----------+-------------------------------------------------------------------+
 ||          || :menuselection:`Billing --> Batch Billing --> Invoice Charges`   |
