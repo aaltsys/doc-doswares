@@ -133,8 +133,11 @@ following sequence of steps:
 QUICKDEX ERROR INSTRUCTIONS
 =============================
  
-.. warning:: The following message may appear during the update process.
-
+.. warning:: The following message may appear during the update process. Do not 
+   ignore this message and continue. Instead, follow the directions below. You 
+   may need technical assistance with these instructions. Call if you are unsure 
+   how to proceed.
+   
 ::
  
    ┌─[FS290]────────────────────────────────────────────────────────┐ 
@@ -151,9 +154,7 @@ QUICKDEX ERROR INSTRUCTIONS
    │                                                                │ 
    └────────────────────────────────────────────────────────────────┘   
 
-Do not ignore this message or continue. You may need technical assistance with 
-the following instructions. While this message is displayed, perform these 
-steps: 
+While this message is displayed, perform these steps: 
  
    +------------+------------------------------------------------------------+
    | Action     | Explanation                                                |
