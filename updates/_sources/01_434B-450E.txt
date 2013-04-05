@@ -133,21 +133,23 @@ following sequence of steps:
 QUICKDEX ERROR INSTRUCTIONS
 =============================
  
-.. warning:: The following message may appear during the update process::
+.. warning:: The following message may appear during the update process.
+
+::
  
-      ┌─[FS290]────────────────────────────────────────────────────────┐ 
-      │                                                                │ 
-      │           You cannot write or delete records because           │ 
-      │         Quick/Rightdex for this file does not use the          │ 
-      │  "DEFAULT" language set specified in the current environment.  │ 
-      │                                                                │ 
-      │                            Either:                             │ 
-      │                                                                │ 
-      │                  Reload the "-" language set                   │ 
-      │                             - or -                             │ 
-      │                 Re-install the Quick/Rightdex.                 │ 
-      │                                                                │ 
-      └────────────────────────────────────────────────────────────────┘   
+   ┌─[FS290]────────────────────────────────────────────────────────┐ 
+   │                                                                │ 
+   │           You cannot write or delete records because           │ 
+   │         Quick/Rightdex for this file does not use the          │ 
+   │  "DEFAULT" language set specified in the current environment.  │ 
+   │                                                                │ 
+   │                            Either:                             │ 
+   │                                                                │ 
+   │                  Reload the "-" language set                   │ 
+   │                             - or -                             │ 
+   │                 Re-install the Quick/Rightdex.                 │ 
+   │                                                                │ 
+   └────────────────────────────────────────────────────────────────┘   
 
 Do not ignore this message or continue. You may need technical assistance with 
 the following instructions. While this message is displayed, perform these 
