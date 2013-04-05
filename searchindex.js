@@ -1,0 +1,1 @@
+Search.setIndex({objects:{},terms:{index:0,search:0,site:0,content:0,ware:0,page:0},objtypes:{},titles:["DOS WARES Site Index"],objnames:{},filenames:["index"]})
