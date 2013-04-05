@@ -267,76 +267,76 @@ employee code :kbd:`PN` for Programmer Notes.
 4.50E Version New Features
 =============================
  
-+-----------+-------------------------------------------------------------------+
-| Status    | Menu Item                                                         |
-+===========+===================================================================+
-||          || :menuselection:`Tools --> Utilities --> Recover Post`            |
-|| replaces || :menuselection:`Setup --> Fixes --> Recover Transact`            |
-+-----------+-------------------------------------------------------------------+
-|| new      || :menuselection:`Tools --> Processes --> Execute Rules`           |
-|| purpose  || Manages running program Business Rules                           |
-+-----------+-------------------------------------------------------------------+
-|| new      || :menuselection:`Tools --> Processes --> Define Rules`            |
-|| purpose  || Defines program Business Rules                                   |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Tools --> Processes --> Report Setup`            |
-|| replaces || :menuselection:`Tools --> Reports --> Control Reports`           |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Tools --> Processes --> Processes Setup`         |
-|| replaces || :menuselection:`Tools --> Define --> Processes`                  |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Tools --> Processes --> Schedule Processes`      |
-|| replaces || :menuselection:`Tools --> Define --> Schedules`                  |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Tools --> Processes --> Actions Viewer`          |
-|| replaces || :menuselection:`Tools --> Processes --> Errors Review`           |
-|| replaces || :menuselection:`Tools --> Processes --> Events Review`           |
-+-----------+-------------------------------------------------------------------+
-| new       || :menuselection:`Entry --> =Forms`                                |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Billing --> =Forms`                              |
-|| replaces || :menuselection:`Reports --> Forms --> ...`                       |
-+-----------+-------------------------------------------------------------------+
-| new       || :menuselection:`Setup --> =Forms`                                |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Setup --> Utilities --> ...`                     |
-|| replaces || :menuselection:`Setup --> Fixes --> ...`                         |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Tools --> Utilities --> ...`                     |
-|| replaces || :menuselection:`Tools --> Actions --> ...`                       |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Billing --> Tariffs Setup`                       |
-|| replaces || :menuselection:`Setup --> Rates`                                 |
-|| replaces || :menuselection:`Setup --> Profiles`                              |
-+-----------+-------------------------------------------------------------------+
-||          | :menuselection:`Billing --> Batch Billing --> Recurring Calculate`|
-|| replaces || :menuselection:`Billing --> Batch Billing --> Recurring Invoices`|
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Billing --> Batch Billing --> Invoice Charges`   |
-|| replaces || :menuselection:`Billing --> Batch --> Services Invoices`         |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Billing --> Utilities --> Month End`             |
-|| replaces || :menuselection:`Billing --> Month End`                           |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Billing --> Utilities --> Void Batch`            |
-|| replaces || :menuselection:`Setup --> Fixes --> Void Invoices`               |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Billing --> Utilities --> Remove Records`        |
-|| replaces || :menuselection:`Setup --> Fixes --> Old Transactions`            |
-+-----------+-------------------------------------------------------------------+
-||          || :menuselection:`Billing --> Utilities --> Sales History`         |
-|| replaces || :menuselection:`Setup --> Fixes --> Sales History`               |
-+-----------+-------------------------------------------------------------------+
-|| deleted  || :menuselection:`Billing --> Batch Billing --> Prorate Invoices`  |
-+-----------+-------------------------------------------------------------------+
-|| deleted  || :menuselection:`Reports --> ...` several options                 |
-+-----------+-------------------------------------------------------------------+
-|| deleted  || :menuselection:`Setup --> Rates`                                 |
-+-----------+-------------------------------------------------------------------+
-|| deleted  || :menuselection:`Setup --> Profiles`                              |
-+-----------+-------------------------------------------------------------------+
-|| deleted  || :menuselection:`Setup --> Fixes --> ...` several options         |
-+-----------+-------------------------------------------------------------------+
++-----------+--------------------------------------------------------------------+
+| Status    | Menu Item                                                          |
++===========+====================================================================+
+||          || :menuselection:`Tools --> Utilities --> Recover Post`             |
+|| replaces || :menuselection:`Setup --> Fixes --> Recover Transact`             |
++-----------+--------------------------------------------------------------------+
+|| new      || :menuselection:`Tools --> Processes --> Execute Rules`            |
+|| purpose  || Manages running program Business Rules                            |
++-----------+--------------------------------------------------------------------+
+|| new      || :menuselection:`Tools --> Processes --> Define Rules`             |
+|| purpose  || Defines program Business Rules                                    |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Processes --> Report Setup`             |
+|| replaces || :menuselection:`Tools --> Reports --> Control Reports`            |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Processes --> Processes Setup`          |
+|| replaces || :menuselection:`Tools --> Define --> Processes`                   |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Processes --> Schedule Processes`       |
+|| replaces || :menuselection:`Tools --> Define --> Schedules`                   |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Processes --> Actions Viewer`           |
+|| replaces || :menuselection:`Tools --> Processes --> Errors Review`            |
+|| replaces || :menuselection:`Tools --> Processes --> Events Review`            |
++-----------+--------------------------------------------------------------------+
+| new       || :menuselection:`Entry --> =Forms`                                 |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> =Forms`                               |
+|| replaces || :menuselection:`Reports --> Forms --> ...`                        |
++-----------+--------------------------------------------------------------------+
+| new       || :menuselection:`Setup --> =Forms`                                 |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Setup --> Utilities --> ...`                      |
+|| replaces || :menuselection:`Setup --> Fixes --> ...`                          |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Utilities --> ...`                      |
+|| replaces || :menuselection:`Tools --> Actions --> ...`                        |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Tariffs Setup`                        |
+|| replaces || :menuselection:`Setup --> Rates`                                  |
+|| replaces || :menuselection:`Setup --> Profiles`                               |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Batch Billing --> Recurring Calculate`|
+|| replaces || :menuselection:`Billing --> Batch Billing --> Recurring Invoices` |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Batch Billing --> Invoice Charges`    |
+|| replaces || :menuselection:`Billing --> Batch --> Services Invoices`          |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Utilities --> Month End`              |
+|| replaces || :menuselection:`Billing --> Month End`                            |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Utilities --> Void Batch`             |
+|| replaces || :menuselection:`Setup --> Fixes --> Void Invoices`                |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Utilities --> Remove Records`         |
+|| replaces || :menuselection:`Setup --> Fixes --> Old Transactions`             |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Utilities --> Sales History`          |
+|| replaces || :menuselection:`Setup --> Fixes --> Sales History`                |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Billing --> Batch Billing --> Prorate Invoices`   |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Reports --> ...` several options                  |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Setup --> Rates`                                  |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Setup --> Profiles`                               |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Setup --> Fixes --> ...` several options          |
++-----------+--------------------------------------------------------------------+
 
 4.50E Documentation Revisions
 =============================
