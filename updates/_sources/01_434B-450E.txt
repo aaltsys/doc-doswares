@@ -138,21 +138,21 @@ QUICKDEX ERROR INSTRUCTIONS
    may need technical assistance with these instructions. Call if you are unsure 
    how to proceed.
    
-::
- 
-   ┌─[FS290]────────────────────────────────────────────────────────┐ 
-   │                                                                │ 
-   │           You cannot write or delete records because           │ 
-   │         Quick/Rightdex for this file does not use the          │ 
-   │  "DEFAULT" language set specified in the current environment.  │ 
-   │                                                                │ 
-   │                            Either:                             │ 
-   │                                                                │ 
-   │                  Reload the "-" language set                   │ 
-   │                             - or -                             │ 
-   │                 Re-install the Quick/Rightdex.                 │ 
-   │                                                                │ 
-   └────────────────────────────────────────────────────────────────┘   
+   ::
+   
+      ┌─[FS290]────────────────────────────────────────────────────────┐ 
+      │                                                                │ 
+      │           You cannot write or delete records because           │ 
+      │         Quick/Rightdex for this file does not use the          │ 
+      │  "DEFAULT" language set specified in the current environment.  │ 
+      │                                                                │ 
+      │                            Either:                             │ 
+      │                                                                │ 
+      │                  Reload the "-" language set                   │ 
+      │                             - or -                             │ 
+      │                 Re-install the Quick/Rightdex.                 │ 
+      │                                                                │ 
+      └────────────────────────────────────────────────────────────────┘   
 
 While this message is displayed, perform these steps: 
  
