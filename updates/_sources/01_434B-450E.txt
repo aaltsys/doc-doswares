@@ -135,19 +135,19 @@ QUICKDEX ERROR INSTRUCTIONS
  
 .. warning:: The following message may appear during the update process:
  
-      ┌─[FS290]────────────────────────────────────────────────────────┐ 
-      │                                                                │ 
-      │           You cannot write or delete records because           │ 
-      │         Quick/Rightdex for this file does not use the          │ 
-      │  "DEFAULT" language set specified in the current environment.  │ 
-      │                                                                │ 
-      │                            Either:                             │ 
-      │                                                                │ 
-      │                  Reload the "-" language set                   │ 
-      │                             - or -                             │ 
-      │                 Re-install the Quick/Rightdex.                 │ 
-      │                                                                │ 
-      └────────────────────────────────────────────────────────────────┘   
+   |  ┌─[FS290]────────────────────────────────────────────────────────┐ 
+   |  │                                                                │ 
+   |  │           You cannot write or delete records because           │ 
+   |  │         Quick/Rightdex for this file does not use the          │ 
+   |  │  "DEFAULT" language set specified in the current environment.  │ 
+   |  │                                                                │ 
+   |  │                            Either:                             │ 
+   |  │                                                                │ 
+   |  │                  Reload the "-" language set                   │ 
+   |  │                             - or -                             │ 
+   |  │                 Re-install the Quick/Rightdex.                 │ 
+   |  │                                                                │ 
+   |  └────────────────────────────────────────────────────────────────┘   
 
 Do not ignore this message or continue. You may need technical assistance with 
 the following instructions. While this message is displayed, perform these 
@@ -343,58 +343,58 @@ employee code :kbd:`PN` for Programmer Notes.
 4.50E Documentation Revisions
 =============================
 
-+-------------+-------------+-------------------------------------------------------+
-| Module UTIL | Utilities   |:menuselection:`Access --> -Manuals --> UTIL_DOCUMENTS`|
-+-------------+-------------+---------------------------+---------------------------+
-| MANUAL*PREFACE            | MENUS*WINDOW              | MENUS*WINDOW.KEYS         |
-+---------------------------+---------------------------+---------------------------+
-| TOOLS*RULES               | MENUS*WINDOW.FILE         | MENUS*WINDOW.WINDOW       |
-+---------------------------+---------------------------+---------------------------+
-| TOPICS*UNIQUE             | MENUS*WINDOW.EDIT         | MENUS*WINDOW.HELP         |
-+---------------------------+---------------------------+---------------------------+
-| TOPICS*CONFIG             | MENUS*WINDOW.QUERY        |                           |
-+---------------------------+---------------------------+---------------------------+
++--------------+-------------+-------------------------------------------------------+
+| Module UTIL  | Utilities   |:menuselection:`Access --> -Manuals --> UTIL_DOCUMENTS`|
++--------------+-------------+---------------------------+---------------------------+
+| MANUAL*PREFACE             | MENUS*WINDOW              | MENUS*WINDOW.KEYS         |
++----------------------------+---------------------------+---------------------------+
+| TOOLS*RULES                | MENUS*WINDOW.FILE         | MENUS*WINDOW.WINDOW       |
++----------------------------+---------------------------+---------------------------+
+| TOPICS*UNIQUE              | MENUS*WINDOW.EDIT         | MENUS*WINDOW.HELP         |
++----------------------------+---------------------------+---------------------------+
+| TOPICS*CONFIG              | MENUS*WINDOW.QUERY        |                           |
++----------------------------+---------------------------+---------------------------+
 
-+-------------+-------------+-------------------------------------------------------+
-| Module BILL | Billing     |:menuselection:`Access --> -Manuals --> BILL_DOCUMENTS`|
-+-------------+-------------+---------------------------+---------------------------+
-| BILLING*CHARGES           | BILLING*CHARGE.CALC       | BILLING*VOID              |
-+---------------------------+---------------------------+---------------------------+
-| BILLING*TARIFFS           | BILLING*INVOICE.CALC      |                           |
-+---------------------------+---------------------------+---------------------------+
++--------------+-------------+-------------------------------------------------------+
+| Module BILL  | Billing     |:menuselection:`Access --> -Manuals --> BILL_DOCUMENTS`|
++--------------+-------------+---------------------------+---------------------------+
+| BILLING*CHARGES            | BILLING*CHARGE.CALC       | BILLING*VOID              |
++----------------------------+---------------------------+---------------------------+
+| BILLING*TARIFFS            | BILLING*INVOICE.CALC      |                           |
++----------------------------+---------------------------+---------------------------+
 
-+-------------+-------------+-------------------------------------------------------+
-| Module APP  | Application | :menuselection:`Access --> -Manuals --> APP_DOCUMENTS`|
-+-------------+-------------+---------------------------+---------------------------+
-| MENUS*BILLING.BATCH       | BILLING*RECUR.CALC        | SETUP*ACCOUNTS            |
-+---------------------------+---------------------------+---------------------------+
-| MENUS*SETUP               | BILLING*PERIOD.CLOSE      | SETUP*PRODUCTS            |
-+---------------------------+---------------------------+---------------------------+
++--------------+-------------+-------------------------------------------------------+
+| Module APP   | Application | :menuselection:`Access --> -Manuals --> APP_DOCUMENTS`|
++--------------+-------------+---------------------------+---------------------------+
+| MENUS*BILLING.BATCH        | BILLING*RECUR.CALC        | SETUP*ACCOUNTS            |
++----------------------------+---------------------------+---------------------------+
+| MENUS*SETUP                | BILLING*PERIOD.CLOSE      | SETUP*PRODUCTS            |
++----------------------------+---------------------------+---------------------------+
 
-+-------------+-------------+-------------------------------------------------------+
-| Module APP  | App Forms   | :menuselection:`Tools --> -Reports --> Forms --> APP` |
-+-------------+-------------+---------------------------+---------------------------+
-| RECEIPT                   | PERIOD.CLOSE              | CONFIG_PRODUCTS           |
-+---------------------------+---------------------------+---------------------------+
-| DOCKLOG                   | DAILY.PROCEDURE           |                           |
-+---------------------------+---------------------------+---------------------------+
++--------------+-------------+-------------------------------------------------------+
+| Module APP   | App Forms   | :menuselection:`Tools --> -Reports --> Forms --> APP` |
++--------------+-------------+---------------------------+---------------------------+
+| RECEIPT                    | PERIOD.CLOSE              | CONFIG_PRODUCTS           |
++----------------------------+---------------------------+---------------------------+
+| DOCKLOG                    | DAILY.PROCEDURE           |                           |
++----------------------------+---------------------------+---------------------------+
 
-+-------------------------------------------+---------------------------------------+
-| Added Technical Documentation             | Menu Location or Selection            |
-+===========================================+=======================================+
-| Technical notes and program changes       | :menuselection:`Access --> =Notes`    |
-+-------------------------------------------+---------------------------------------+
-| Table of Contents for Technical Notes     | APP_NOTE.HELP.TOC                     |
-+-------------------------------------------+---------------------------------------+
-| Notes 03/01/01 thru 04/15/03, Employee PN | APP_NOTE.RESOLUTIONS                  |
-+-------------------------------------------+---------------------------------------+
-| Technical notes review, file APP_NOTES    | :menuselection:`Contacts --> Notes`   |
-+----------+--------------------------------+---------------------------------------+
-| 90109    | Automating report capture and download                                 |
-+----------+------------------------------------------------------------------------+
-| 90122    | Saving reports in EXCEL format                                         |
-+----------+------------------------------------------------------------------------+
-| 90123    | Swapping UOM codes on products                                         |
-+----------+------------------------------------------------------------------------+
-| 90124    | Updating COUNTRY codes                                                 |
-+----------+------------------------------------------------------------------------+
++--------------------------------------------+---------------------------------------+
+| Added Technical Documentation              | Menu Location or Selection            |
++============================================+=======================================+
+| Technical notes and program changes        | :menuselection:`Access --> =Notes`    |
++--------------------------------------------+---------------------------------------+
+| Table of Contents for Technical Notes      | APP_NOTE.HELP.TOC                     |
++--------------------------------------------+---------------------------------------+
+| Notes 03/01/01 thru 04/15/03, Employee PN  | APP_NOTE.RESOLUTIONS                  |
++--------------------------------------------+---------------------------------------+
+| Technical notes review, file APP_NOTES     | :menuselection:`Contacts --> Notes`   |
++----------+---------------------------------+---------------------------------------+
+| 90109    | Automating report capture and download                                  |
++----------+-------------------------------------------------------------------------+
+| 90122    | Saving reports in EXCEL format                                          |
++----------+-------------------------------------------------------------------------+
+| 90123    | Swapping UOM codes on products                                          |
++----------+-------------------------------------------------------------------------+
+| 90124    | Updating COUNTRY codes                                                  |
++----------+-------------------------------------------------------------------------+
