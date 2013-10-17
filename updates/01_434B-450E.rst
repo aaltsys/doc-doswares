@@ -1,0 +1,405 @@
+.. _upd-450e:
+
+#############################
+WARES 4.34B to 4.50E Upgrade
+#############################
+
+First Read These Cautions:
+=============================
+
+The following issues may effect your conversion to WARES version 4.50E: 
+
+Free days
+-----------------------------
+
+Free days has moved from the Profile setup to the Account setup. Where an 
+account has multiple profiles, some with free days and some without, the 
+products and lots must be split into separate accounts BEFORE conversion. Call 
+for assistance if this applies to any of your accounts. 
+ 
+UOM and Country codes
+-----------------------------
+
+This release replaces the UOM and COUNTRY code tables with extended standard 
+code lists. If you have customized UOM codes, the custom values can be converted 
+to standard codes according to the instructions in help note 90123. COUNTRY 
+codes in addresses are corrected using the instructions in help note 90124. 
+
+GL_CODE table
+-----------------------------
+
+At :menuselection:`Tools --> Define --> Table Codes`, record GL_CODE will 
+replace GL.CODE. After conversion, print these records and examine the chart of 
+accounts ledger codes in COL3. Update the new GL_CODE table if any GL codes are 
+missing or account numbers are wrong.
+ 
+Billing reports
+-----------------------------
+
+The CHARGE.LOG used to show all billed transactions; now it lists only 
+transactions with charges.
+
+Custom reports
+-----------------------------
+
+At :menuselection:`Tools --> Reports --> Control Reports`, Press 
+:kbd:`[Shift-F10]` to see a list of customized reports. Reports which use files 
+CHARGES, INVOICES, PAYMENTS, PROFILES or RATES will have to be redesigned or 
+discarded after this update. PRODUCTS reports may require redesign. New reports 
+must be created wherever a customer requires special auditing for billing.
+
+Report customizations
+-----------------------------
+
+Selection commands :command:`XQ`, :command:`BATCH.LOG`, and 
+:command:`PRINT.SUBS` have been reprogrammed and now require different command 
+parameters. If custom reports (other than billing reports, as mentioned above) 
+do not work after this update, refer to help note 90153 for instructions.
+ 
+Window menu keys
+-----------------------------
+
+The :kbd:`[F10]` window menu has been enhanced to include every key commonly 
+required in data entry or review. Every window uses the same menu, except for 
+window-specific softkeys and relations. The following keys changed:
+
+.. cssclass:: bd
+
+   +-----------+----------+----------+-------------------------------+
+   | New key   | Replaces | Shortcut | Description                   |
+   +===========+==========+==========+===============================+
+   | [F10],E,R | [F10],E  | [AF10]   | edit related window           |
+   +-----------+----------+----------+-------------------------------+
+   | [F10],Q,Q | [F10],Q  |          | enter query mode for window   |
+   +-----------+----------+----------+-------------------------------+
+   | [F10],F,N | [F10],F  |          | open a file in a window       |
+   +-----------+----------+----------+-------------------------------+
+   | [F10],K,L | [F10],L  | [SF10]   | display browse records        |
+   +-----------+----------+----------+-------------------------------+
+ 
+Softkeys and Relations
+-----------------------------
+
+The following keys have changed: 
+
++---------+-------------+------------------------------------------------+
+| New key | Replaces    | Description                                    |
++=========+=============+================================================+
+| [AF9]   | [SF3]/[SF4] | Tariffs replace Rates and Profiles             |
++---------+-------------+------------------------------------------------+
+| [AF7]   | [AF8]       | to edit serial numbers                         |
++---------+-------------+------------------------------------------------+
+| [SF7]   | [SF8]       | to display serial numbers                      |
++---------+-------------+------------------------------------------------+
+| [SF8]   |             | undoes entry changes on a displayed record     |
++---------+-------------+------------------------------------------------+
+| [SF4]   |             | configure entry windows (Accounts and Tariffs) |
++---------+-------------+------------------------------------------------+
+| [AF6]   | [SF6]       | display related Lot Details in Products Setup  |
++---------+-------------+------------------------------------------------+
+| [SF2]   |             | shows product balances in Products Setup       |
++---------+-------------+------------------------------------------------+
+
+----------
+
+#############################
+4.50E Update Instructions
+#############################
+
+Download and Extract Update
+=============================
+
+#. Create an empty folder at the root of your local drive, :file:`C:\\TEMP`.
+#. :download:`Download the update <_downloads/upw_450.zip>`.
+#. <Right-Click> file :file:`upw_450.zip`, and extract the archive contents to 
+   folder :file:`C:\\TEMP`.
+
+Running Module Updates
+=============================
+
+WARES is a modular program, and updates must be run in each program module. For 
+each of the modules AREV, TOOLS, CONTACTS, EXCHANGE, and WARES, perform the 
+following sequence of steps:
+ 
+#. Start WARES and login using the supervisor level password.
+#. At :menuselection:`Tools --> Actions --> Update`, press :kbd:`<Enter>` to 
+   start the updater.
+#. When asked for the drive and path to the update files, enter 
+   :file:`C:\\TEMP`.
+#. From the popup list of available update sets, select and run updates in the 
+   sequence AREV, TOOLS, CONTACTS, EXCHANGE, and WARES. 
+#. Highlight an update to perform and press :kbd:`<Enter>`. When asked to 
+   install the update, type :kbd:`Y` and press :kbd:`<Enter>`. 
+#. Your WARES session will terminate when each update finishes.
+ 
+QUICKDEX ERROR INSTRUCTIONS
+=============================
+ 
+.. warning:: The following message may appear during the update process. Do not 
+   ignore this message and continue. Instead, follow the directions below. You 
+   may need technical assistance with these instructions. Call if you are unsure 
+   how to proceed.
+   
+   ::
+   
+      ┌─[FS290]────────────────────────────────────────────────────────┐ 
+      │                                                                │ 
+      │           You cannot write or delete records because           │ 
+      │         Quick/Rightdex for this file does not use the          │ 
+      │  "DEFAULT" language set specified in the current environment.  │ 
+      │                                                                │ 
+      │                            Either:                             │ 
+      │                                                                │ 
+      │                  Reload the "-" language set                   │ 
+      │                             - or -                             │ 
+      │                 Re-install the Quick/Rightdex.                 │ 
+      │                                                                │ 
+      └────────────────────────────────────────────────────────────────┘   
+
+While this message is displayed, perform these steps: 
+ 
+   +------------+------------------------------------------------------------+
+   | Action     | Explanation                                                |
+   +============+============================================================+
+   | [F5]       | Press function key F5 to get a TCL window                  |
+   +------------+------------------------------------------------------------+
+   | [F2]       || Press function key F2 to see a list of TCL commands       |
+   |            || Identify the DICT.filename producing the error            |
+   +------------+------------------------------------------------------------+
+   | <Esc>      | Remove the TCL commands popup                              |
+   +------------+------------------------------------------------------------+
+   | <type>     || :kbd:`AW UTIL_WINDOWS MAKEINDEX`, press :kbd:`<Enter>`    |
+   |            || (command to display the Make Indexes window.)             |
+   |            || (WARES versions before 4.30 type :kbd:`AW MAKEINDEX`)     |
+   +------------+------------------------------------------------------------+
+   | [SF1]      | Press function key Shift-F1 to enter the filename          |
+   +------------+------------------------------------------------------------+
+   | <type>     || :kbd:`DICT.filename`, press :kbd:`<Enter> <Enter>`        |
+   |            || (Type the DICT.filename in the Get Filename window,       |
+   |            || Press <Enter> to accept the filename,                     |
+   |            || Press <Enter> for "Yes" to remove the Quickdex.)          |
+   +------------+------------------------------------------------------------+
+   | [SF1]      | Press function key Shift-F1 to enter the filename          |
+   +------------+------------------------------------------------------------+
+   | <type>     || :kbd:`DICT.filename`, press :kbd:`<Enter> <Enter> <Enter>`| 
+   |            || (Type the DICT.filename in the Get Filename window,       |
+   |            || Press <Enter> to accept the filename,                     |
+   |            || Press <Enter> for "Q" to install a Quickdex,              |
+   |            || Press <Enter> for "Yes" to update the Quickdex.)          |
+   +------------+------------------------------------------------------------+
+   | <Esc>      | Return to the TCL window                                   |
+   +------------+------------------------------------------------------------+
+   | [F2]       | Display the previous TCL commands list                     |
+   +------------+------------------------------------------------------------+
+   | <Down>     | Move down to the top-most UPDATETABLE command              |
+   +------------+------------------------------------------------------------+
+   | <Enter>    | Select the top-most UPDATETABLE command                    |
+   +------------+------------------------------------------------------------+
+   | <Enter>    | Re-execute the UPDATETABLE command                         |
+   +------------+------------------------------------------------------------+
+   | <Esc><Esc> | Escape to remove the error message and continue updating   |
+   +------------+------------------------------------------------------------+
+ 
+[UPD11] DEMO VOLUME MESSAGE 
+=============================
+ 
+If message [UPD11] appears when volume WARES.DEMO is not attached, then: 
+
+   +------------+--------------------------------------------------+
+   | Action     | Explanation                                      |
+   +============+==================================================+
+   | [F5]       | Press [F5] to display a Command window           |
+   +------------+--------------------------------------------------+
+   | <type>     | :kbd:`REBUILD.IMAGE ALL`, press :kbd:`<Enter>`   |
+   +------------+--------------------------------------------------+
+   | <type>     | :kbd:`OFF`, press :kbd:`<Enter>`                 |
+   +------------+--------------------------------------------------+
+   |            | Restart WARES and perform the update             |
+   +------------+--------------------------------------------------+
+
+CHANGES REQUIRING CORRECTION 
+=============================
+
+This update may necessitate making configuration changes in WARES:
+ 
++  At :menuselection:`Tools --> Define --> Table Codes`, record UOM is renamed 
+   UOM.OLD and replaced. Some special UOM codes may require re-entry in the UOM 
+   table. Updating UOM codes on product records can be performed as a batch 
+   process, as described in Help Note 90123. 
+ 
++  At :menuselection:`Tools --> Define --> Table Codes`, record GL_CODE replaces 
+   GL.CODE. The old record is kept for reference. Column 3, the Account numbers, 
+   may need to be changed in the updated GL_CODE record.
+ 
++  At :menuselection:`eXchange --> Export --> Exports`, the export template is 
+   replaced. If you have been exporting invoices to an accounting program, add 
+   the "HISTORY" command on the final line of the template, and check that the 
+   file path for export is on the correct drive letter. 
+
++  At :menuselection:`Billing --> Tariff Setup`, new UOM codes on handling and 
+   storage tariffs may be required. The conversion simply guesses at the codes. 
+   Tariff descriptions should be updated where accounts have multiple tariffs.
+
++  Selection commands on customized reports may require updating, as described 
+   in help note 90153.
+
+----------
+
+#############################
+4.50E Features and Notes
+#############################
+
+Documentation Notes
+=============================
+
+Use the WARES Notes features to find procedural help documents and other 
+information about program changes.
+
+Choose APP_NOTE.HELP.TOC from menu selection :menuselection:`Access --> =Notes` 
+to view or print a Table of Contents for Help Notes.
+ 
+To print a specific help note, go to :menuselection:`Contacts --> Notes`. Then 
+enter the number of the desired note, and press :kbd:`[SF9]` to print out the 
+help document.
+
+To display notes related to an entry window, press :kbd:`[F10],H,N` in the 
+window. Navigate between notes with :kbd:`[Alt-F]` and :kbd:`[Alt-B]`, or view
+a list of notes with :kbd:`[Shift-F10]`.
+
+View or print program change notes from menu :menuselection:`Access --> =Notes`.
+Choose report APP_NOTE.RESOLUTIONS, enter the date range :kbd:`03/01/01` 
+through :kbd:`04/15/03` for notes related to this release, and enter the 
+employee code :kbd:`PN` for Programmer Notes. 
+
+4.50E Version New Features
+=============================
+ 
++-----------+--------------------------------------------------------------------+
+| Status    | Menu Item                                                          |
++===========+====================================================================+
+||          || :menuselection:`Tools --> Utilities --> Recover Post`             |
+|| replaces || :menuselection:`Setup --> Fixes --> Recover Transact`             |
++-----------+--------------------------------------------------------------------+
+|| new      || :menuselection:`Tools --> Processes --> Execute Rules`            |
+|| purpose  || Manages running program Business Rules                            |
++-----------+--------------------------------------------------------------------+
+|| new      || :menuselection:`Tools --> Processes --> Define Rules`             |
+|| purpose  || Defines program Business Rules                                    |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Processes --> Report Setup`             |
+|| replaces || :menuselection:`Tools --> Reports --> Control Reports`            |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Processes --> Processes Setup`          |
+|| replaces || :menuselection:`Tools --> Define --> Processes`                   |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Processes --> Schedule Processes`       |
+|| replaces || :menuselection:`Tools --> Define --> Schedules`                   |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Processes --> Actions Viewer`           |
+|| replaces || :menuselection:`Tools --> Processes --> Errors Review`            |
+|| replaces || :menuselection:`Tools --> Processes --> Events Review`            |
++-----------+--------------------------------------------------------------------+
+| new       || :menuselection:`Entry --> =Forms`                                 |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> =Forms`                               |
+|| replaces || :menuselection:`Reports --> Forms --> ...`                        |
++-----------+--------------------------------------------------------------------+
+| new       || :menuselection:`Setup --> =Forms`                                 |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Setup --> Utilities --> ...`                      |
+|| replaces || :menuselection:`Setup --> Fixes --> ...`                          |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Tools --> Utilities --> ...`                      |
+|| replaces || :menuselection:`Tools --> Actions --> ...`                        |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Tariffs Setup`                        |
+|| replaces || :menuselection:`Setup --> Rates`                                  |
+|| replaces || :menuselection:`Setup --> Profiles`                               |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Batch Billing --> Recurring Calculate`|
+|| replaces || :menuselection:`Billing --> Batch Billing --> Recurring Invoices` |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Batch Billing --> Invoice Charges`    |
+|| replaces || :menuselection:`Billing --> Batch --> Services Invoices`          |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Utilities --> Month End`              |
+|| replaces || :menuselection:`Billing --> Month End`                            |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Utilities --> Void Batch`             |
+|| replaces || :menuselection:`Setup --> Fixes --> Void Invoices`                |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Utilities --> Remove Records`         |
+|| replaces || :menuselection:`Setup --> Fixes --> Old Transactions`             |
++-----------+--------------------------------------------------------------------+
+||          || :menuselection:`Billing --> Utilities --> Sales History`          |
+|| replaces || :menuselection:`Setup --> Fixes --> Sales History`                |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Billing --> Batch Billing --> Prorate Invoices`   |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Reports --> ...` several options                  |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Setup --> Rates`                                  |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Setup --> Profiles`                               |
++-----------+--------------------------------------------------------------------+
+|| deleted  || :menuselection:`Setup --> Fixes --> ...` several options          |
++-----------+--------------------------------------------------------------------+
+
+4.50E Documentation Revisions
+=============================
+
++--------------+-------------+-------------------------------------------------------+
+| Module UTIL  | Utilities   |:menuselection:`Access --> -Manuals --> UTIL_DOCUMENTS`|
++--------------+-------------+---------------------------+---------------------------+
+| MANUAL*PREFACE             | MENUS*WINDOW              | MENUS*WINDOW.KEYS         |
++----------------------------+---------------------------+---------------------------+
+| TOOLS*RULES                | MENUS*WINDOW.FILE         | MENUS*WINDOW.WINDOW       |
++----------------------------+---------------------------+---------------------------+
+| TOPICS*UNIQUE              | MENUS*WINDOW.EDIT         | MENUS*WINDOW.HELP         |
++----------------------------+---------------------------+---------------------------+
+| TOPICS*CONFIG              | MENUS*WINDOW.QUERY        |                           |
++----------------------------+---------------------------+---------------------------+
+
++--------------+-------------+-------------------------------------------------------+
+| Module BILL  | Billing     |:menuselection:`Access --> -Manuals --> BILL_DOCUMENTS`|
++--------------+-------------+---------------------------+---------------------------+
+| BILLING*CHARGES            | BILLING*CHARGE.CALC       | BILLING*VOID              |
++----------------------------+---------------------------+---------------------------+
+| BILLING*TARIFFS            | BILLING*INVOICE.CALC      |                           |
++----------------------------+---------------------------+---------------------------+
+
++--------------+-------------+-------------------------------------------------------+
+| Module APP   | Application | :menuselection:`Access --> -Manuals --> APP_DOCUMENTS`|
++--------------+-------------+---------------------------+---------------------------+
+| MENUS*BILLING.BATCH        | BILLING*RECUR.CALC        | SETUP*ACCOUNTS            |
++----------------------------+---------------------------+---------------------------+
+| MENUS*SETUP                | BILLING*PERIOD.CLOSE      | SETUP*PRODUCTS            |
++----------------------------+---------------------------+---------------------------+
+
++--------------+-------------+-------------------------------------------------------+
+| Module APP   | App Forms   | :menuselection:`Tools --> -Reports --> Forms --> APP` |
++--------------+-------------+---------------------------+---------------------------+
+| RECEIPT                    | PERIOD.CLOSE              | CONFIG_PRODUCTS           |
++----------------------------+---------------------------+---------------------------+
+| DOCKLOG                    | DAILY.PROCEDURE           |                           |
++----------------------------+---------------------------+---------------------------+
+
++--------------------------------------------+---------------------------------------+
+| Added Technical Documentation              | Menu Location or Selection            |
++============================================+=======================================+
+| Technical notes and program changes        | :menuselection:`Access --> =Notes`    |
++--------------------------------------------+---------------------------------------+
+| Table of Contents for Technical Notes      | APP_NOTE.HELP.TOC                     |
++--------------------------------------------+---------------------------------------+
+| Notes 03/01/01 thru 04/15/03, Employee PN  | APP_NOTE.RESOLUTIONS                  |
++--------------------------------------------+---------------------------------------+
+| Technical notes review, file APP_NOTES     | :menuselection:`Contacts --> Notes`   |
++----------+---------------------------------+---------------------------------------+
+| 90109    | Automating report capture and download                                  |
++----------+-------------------------------------------------------------------------+
+| 90122    | Saving reports in EXCEL format                                          |
++----------+-------------------------------------------------------------------------+
+| 90123    | Swapping UOM codes on products                                          |
++----------+-------------------------------------------------------------------------+
+| 90124    | Updating COUNTRY codes                                                  |
++----------+-------------------------------------------------------------------------+

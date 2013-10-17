@@ -241,15 +241,19 @@ texinfo_documents = [
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
 
+# intersphinx_mapping = {
+# 'resources': ('resources', '../_deploy/resources/objects.inv'),
+# 'billing': ('billing', '../_deploy/billing/objects.inv'),
+# 'edi': ('edi', '../_deploy/edi/objects.inv'),
+# 'export': ('export', '../_deploy/export/objects.inv'),
+# 'rules': ('rules', '../_deploy/rules/objects.inv'),
+# 'reports': ('reports', '../_deploy/reports/objects.inv'),
+# 'recovery': ('recovery', '../_deploy/recovery/objects.inv'),
+# 'schedules': ('schedules', '../_deploy/schedules/objects.inv'),
+# 'updates': ('updates', '../_deploy/updates/objects.inv'),
+# }
 
 intersphinx_mapping = {
  'resources': ('resources', '../_deploy/resources/objects.inv'),
- 'billing': ('billing', '../_deploy/billing/objects.inv'),
- 'edi': ('edi', '../_deploy/edi/objects.inv'),
- 'export': ('export', '../_deploy/export/objects.inv'),
- 'rules': ('rules', '../_deploy/rules/objects.inv'),
- 'reports': ('reports', '../_deploy/reports/objects.inv'),
- 'recovery': ('recovery', '../_deploy/recovery/objects.inv'),
- 'schedules': ('schedules', '../_deploy/schedules/objects.inv'),
  'updates': ('updates', '../_deploy/updates/objects.inv'),
 }
