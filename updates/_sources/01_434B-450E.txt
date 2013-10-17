@@ -63,17 +63,19 @@ The :kbd:`[F10]` window menu has been enhanced to include every key commonly
 required in data entry or review. Every window uses the same menu, except for 
 window-specific softkeys and relations. The following keys changed:
 
-+-----------+----------+----------+-------------------------------+
-| New key   | Replaces | Shortcut | Description                   |
-+===========+==========+==========+===============================+
-| [F10],E,R | [F10],E  | [AF10]   | edit related window           |
-+-----------+----------+----------+-------------------------------+
-| [F10],Q,Q | [F10],Q  |          | enter query mode for window   |
-+-----------+----------+----------+-------------------------------+
-| [F10],F,N | [F10],F  |          | open a file in a window       |
-+-----------+----------+----------+-------------------------------+
-| [F10],K,L | [F10],L  | [SF10]   | display browse records        |
-+-----------+----------+----------+-------------------------------+
+.. cssclass:: bd
+
+   +-----------+----------+----------+-------------------------------+
+   | New key   | Replaces | Shortcut | Description                   |
+   +===========+==========+==========+===============================+
+   | [F10],E,R | [F10],E  | [AF10]   | edit related window           |
+   +-----------+----------+----------+-------------------------------+
+   | [F10],Q,Q | [F10],Q  |          | enter query mode for window   |
+   +-----------+----------+----------+-------------------------------+
+   | [F10],F,N | [F10],F  |          | open a file in a window       |
+   +-----------+----------+----------+-------------------------------+
+   | [F10],K,L | [F10],L  | [SF10]   | display browse records        |
+   +-----------+----------+----------+-------------------------------+
  
 Softkeys and Relations
 -----------------------------
