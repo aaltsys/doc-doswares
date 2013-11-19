@@ -10,7 +10,7 @@ WARES
 DOS Command Files
 -----------------------------
 
-:download:`wares.pif <_downloads/wares.pif>` desktop start file to execute wares.
+:download:`wares.pif <_downloads/WARES.pif>` desktop start file to execute WARES.
 
 :download:`wares.bat <_downloads/wares.bat>` revised to work with EMSmagic and 
 netprint.bat.

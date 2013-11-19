@@ -3,6 +3,14 @@
 DOS WARES Site Index
 ==================================================
 
+:ref:`configure:04_dos-ems`
+
++ Getting DOS EMS memory management to work in Windows XP and Windows 7
+
+:ref:`configure:05_net-use`
+
++ Mapping Windows network drives and printers for DOS programs
+
 :ref:`resources:downloads`
 
 This page consolidates the various DOS support files for WARES, including:
