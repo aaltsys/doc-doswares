@@ -3,11 +3,11 @@
 DOS WARES Site Index
 ==================================================
 
-:ref:`configure:04_dos-ems`
+:ref:`configure:dosems`
 
 + Getting DOS EMS memory management to work in Windows XP and Windows 7
 
-:ref:`configure:05_net-use`
+:ref:`configure:netuse`
 
 + Mapping Windows network drives and printers for DOS programs
 
