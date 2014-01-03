@@ -53,8 +53,11 @@ Install patches as follows:
 #. Follow the wizard directions, saving the files to directory 
    :file:`\{working directory\}\\PATCHES` when prompted
 #. Login to WARES
-#. From menu selection :menuselection:`Tools --> Utilities --> Bundle`, install 
-   patches from volume :file:`PATCHES`, choosing whichever file is needed
+#. At menu selection :menuselection:`Tools --> Utilities --> Bundle`, install 
+   patches from :guilabel:`Bundle Volume` :file:`PATCHES`
+#. At :guilabel:`Bundle Filename`, press :kbd:`F2` and choose a file as needed
+#. At :guilabel:`Action`, press :kbd:`F2` and choose :guilabel:`RESTORE`
+#. Press :kbd:`F9` to complete the restore and exit the Bundle utility.
 
 Evaluation copy of 4.50E
 -----------------------------
