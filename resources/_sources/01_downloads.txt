@@ -26,7 +26,7 @@ printer sharing.
 
 Update Patches files
 -----------------------------
-   
+
 :download:`Update patches to WARES 4.50E: <_downloads/patches.zip>`
 
 Determine your WARES working directory:
@@ -47,7 +47,7 @@ Install patches as follows:
    :file:`W:` or :file:`C:\\ATLAS`.
 
 #. Delete all files in directory :file:`\{working directory\}\\PATCHES`
-#. Download archive file :file:`patches.zip`
+#. Download archive file :download:`patches.zip <_downloads/patches.zip>`
 #. In :guilabel:`My Computer`, Right-click :file:`Downloads\\patches.zip` and 
    chose :menuselection:`Extract all ...`
 #. Follow the wizard directions, saving the files to directory 
