@@ -10,7 +10,7 @@ WARES
 DOS Command Files
 -----------------------------
 
-:download:`wares.pif <_downloads/WARES.pif>` desktop start file to execute WARES.
+:download:`wares.pif <_downloads/WARES.pif>` desktop .pif file to start WARES.
 
 :download:`wares.bat <_downloads/wares.bat>` revised to work with EMSmagic and 
 netprint.bat.
@@ -27,18 +27,34 @@ printer sharing.
 Update Patches files
 -----------------------------
    
-:download:`Download update patches to WARES 4.50E: <_downloads/patches.zip>`
+:download:`Update patches to WARES 4.50E: <_downloads/patches.zip>`
 
-Install patches with the following directions:
+Determine your WARES working directory:
 
-#. Delete any existing files in directory :file:`C:\\ATLAS\\PATCHES`.
-#. Download the :file:`patches.zip` archive file.
-#. Right-click :file:`patches.zip` and chose :menuselection:`Extract all ...`
+#. Start WARES from your desktop, using your supervisor level login
+#. Press :kbd:`F5` to display the :guilabel:`Command-WARES` window
+#. Type :kbd:`PC <enter>` to show the DOS system command window
+#. The command window last line displays your working directory, followed by a 
+   :kbd:`>` symbol. Typical working directory is :file:`C:\\ATLAS`` or 
+   :file:`W:\\`.
+#. Type :kbd:`EXIT` to leave the DOS command window
+#. Press :kbd:`esc` to leave the :guilabel:`Command-WARES` window
+
+Install patches as follows:
+
+.. note:: Where the following instructions show :file:`{working directory}`,
+   substitute the working directory from the previous section, typically 
+   :file:`W:` or :file:`C:\\ATLAS`.
+
+#. Delete all files in directory :file:`{working directory}\\PATCHES`
+#. Download archive file :file:`patches.zip`
+#. In :guilabel:`My Computer`, Right-click :file:`Downloads\patches.zip` and 
+   chose :menuselection:`Extract all ...`
 #. Follow the wizard directions, saving the files to directory 
-   :file:`C:\\ATLAS\\PATCHES` when prompted.
-#. Login to WARES.
+   :file:`{working directory}\\PATCHES` when prompted
+#. Login to WARES
 #. From menu selection :menuselection:`Tools --> Utilities --> Bundle`, install 
-   patches from volume :file:`PATCHES`, choosing whichever file is needed. 
+   patches from volume :file:`PATCHES`, choosing whichever file is needed
 
 Evaluation copy of 4.50E
 -----------------------------
