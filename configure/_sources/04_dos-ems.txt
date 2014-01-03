@@ -186,7 +186,7 @@ WARES.BAT
 
 The :file:`WARES.BAT` execution file is found in your :file:`ATLAS` folder. The 
 path to this file should be either: :file:`C:\\ATLAS\\WARES.BAT` on single-user 
-systems, or :file:`W:\\ATLAS\\WARES.BAT` on multiuser servers.
+systems, or :file:`W:\\WARES.BAT` on multiuser servers.
 
 Change :file:`WARES.BAT` to call :program:`EMSMAGIC` as shown below::
 
