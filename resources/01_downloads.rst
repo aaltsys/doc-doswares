@@ -42,16 +42,16 @@ Determine your WARES working directory:
 
 Install patches as follows:
 
-.. note:: Where the following instructions show :file:`{working directory}`,
+.. note:: Where the following instructions show :file:`\{working directory\}`,
    substitute the working directory from the previous section, typically 
    :file:`W:` or :file:`C:\\ATLAS`.
 
-#. Delete all files in directory :file:`{working directory}\\PATCHES`
+#. Delete all files in directory :file:`\{working directory\}\\PATCHES`
 #. Download archive file :file:`patches.zip`
-#. In :guilabel:`My Computer`, Right-click :file:`Downloads\patches.zip` and 
+#. In :guilabel:`My Computer`, Right-click :file:`Downloads\\patches.zip` and 
    chose :menuselection:`Extract all ...`
 #. Follow the wizard directions, saving the files to directory 
-   :file:`{working directory}\\PATCHES` when prompted
+   :file:`\{working directory\}\\PATCHES` when prompted
 #. Login to WARES
 #. From menu selection :menuselection:`Tools --> Utilities --> Bundle`, install 
    patches from volume :file:`PATCHES`, choosing whichever file is needed
