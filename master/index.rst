@@ -3,6 +3,20 @@
 DOS WARES Site Index
 ==================================================
 
+Contents:
+
+:ref:`configure:dosems`
+
++ Getting DOS EMS memory management to work in Windows XP and Windows 7
+
+:ref:`configure:netuse`
+
++ Mapping Windows network drives and printers for DOS programs
+
+:ref:`updates:upd-450e`
+
++  Upgrade files and instructions to convert from version 4.34B to 4.50E
+
 :ref:`resources:downloads`
 
 This page consolidates the various DOS support files for WARES, including:
@@ -11,12 +25,6 @@ This page consolidates the various DOS support files for WARES, including:
 +  Program patch updates
 +  A demo copy of WARES Warehousing
 +  EDI standards table data
-
-:ref:`updates:upd-450e`
-
-+  Upgrade files and instructions to convert from version 4.34B to 4.50E
-
-Contents:
 
 .. toctree::
    :maxdepth: 0

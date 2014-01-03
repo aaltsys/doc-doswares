@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# DOS WARES Master Index documentation build configuration file, created by
-# sphinx-quickstart on Thu Mar 21 14:34:22 2013.
+# DOS WARES Configure documentation build configuration file, created by
+# sphinx-quickstart on Thu Mar 21 14:29:08 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'DOS WARES Master Index'
+project = u'DOS WARES Configure'
 copyright = u'2013, Gerald Lovel'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -164,7 +164,7 @@ html_use_index = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DOSWARESMasterIndexdoc'
+htmlhelp_basename = 'DOSWARESConfiguredoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'DOSWARESMasterIndex.tex', u'DOS WARES Master Index Documentation',
+  ('index', 'DOSWARESConfigure.tex', u'DOS WARES Configure Documentation',
    u'Gerald Lovel', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'doswaresmasterindex', u'DOS WARES Master Index Documentation',
+    ('index', 'doswaresconfigure', u'DOS WARES Configure Documentation',
      [u'Gerald Lovel'], 1)
 ]
 
@@ -227,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'DOSWARESMasterIndex', u'DOS WARES Master Index Documentation',
-   u'Gerald Lovel', 'DOSWARESMasterIndex', 'One line description of project.',
+  ('index', 'DOSWARESConfigure', u'DOS WARES Configure Documentation',
+   u'Gerald Lovel', 'DOSWARESConfigure', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -240,22 +240,3 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
-
-# intersphinx_mapping = {
-# 'resources': ('resources', '../_deploy/resources/objects.inv'),
-# 'billing': ('billing', '../_deploy/billing/objects.inv'),
-# 'configure': ('configure', '../_deploy/configure/objects.inv'),
-# 'edi': ('edi', '../_deploy/edi/objects.inv'),
-# 'export': ('export', '../_deploy/export/objects.inv'),
-# 'rules': ('rules', '../_deploy/rules/objects.inv'),
-# 'reports': ('reports', '../_deploy/reports/objects.inv'),
-# 'recovery': ('recovery', '../_deploy/recovery/objects.inv'),
-# 'schedules': ('schedules', '../_deploy/schedules/objects.inv'),
-# 'updates': ('updates', '../_deploy/updates/objects.inv'),
-# }
-
-intersphinx_mapping = {
- 'configure': ('configure', '../_deploy/configure/objects.inv'),
- 'resources': ('resources', '../_deploy/resources/objects.inv'),
- 'updates': ('updates', '../_deploy/updates/objects.inv'),
-}
