@@ -35,23 +35,25 @@ Determine your WARES working directory:
 #. Press :kbd:`F5` to display the :guilabel:`Command-WARES` window
 #. Type :kbd:`PC <enter>` to show the DOS system command window
 #. The command window last line displays your working directory, followed by a 
-   :kbd:`>` symbol. Typical working directory is :file:`C:\\ATLAS`` or 
+   :kbd:`>` symbol. Typically the working directory is :file:`C:\\ATLAS` or 
    :file:`W:\\`.
 #. Type :kbd:`EXIT` to leave the DOS command window
 #. Press :kbd:`esc` to leave the :guilabel:`Command-WARES` window
 
 Install patches as follows:
 
-.. note:: Where the following instructions show :file:`\{working directory\}`,
+.. |workdir| replace:: \{working directory\}
+
+.. note:: Where the following instructions show |workdir|,
    substitute the working directory from the previous section, typically 
    :file:`W:` or :file:`C:\\ATLAS`.
 
-#. Delete all files in directory :file:`\{working directory\}\\PATCHES`
+#. Delete all files in directory |workdir|:file:`\\PATCHES`
 #. Download archive file :download:`patches.zip <_downloads/patches.zip>`
 #. In :guilabel:`My Computer`, Right-click :file:`Downloads\\patches.zip` and 
    chose :menuselection:`Extract all ...`
 #. Follow the wizard directions, saving the files to directory 
-   :file:`\{working directory\}\\PATCHES` when prompted
+   |workdir|:file:`\\PATCHES` when prompted
 #. Login to WARES
 #. At menu selection :menuselection:`Tools --> Utilities --> Bundle`, install 
    patches from :guilabel:`Bundle Volume` :file:`PATCHES`
