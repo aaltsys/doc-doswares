@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Alternatives to Run WARES &mdash; DOS WARES Configure 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/aaltsys.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DOS WARES Configure 1.0 documentation" href="index.html" />
+    <link rel="prev" title="DOS Programs and EMS" href="04_dos-ems.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="04_dos-ems.html" title="DOS Programs and EMS"
+             accesskey="P">previous</a></li>
+        <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Alternatives to Run WARES</a><ul>
+<li><a class="reference internal" href="#dosbox-emulation">DOSBOX emulation</a><ul>
+<li><a class="reference internal" href="#installing-dosbox">Installing DOSBox</a></li>
+<li><a class="reference internal" href="#configuring-dosbox">Configuring DOSBox</a></li>
+<li><a class="reference internal" href="#configuring-desktop-icon">Configuring desktop icon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="04_dos-ems.html"
+                        title="previous chapter">DOS Programs and EMS</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/05_alternatives.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="alternatives-to-run-wares">
+<span id="alternatives"></span><h1>Alternatives to Run WARES<a class="headerlink" href="#alternatives-to-run-wares" title="Permalink to this headline">¶</a></h1>
+<p>The move to 64-bit Windows 7 and Windows 8 eliminates running WARES natively on
+a Windows operating system. There are other options, however. These are:</p>
+<ul class="simple">
+<li>DOS emulation using <strong class="program">DOSBox</strong> on Windows 7 and Windows 8</li>
+<li>Microsoft&#8217;s 32-bit <strong class="program">Virtual Windows XP</strong> emulation for Windows 7</li>
+<li>Remote desktop access to WARES on an ADDS Server</li>
+<li>Linux Ubuntu desktop operating system, and DOSEMU</li>
+</ul>
+<div class="section" id="dosbox-emulation">
+<h2>DOSBOX emulation<a class="headerlink" href="#dosbox-emulation" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Instructions in this section are intended for Windows 7, and are based
+on DOSBOX version 0.74, which is the current release as of January, 2014.
+This configuration was tested on one Windows 7 system, where it worked on the
+local desktop and over rdp. DOSBox does not support NETBIOS record locking
+required for multiuser operation.</p>
+</div>
+<p>The configuration described here will run a single program in <strong class="program">DOSBox</strong>,
+Specifically DOS program <strong class="program">WARES</strong>. WARES requires a custom DOSBox
+configuration file and start icon. To run other programs, create corresponding
+additional custom configuration files and icons.</p>
+<div class="section" id="installing-dosbox">
+<h3>Installing DOSBox<a class="headerlink" href="#installing-dosbox" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.dosbox.com/download.php?main=1">Download DOSBox</a> from your web
+browser. In Windows, this file will probably land in the <tt class="file docutils literal"><span class="pre">Downloads</span></tt>
+folder.</p>
+<ul class="simple">
+<li>Double-Click the installer file <tt class="file docutils literal"><span class="pre">DOSBox0.74-win32-installer.exe</span></tt></li>
+<li>Tell Windows to <strong class="command">Run</strong> the software</li>
+<li>At <em class="guilabel">DOSBox v0.74 License</em>, click <em class="guilabel">Next</em> to accept the
+GNU public license terms</li>
+<li>At <em class="guilabel">Select components to install:</em>, check the
+<em class="guilabel">Desktop Shortcut</em> box, then click <em class="guilabel">Next</em> to continue</li>
+<li>At the <em class="guilabel">Destination Folder</em>, just click <em class="guilabel">Install</em> to
+use the default location <tt class="file docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\DOSBox-0.74</span></tt></li>
+<li>Click <em class="guilabel">Close</em> to exit the installer when finished.</li>
+</ul>
+</div>
+<div class="section" id="configuring-dosbox">
+<h3>Configuring DOSBox<a class="headerlink" href="#configuring-dosbox" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Before configuring <strong class="program">DOSBox</strong>, determine the directory path for the
+program to be run. Then in the following instructions, change the token
+<tt class="kbd docutils literal"><span class="pre">{path}</span></tt> to the actual directory path. For example, if program WARES
+is started from directory <tt class="file docutils literal"><span class="pre">C:\ATLAS\</span></tt>, replace the line
+<tt class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></tt> with the text <tt class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">C:\ATLAS\</span></tt>. DOSBox
+requires an absolute path including the drive letter for this entry.</p>
+</div>
+<ul>
+<li><p class="first">At the task bar <em class="guilabel">Start</em> menu, type <tt class="kbd docutils literal"><span class="pre">cmd</span> <span class="pre">&lt;Enter&gt;</span></tt> in the search
+box. A cmd console window should appear.</p>
+</li>
+<li><p class="first">At the console command line, enter:</p>
+<div class="highlight-python"><pre>cd appdata\local\dosbox
+edit wares.conf</pre>
+</div>
+</li>
+<li><p class="first">In the text editor, enter the following configuration text for WARES:</p>
+<div class="highlight-python"><pre>[sdl]
+output=overlay
+
+[render]
+scaler=2xsai forced
+
+[autoexec]
+mount w {path}
+w:
+wares wares</pre>
+</div>
+</li>
+<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">S</span></tt> to save, then <tt class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">X</span></tt> to exit the editor.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="configuring-desktop-icon">
+<h3>Configuring desktop icon<a class="headerlink" href="#configuring-desktop-icon" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">On the desktop, <tt class="kbd docutils literal"><span class="pre">&lt;Right-Click&gt;</span></tt> the <em class="guilabel">DOSBox 0.74</em> icon and
+choose menu option <em class="menuselection">Properties</em></p>
+</li>
+<li><p class="first">Change the <em class="guilabel">Target</em> text to read as follows:</p>
+<div class="highlight-python"><pre>"C:\Program Files\DOSBox-0.74\DOSBox.exe" -conf "%userprofile%\appdata\local\dosbox\wares.conf" -noconsole</pre>
+</div>
+</li>
+<li><p class="first">Test the DOSBox configuration by double-clicking the desktop icon.</p>
+</li>
+<li><p class="first">After quitting the program, type <tt class="kbd docutils literal"><span class="pre">EXIT</span></tt> to close the DOSBox window.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="04_dos-ems.html" title="DOS Programs and EMS"
+             >previous</a></li>
+        <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Gerald Lovel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

@@ -13,6 +13,10 @@ Contents:
 
 + Mapping Windows network drives and printers for DOS programs
 
+:ref:`configure:alternatives`
+
++ Alternatives for executing WARES on 64-bit Windows
+
 :ref:`updates:upd-450e`
 
 +  Upgrade files and instructions to convert from version 4.34B to 4.50E
