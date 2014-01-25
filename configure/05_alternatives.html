@@ -43,8 +43,9 @@
 <li><a class="reference internal" href="#">Alternatives to Run WARES</a><ul>
 <li><a class="reference internal" href="#dosbox-emulation">DOSBOX emulation</a><ul>
 <li><a class="reference internal" href="#installing-dosbox">Installing DOSBox</a></li>
-<li><a class="reference internal" href="#configuring-dosbox">Configuring DOSBox</a></li>
-<li><a class="reference internal" href="#configuring-desktop-icon">Configuring desktop icon</a></li>
+<li><a class="reference internal" href="#dosbox-keyboard-configuration">DOSBox keyboard configuration</a></li>
+<li><a class="reference internal" href="#dosbox-program-configuration">DOSBox program configuration</a></li>
+<li><a class="reference internal" href="#configure-desktop-icon">Configure desktop icon</a></li>
 </ul>
 </li>
 </ul>
@@ -92,80 +93,115 @@ a Windows operating system. There are other options, however. These are:</p>
 </ul>
 <div class="section" id="dosbox-emulation">
 <h2>DOSBOX emulation<a class="headerlink" href="#dosbox-emulation" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Instructions in this section are intended for Windows 7, and are based
-on DOSBOX version 0.74, which is the current release as of January, 2014.
-This configuration was tested on one Windows 7 system, where it worked on the
-local desktop and over rdp. DOSBox does not support NETBIOS record locking
-required for multiuser operation.</p>
-</div>
 <p>The configuration described here will run a single program in <strong class="program">DOSBox</strong>,
-Specifically DOS program <strong class="program">WARES</strong>. WARES requires a custom DOSBox
-configuration file and start icon. To run other programs, create corresponding
+Specifically DOS program <strong class="program">WARES</strong>. WARES requires custom DOSBox
+configuration files and start icon. To run other programs, create corresponding
 additional custom configuration files and icons.</p>
+<p>Using DOSBox with printers requires <strong class="command">net use</strong> commands to map Windows
+printers to virtual LPT devices. See <a class="reference internal" href="03_net-use.html#netuse"><em>Documentation for NET USE</em></a>.</p>
 <div class="section" id="installing-dosbox">
 <h3>Installing DOSBox<a class="headerlink" href="#installing-dosbox" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://www.dosbox.com/download.php?main=1">Download DOSBox</a> from your web
-browser. In Windows, this file will probably land in the <tt class="file docutils literal"><span class="pre">Downloads</span></tt>
-folder.</p>
+<p>For DOSBox with printer support, download DOSBox_SVN_daum current version
+<a class="reference download internal" href="_downloads/DOSBox_daum-win32-installer.exe"><tt class="xref download docutils literal"><span class="pre">from</span> <span class="pre">here</span></tt></a>.
+Windows will probably save this file in your <tt class="file docutils literal"><span class="pre">Downloads</span></tt> folder.</p>
 <ul class="simple">
-<li>Double-Click the installer file <tt class="file docutils literal"><span class="pre">DOSBox0.74-win32-installer.exe</span></tt></li>
-<li>Tell Windows to <strong class="command">Run</strong> the software</li>
-<li>At <em class="guilabel">DOSBox v0.74 License</em>, click <em class="guilabel">Next</em> to accept the
+<li>Open your <tt class="file docutils literal"><span class="pre">Downloads</span></tt> folder in Windows Explorer</li>
+<li>Double-Click the installer file <tt class="file docutils literal"><span class="pre">DOSBox_daum-win32-installer.exe</span></tt></li>
+<li>In the <em class="guilabel">User Account Control</em> window, click <em class="guilabel">Yes</em> to run
+the installer</li>
+<li>At <em class="guilabel">License Agreement</em>, click <em class="guilabel">Next</em> to accept the
 GNU public license terms</li>
-<li>At <em class="guilabel">Select components to install:</em>, check the
-<em class="guilabel">Desktop Shortcut</em> box, then click <em class="guilabel">Next</em> to continue</li>
+<li>At <em class="guilabel">Select components to install:</em>, check the boxes for
+<em class="guilabel">Desktop Shortcut</em> and <em class="guilabel">Font Files</em>, then click
+<em class="guilabel">Next</em> to continue</li>
 <li>At the <em class="guilabel">Destination Folder</em>, just click <em class="guilabel">Install</em> to
-use the default location <tt class="file docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\DOSBox-0.74</span></tt></li>
+use the default location <tt class="file docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\DOSBox_SVN-daum</span></tt></li>
 <li>Click <em class="guilabel">Close</em> to exit the installer when finished.</li>
 </ul>
 </div>
-<div class="section" id="configuring-dosbox">
-<h3>Configuring DOSBox<a class="headerlink" href="#configuring-dosbox" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="dosbox-keyboard-configuration">
+<h3>DOSBox keyboard configuration<a class="headerlink" href="#dosbox-keyboard-configuration" title="Permalink to this headline">¶</a></h3>
+<p>DOSBox uses function keys for program controls. Operating System functions
+override some of these controls, so the DOSBox operations cannot work.
+Other DOSBox key mappings conflict with key assignments for applications
+running in DOSBox, and so application functions cannot work. DOSBox includes a
+control menu which makes key mappings unnecessary anyway. Therefore WARES
+provides a custom keyboard mapper file which eliminates most DOSBox function key
+mappings. This configuration is installed in the next section.</p>
+</div>
+<div class="section" id="dosbox-program-configuration">
+<h3>DOSBox program configuration<a class="headerlink" href="#dosbox-program-configuration" title="Permalink to this headline">¶</a></h3>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Before configuring <strong class="program">DOSBox</strong>, determine the directory path for the
-program to be run. Then in the following instructions, change the token
-<tt class="kbd docutils literal"><span class="pre">{path}</span></tt> to the actual directory path. For example, if program WARES
-is started from directory <tt class="file docutils literal"><span class="pre">C:\ATLAS\</span></tt>, replace the line
-<tt class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></tt> with the text <tt class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">C:\ATLAS\</span></tt>. DOSBox
-requires an absolute path including the drive letter for this entry.</p>
+<p class="last">DOSBox requires configuration to work with WARES.</p>
 </div>
-<ul>
-<li><p class="first">At the task bar <em class="guilabel">Start</em> menu, type <tt class="kbd docutils literal"><span class="pre">cmd</span> <span class="pre">&lt;Enter&gt;</span></tt> in the search
-box. A cmd console window should appear.</p>
-</li>
-<li><p class="first">At the console command line, enter:</p>
-<div class="highlight-python"><pre>cd appdata\local\dosbox
-edit wares.conf</pre>
-</div>
-</li>
-<li><p class="first">In the text editor, enter the following configuration text for WARES:</p>
-<div class="highlight-python"><pre>[sdl]
+<div class="sidebar">
+<p class="first sidebar-title">DOSBox WARES Configuration</p>
+<div class="last highlight-python"><pre>[sdl]
+windowresolution=960x600
 output=overlay
+autolock=false
+mapperfile=dosbox-wares.map
 
-[render]
-scaler=2xsai forced
+[cpu]
+cycles=fixed 6000
+
+[joystick]
+joysticktype=none
+
+[printer]
+printout=printer
+
+[parallel]
+parallel1=file dev:lpt1
+parallel2=file dev:lpt2
 
 [autoexec]
 mount w {path}
 w:
 wares wares</pre>
 </div>
+</div>
+<p>Before configuring <strong class="program">DOSBox</strong>, determine the directory path for the
+program to be run. Then in the following instructions, change the token
+<tt class="kbd docutils literal"><span class="pre">{path}</span></tt> to the actual directory path. For example, if program WARES is
+started from directory <tt class="file docutils literal"><span class="pre">C:\ATLAS\</span></tt>, replace the line
+<tt class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></tt> with the text <tt class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">C:\ATLAS\</span></tt>. DOSBox
+requires an absolute path including the drive letter for this entry.</p>
+<ul class="simple">
+<li>Download the following files to your <tt class="file docutils literal"><span class="pre">Downloads</span></tt> folder:</li>
+</ul>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><a class="reference download internal" href="_downloads/dosbox-wares.conf"><tt class="xref download docutils literal"><span class="pre">dosbox-wares.conf</span></tt></a></div>
+<div class="line"><a class="reference download internal" href="_downloads/dosbox-wares.map"><tt class="xref download docutils literal"><span class="pre">dosbox-wares.map</span></tt></a></div>
+</div>
+</div></blockquote>
+<ul>
+<li><p class="first">At the task bar <em class="guilabel">Start</em> menu, type <tt class="kbd docutils literal"><span class="pre">cmd</span> <span class="pre">&lt;Enter&gt;</span></tt> in the search
+box. A <strong class="command">cmd</strong> console window should appear.</p>
+</li>
+<li><p class="first">At the console command line, copy the files with the following commands:</p>
+<div class="highlight-python"><pre>md AppData\Local\DOSBox
+copy Downloads\dosbox-wares.* appdata\local\dosbox
+edit dosbox-wares.conf</pre>
+</div>
+</li>
+<li><p class="first">In the text editor, change the configuration line <tt class="docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></tt> to
+represent the path to your WARES files.</p>
 </li>
 <li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">S</span></tt> to save, then <tt class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">X</span></tt> to exit the editor.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="configuring-desktop-icon">
-<h3>Configuring desktop icon<a class="headerlink" href="#configuring-desktop-icon" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="configure-desktop-icon">
+<h3>Configure desktop icon<a class="headerlink" href="#configure-desktop-icon" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p class="first">On the desktop, <tt class="kbd docutils literal"><span class="pre">&lt;Right-Click&gt;</span></tt> the <em class="guilabel">DOSBox 0.74</em> icon and
+<li><p class="first">On the desktop, <tt class="kbd docutils literal"><span class="pre">&lt;Right-Click&gt;</span></tt> the <em class="guilabel">DOSBox SVN-daum</em> icon and
 choose menu option <em class="menuselection">Properties</em></p>
 </li>
 <li><p class="first">Change the <em class="guilabel">Target</em> text to read as follows:</p>
-<div class="highlight-python"><pre>"C:\Program Files\DOSBox-0.74\DOSBox.exe" -conf "%userprofile%\appdata\local\dosbox\wares.conf" -noconsole</pre>
+<div class="highlight-python"><pre>"C:\Program Files\DOSBox SVN-Daum\DOSBox.exe" -conf "%userprofile%\AppData\Local\DOSBox\dosbox-wares.conf" -noconsole</pre>
 </div>
 </li>
 <li><p class="first">Test the DOSBox configuration by double-clicking the desktop icon.</p>
@@ -173,6 +209,17 @@ choose menu option <em class="menuselection">Properties</em></p>
 <li><p class="first">After quitting the program, type <tt class="kbd docutils literal"><span class="pre">EXIT</span></tt> to close the DOSBox window.</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>(1) Instructions in this section are based on DOSBox_SVN_Daum, an extended
+version of DOSBox official release 0.74.</p>
+<p>(2) This configuration worked on Windows 7 system at the local desktop and
+over rdp.</p>
+<p>(3) DOSBox does not have native support for NETBIOS record locking as is
+required for multiuser operation.</p>
+<p class="last">(4) DOSBox local configuration files are saved at:
+<tt class="file docutils literal"><span class="pre">%userprofile%\appdata\local\dosbox\</span></tt>.</p>
+</div>
 </div>
 </div>
 </div>
