@@ -26,10 +26,11 @@ printers to virtual LPT devices. See :ref:`Documentation for NET USE <netuse>`.
 Installing DOSBox
 -----------------------------
 
-For DOSBox with printer support, download a current version of
-:download:`DOSBox_SVN_daum <../resources/_downloads/DOSBox_daum-win32-installer.exe>`. 
-Windows will probably save this file in your :file:`Downloads` folder.
+DOSBox with printer support requires an extension such as DOSBox SVN-Daum. A  
+download link for a known-working version is installed as follows: 
 
+*  download :download:`DOSBox_SVN_daum <../resources/_downloads/DOSBox_daum-win32-installer.exe>`. 
+   Windows will probably save this file in your :file:`Downloads` folder
 *  Open your :file:`Downloads` folder in Windows Explorer
 *  Double-Click the installer file :file:`DOSBox_daum-win32-installer.exe` 
 *  In the :guilabel:`User Account Control` window, click :guilabel:`Yes` to run 
@@ -40,7 +41,7 @@ Windows will probably save this file in your :file:`Downloads` folder.
    :guilabel:`Desktop Shortcut` and :guilabel:`Font Files`, then click 
    :guilabel:`Next` to continue 
 *  At the :guilabel:`Destination Folder`, just click :guilabel:`Install` to
-   use the default location :file:`C:\\Program Files\\DOSBox_SVN-daum`  
+   use the default location :file:`C:\\Program Files\\DOSBox SVN-daum`  
 *  Click :guilabel:`Close` to exit the installer when finished.
 
 DOSBox keyboard configuration
