@@ -26,8 +26,8 @@ printers to virtual LPT devices. See :ref:`Documentation for NET USE <netuse>`.
 Installing DOSBox
 -----------------------------
 
-For DOSBox with printer support, download DOSBox_SVN_daum current version
-:download:`from here <../resources/_downloads/DOSBox_daum-win32-installer.exe>`.
+For DOSBox with printer support, download a current version of
+:download:`DOSBox_SVN_daum <../resources/_downloads/DOSBox_daum-win32-installer.exe>`. 
 Windows will probably save this file in your :file:`Downloads` folder.
 
 *  Open your :file:`Downloads` folder in Windows Explorer
