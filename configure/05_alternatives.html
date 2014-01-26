@@ -112,7 +112,8 @@ Windows will probably save this file in your <tt class="file docutils literal"><
 the installer</li>
 <li>At <em class="guilabel">License Agreement</em>, click <em class="guilabel">I Agree</em> to accept the
 GNU public license terms, and <em class="guilabel">Next</em> to continue</li>
-<li>At <em class="guilabel">Select components to install:</em>, check the boxes for
+<li>Click <em class="guilabel">Next</em> at <em class="guilabel">Before Installation</em></li>
+<li>If <em class="guilabel">Select components to install:</em> displays, check the boxes for
 <em class="guilabel">Desktop Shortcut</em> and <em class="guilabel">Font Files</em>, then click
 <em class="guilabel">Next</em> to continue</li>
 <li>At the <em class="guilabel">Destination Folder</em>, just click <em class="guilabel">Install</em> to
@@ -184,8 +185,8 @@ box. A <strong class="command">cmd</strong> console window should appear.</p>
 </li>
 <li><p class="first">At the console command line, copy the files with the following commands:</p>
 <div class="highlight-python"><pre>md AppData\Local\DOSBox
-copy Downloads\dosbox-wares.* appdata\local\dosbox
-edit dosbox-wares.conf</pre>
+copy Downloads\dosbox-wares.* appdata\local\dosbox\
+edit AppData\Local\DOSBox\dosbox-wares.conf</pre>
 </div>
 </li>
 <li><p class="first">In the text editor, change the configuration line <tt class="docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></tt> to
@@ -194,6 +195,14 @@ represent the path to your WARES files.</p>
 <li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">S</span></tt> to save, then <tt class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">X</span></tt> to exit the editor.</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The commands given above are for Windows 7. These commands may not be
+correct for Windows 8. The corresponding commands for Windows XP would be:</p>
+<div class="last highlight-python"><pre>copy "My Documents\Downloads\dosbox-wares.*" "\Program Files\DOSBox SVN-Daum\"
+edit "\Program Files\DOSBox SVN-Daum\dosbox-wares.conf"</pre>
+</div>
+</div>
 </div>
 <div class="section" id="configure-desktop-icon">
 <h3>Configure desktop icon<a class="headerlink" href="#configure-desktop-icon" title="Permalink to this headline">¶</a></h3>
@@ -210,6 +219,12 @@ choose menu option <em class="menuselection">Properties</em></p>
 <li><p class="first">After quitting the program, type <tt class="kbd docutils literal"><span class="pre">EXIT</span></tt> to close the DOSBox window.</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>On Windows XP, the correct Target text would be:</p>
+<div class="last highlight-python"><pre>"C:\Program Files\DOSBox SVN-Daum\DOSBox.exe -conf "dosbox-wares.conf" -noconsole</pre>
+</div>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>(1) Instructions in this section are based on DOSBox_SVN_Daum, an extended

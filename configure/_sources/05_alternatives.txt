@@ -37,7 +37,8 @@ download link for a known-working version is installed as follows:
    the installer
 *  At :guilabel:`License Agreement`, click :guilabel:`I Agree` to accept the 
    GNU public license terms, and :guilabel:`Next` to continue
-*  At :guilabel:`Select components to install:`, check the boxes for
+*  Click :guilabel:`Next` at :guilabel:`Before Installation` 
+*  If :guilabel:`Select components to install:` displays, check the boxes for
    :guilabel:`Desktop Shortcut` and :guilabel:`Font Files`, then click 
    :guilabel:`Next` to continue 
 *  At the :guilabel:`Destination Folder`, just click :guilabel:`Install` to
@@ -106,12 +107,18 @@ requires an absolute path including the drive letter for this entry.
 *  At the console command line, copy the files with the following commands::
 
       md AppData\Local\DOSBox
-      copy Downloads\dosbox-wares.* appdata\local\dosbox
-      edit dosbox-wares.conf
+      copy Downloads\dosbox-wares.* appdata\local\dosbox\
+      edit AppData\Local\DOSBox\dosbox-wares.conf
 
 *  In the text editor, change the configuration line ``mount w {path}`` to 
    represent the path to your WARES files.
 *  Press :kbd:`<Alt-F>, S` to save, then :kbd:`<Alt-F>, X` to exit the editor.
+
+.. note:: The commands given above are for Windows 7. These commands may not be 
+   correct for Windows 8. The corresponding commands for Windows XP would be::
+   
+      copy "My Documents\Downloads\dosbox-wares.*" "\Program Files\DOSBox SVN-Daum\"
+      edit "\Program Files\DOSBox SVN-Daum\dosbox-wares.conf"
 
 Configure desktop icon
 -----------------------------
@@ -124,6 +131,11 @@ Configure desktop icon
     
 *  Test the DOSBox configuration by double-clicking the desktop icon. 
 *  After quitting the program, type :kbd:`EXIT` to close the DOSBox window.
+
+.. note::
+   On Windows XP, the correct Target text would be::
+   
+      "C:\Program Files\DOSBox SVN-Daum\DOSBox.exe -conf "dosbox-wares.conf" -noconsole
 
 .. note:: 
    (1) Instructions in this section are based on DOSBox_SVN_Daum, an extended 
