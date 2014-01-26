@@ -35,8 +35,8 @@ download link for a known-working version is installed as follows:
 *  Double-Click the installer file :file:`DOSBox_daum-win32-installer.exe` 
 *  In the :guilabel:`User Account Control` window, click :guilabel:`Yes` to run 
    the installer
-*  At :guilabel:`License Agreement`, click :guilabel:`Next` to accept the 
-   GNU public license terms
+*  At :guilabel:`License Agreement`, click :guilabel:`I Agree` to accept the 
+   GNU public license terms, and :guilabel:`Next` to continue
 *  At :guilabel:`Select components to install:`, check the boxes for
    :guilabel:`Desktop Shortcut` and :guilabel:`Font Files`, then click 
    :guilabel:`Next` to continue 
@@ -73,7 +73,7 @@ DOSBox program configuration
       
       [cpu]
       cycles=fixed 6000
-
+      
       [joystick]
       joysticktype=none
       
