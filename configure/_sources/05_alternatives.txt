@@ -33,21 +33,16 @@ download link for a known-working version is installed as follows:
    Windows will probably save this file in your :file:`Downloads` folder
 *  Open your :file:`Downloads` folder in Windows Explorer
 *  Double-Click the installer file :file:`DOSBox_daum-win32-installer.exe` 
-*  In the :guilabel:`User Account Control` window, click :guilabel:`Yes` to run 
+*  In the :guilabel:`User Account Control` panel, click :guilabel:`Yes` to run 
    the installer (for Windows XP, click :guilabel:`Run` in the 
    :guilabel:`Security Warning`)
 *  Click :guilabel:`Next` to start the installer. At 
    :guilabel:`License Agreement`, click :guilabel:`I Agree` to accept the 
    GNU public license terms, and :guilabel:`Next` to continue
-*  Click :guilabel:`Next` at :guilabel:`Before Installation` 
-
-*  If :guilabel:`Select components to install:` displays, check the boxes for
-   :guilabel:`Desktop Shortcut` and :guilabel:`Font Files`
-
-*  Click :guilabel:`Next` to continue 
+*  Click :guilabel:`Next` at :guilabel:`Before Installation` Information panel
 *  At the :guilabel:`Destination Folder`, just click :guilabel:`Install` to
    use the default location :file:`C:\\Program Files\\DOSBox SVN-daum`  
-*  Click :guilabel:`Close` to exit the installer when finished.
+*  Click :guilabel:`OK` to exit the installer when finished.
 
 DOSBox keyboard configuration
 -----------------------------
@@ -149,11 +144,11 @@ Configure desktop icon
    (1) Instructions in this section are based on DOSBox_SVN_Daum, an extended 
    version of DOSBox official release 0.74. 
    
-   (2) This configuration worked on Windows 7 system at the local desktop and 
-   over rdp. 
+   (2) This configuration worked on Windows 7 and Windows XP at the local 
+   desktop and over rdp. 
    
    (3) DOSBox does not have native support for NETBIOS record locking as is 
    required for multiuser operation.
    
-   (4) DOSBox local configuration files are saved at: 
+   (4) With Windows 7, DOSBox local configuration files are saved at: 
    :file:`\%userprofile\%\\appdata\\local\\dosbox\\`. 
