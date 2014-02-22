@@ -255,7 +255,8 @@ texinfo_documents = [
 # }
 
 intersphinx_mapping = {
- 'configure': ('configure', '../_deploy/configure/objects.inv'),
  'resources': ('resources', '../_deploy/resources/objects.inv'),
+ 'configure': ('configure', '../_deploy/configure/objects.inv'),
+ 'support': ('support', '../_deploy/support/objects.inv'),
  'updates': ('updates', '../_deploy/updates/objects.inv'),
 }

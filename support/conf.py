@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
-# DOS WARES Task Scheduling documentation build configuration file, created by
-# sphinx-quickstart on Thu Mar 21 14:33:15 2013.
+# DOS WARES Error Recovery documentation build configuration file, created by
+# sphinx-quickstart on Thu Mar 21 14:32:36 2013.
 #
 # This file is execfile()d with the current directory set to its containing dir.
 #
@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'DOS WARES Task Scheduling'
+project = u'DOS WARES Error Recovery'
 copyright = u'2013, Gerald Lovel'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -164,7 +164,7 @@ html_use_index = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DOSWARESTaskSchedulingdoc'
+htmlhelp_basename = 'DOSWARESErrorRecoverydoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'DOSWARESTaskScheduling.tex', u'DOS WARES Task Scheduling Documentation',
+  ('index', 'DOSWARESErrorRecovery.tex', u'DOS WARES Error Recovery Documentation',
    u'Gerald Lovel', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'doswarestaskscheduling', u'DOS WARES Task Scheduling Documentation',
+    ('index', 'doswareserrorrecovery', u'DOS WARES Error Recovery Documentation',
      [u'Gerald Lovel'], 1)
 ]
 
@@ -227,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'DOSWARESTaskScheduling', u'DOS WARES Task Scheduling Documentation',
-   u'Gerald Lovel', 'DOSWARESTaskScheduling', 'One line description of project.',
+  ('index', 'DOSWARESErrorRecovery', u'DOS WARES Error Recovery Documentation',
+   u'Gerald Lovel', 'DOSWARESErrorRecovery', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -240,3 +240,8 @@ texinfo_documents = [
 
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
+
+intersphinx_mapping = {
+ 'resources': ('../resources', '../_deploy/resources/objects.inv'),
+ 'configure': ('../configure', '../_deploy/configure/objects.inv'),
+}
