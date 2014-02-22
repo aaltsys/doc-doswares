@@ -37,8 +37,8 @@ a workstation C:\\ drive. Call if you have questions about what to copy.
 Install an AAltSys Server
 =============================
 
-Use directions from :ref:`install:index`. Add to 
-those directions the following specific instructions.
+`Install an AAltsys Server <http://servers.aaltsys.info/install>`_, adding 
+the following instructions specific to the WARES program.
 
 Configure the AAltSys Server
 -----------------------------
@@ -97,7 +97,8 @@ Configure WARES on the Server
 Configure Workstations
 =============================
 
-Prepare each workstation to run WARES using the directions in the 
-:ref:`workstation:index`. Batch program files may 
-be added to workstation desktops to map printers and network drives, as 
+Prepare each workstation to run WARES using 
+`workstation management guidelines <http://servers.aaltsys.info/workstation>`_.
+In addition, each workstation will require batch files and pif files as 
+described at :ref:`netuse` and :ref:`dosems`.
 explained in article :ref:`workstation:netuse`.
