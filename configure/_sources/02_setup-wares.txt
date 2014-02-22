@@ -101,4 +101,3 @@ Prepare each workstation to run WARES using
 `workstation management guidelines <http://servers.aaltsys.info/workstation>`_.
 In addition, each workstation will require batch files and pif files as 
 described at :ref:`netuse` and :ref:`dosems`.
-explained in article :ref:`workstation:netuse`.
