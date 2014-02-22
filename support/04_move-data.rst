@@ -12,8 +12,9 @@ The difficulty with having multiple WARES installations is a lack of central
 control for management and for billing. The problem of decentralized software 
 is addressed by installing WARES on a central server and using remote access to 
 distribute the software to individual offices, as is described in article 
-:ref:`aad-server`. This article addresses the remaining problem of 
-consolidating multiple WARES program datasets on one central server.
+`AAD Server <http://servers.aaltsys.info/install/aadserver>`_. This article 
+addresses the remaining problem of consolidating multiple WARES program datasets 
+on one central server.
 
 Special considerations
 =============================
