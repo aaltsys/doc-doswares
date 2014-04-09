@@ -41,15 +41,15 @@ WARES User System Setup
    +-----------------+----------------+
    | Security level  | WARES Status   |
    +=================+================+
-   | 5               | 1              |
+   | 5               |  1 (reserved)  |
    +-----------------+----------------+
-   | 4               | 2              |
+   | 4               |   2 (posted)   |
    +-----------------+----------------+
-   | 3               | 3              |
+   | 3               |   3 (verified) |
    +-----------------+----------------+
-   | 2               | 4              |
+   | 2               |   4 (billed)   |
    +-----------------+----------------+
-   | 1               | 5              |
+   | 1               |   5 (closed)   |
    +-----------------+----------------+
 
 .. note::
@@ -65,7 +65,8 @@ WARES User System Setup
    dialog, and enter Name :kbd:`SYSPROG`.
 #. Enter the Sysprog password ____________________ when prompted for it, and
    Press :kbd:`<Enter>` to dismiss the message about missing menu ``MENU``.
-#. Enter :kbd:`RUNMENU STARTUPCONFIG <Enter>` at the :guilabel:`Command` window.
+#. Enter :kbd:`RUNMENU STARTUPCONFIG` and :kbd:`<Enter>` at the 
+   :guilabel:`Command` window.
 #. Select :menuselection:`User` from the Config menu, and fill in the options::
    
       Name         {ACCTID}
@@ -86,7 +87,7 @@ WARES User System Setup
    
       COPYROW SYSENV CU_ENVIRONMENT TO: {ACCTID}_ENVIRONMENT (O)
 
-#. Type :kbd:`OFF <Enter>` to quit WARES.
+#. Type :kbd:`OFF` and :kbd:`<Enter>` to quit WARES.
 
 WARES User Logon Setup
 =============================
@@ -108,7 +109,7 @@ WARES User Logon Setup
       Field 4:  {ACCTID} 
       Field 5:  {ACCTID}
 
-#. Press :kbd:`<F9>` to save. Then logoff with :menuselection:`Access/Quit`.
+#. Press :kbd:`<F9>` to save. Then logoff with :menuselection:`Access --> Quit`.
 
 Testing the login
 =============================

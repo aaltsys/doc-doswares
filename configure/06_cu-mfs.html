@@ -125,19 +125,19 @@ fields 3, 4, and 5 would be just the WARES numeric account identifier.</li>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>5</td>
-<td>1</td>
+<td>1 (reserved)</td>
 </tr>
 <tr class="row-odd"><td>4</td>
-<td>2</td>
+<td>2 (posted)</td>
 </tr>
 <tr class="row-even"><td>3</td>
-<td>3</td>
+<td>3 (verified)</td>
 </tr>
 <tr class="row-odd"><td>2</td>
-<td>4</td>
+<td>4 (billed)</td>
 </tr>
 <tr class="row-even"><td>1</td>
-<td>5</td>
+<td>5 (closed)</td>
 </tr>
 </tbody>
 </table>
@@ -162,7 +162,8 @@ dialog, and enter Name <tt class="kbd docutils literal"><span class="pre">SYSPRO
 <li><p class="first">Enter the Sysprog password ____________________ when prompted for it, and
 Press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt> to dismiss the message about missing menu <tt class="docutils literal"><span class="pre">MENU</span></tt>.</p>
 </li>
-<li><p class="first">Enter <tt class="kbd docutils literal"><span class="pre">RUNMENU</span> <span class="pre">STARTUPCONFIG</span> <span class="pre">&lt;Enter&gt;</span></tt> at the <em class="guilabel">Command</em> window.</p>
+<li><p class="first">Enter <tt class="kbd docutils literal"><span class="pre">RUNMENU</span> <span class="pre">STARTUPCONFIG</span></tt> and <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt> at the
+<em class="guilabel">Command</em> window.</p>
 </li>
 <li><p class="first">Select <em class="menuselection">User</em> from the Config menu, and fill in the options:</p>
 <div class="highlight-python"><pre>Name         {ACCTID}
@@ -184,7 +185,7 @@ WARES command line.</p>
 <div class="highlight-python"><pre>COPYROW SYSENV CU_ENVIRONMENT TO: {ACCTID}_ENVIRONMENT (O)</pre>
 </div>
 </li>
-<li><p class="first">Type <tt class="kbd docutils literal"><span class="pre">OFF</span> <span class="pre">&lt;Enter&gt;</span></tt> to quit WARES.</p>
+<li><p class="first">Type <tt class="kbd docutils literal"><span class="pre">OFF</span></tt> and <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt> to quit WARES.</p>
 </li>
 </ol>
 </div>
@@ -212,7 +213,7 @@ Field 4:  {ACCTID}
 Field 5:  {ACCTID}</pre>
 </div>
 </li>
-<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></tt> to save. Then logoff with <em class="menuselection">Access/Quit</em>.</p>
+<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></tt> to save. Then logoff with <em class="menuselection">Access ‣ Quit</em>.</p>
 </li>
 </ol>
 </div>
