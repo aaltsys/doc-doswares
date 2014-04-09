@@ -118,7 +118,7 @@ WARES must be started from a :file:`.pif` file.
 #. Using a WARES workstation, <Right-click> the existing :file:`WARES.pif` 
    desktop icon and choose :menuselection:`Copy`, then <Right-click> a blank 
    spot on the desktop and choose :menuselection:`Paste`.
-#. <Right-click> the copy of :file:`WARES.pif` you just created, and choose
+#. <Right-click> the :file:`Copy of WARES.pif` you just created, and choose
    :menuselection:`Properties`, then select tab :menuselection:`Program`.
 #. The Program tab :guilabel:`cmd:` line will contain text such as 
    :kbd:`WARES.BAT WARES` or :kbd:`ATLAS.BAT USER00`. Replace the word following 
@@ -131,5 +131,6 @@ WARES must be started from a :file:`.pif` file.
 
 #. Display the :menuselection:`Products` window, then press :kbd:`<SF10>` to 
    list products. Only products for this one customer should display. 
-#. When finished viewing, choose Quit from the menu to exit WARES. 
+#. When finished viewing, choose :menuselection:`Quit` from the menu to exit 
+   WARES. 
 
