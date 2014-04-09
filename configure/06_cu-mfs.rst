@@ -4,7 +4,7 @@
  Customer Access
 #############################
 
-.. note:
+.. note::
    Operating system considerations for local and remote access to WARES are not 
    discussed in this article. Remote access to WARES using a secure terminal 
    server is explained at http://servers.aaltsys.info/install/07_aadserver.html.
@@ -34,25 +34,25 @@ following information is important for using this guide:
 WARES User System Setup
 =============================
 
-.. note:
+.. note::
    Step 6 uses Security Level :kbd:`5`, which is equivalent to WARES status 
    :kbd:`1 (reserved)`. Security levels are shown following:
    
-   +-----------------+----------------------+
-   | Security level  | WARES Posting Status |
-   +=================+======================+
-   | 5               | 1                    |
-   +-----------------+----------------------+
-   | 4               | 2                    |
-   +-----------------+----------------------+
-   | 3               | 3                    |
-   +-----------------+----------------------+
-   | 2               | 4                    |
-   +-----------------+----------------------+
-   | 1               | 5                    |
-   +-----------------+----------------------+
+   +-----------------+----------------+
+   | Security level  | WARES Status   |
+   +=================+================+
+   | 5               | 1              |
+   +-----------------+----------------+
+   | 4               | 2              |
+   +-----------------+----------------+
+   | 3               | 3              |
+   +-----------------+----------------+
+   | 2               | 4              |
+   +-----------------+----------------+
+   | 1               | 5              |
+   +-----------------+----------------+
 
-.. note:
+.. note::
    #. Step 7 of the System Setup below imposes a restricted menu on the user. 
       Replace :kbd:`CU_ENVIRONMENT` with :kbd:`WARES_ENVIRONMENT` in the command 
       at this step to use the full system menu. 
