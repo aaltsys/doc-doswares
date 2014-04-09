@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Customer Access &mdash; DOS WARES Configure 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/aaltsys.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DOS WARES Configure 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Alternatives to Run WARES" href="05_alternatives.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="05_alternatives.html" title="Alternatives to Run WARES"
+             accesskey="P">previous</a></li>
+        <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Customer Access</a><ul>
+<li><a class="reference internal" href="#wares-user-system-setup">WARES User System Setup</a></li>
+<li><a class="reference internal" href="#wares-user-logon-setup">WARES User Logon Setup</a></li>
+<li><a class="reference internal" href="#testing-the-login">Testing the login</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="05_alternatives.html"
+                        title="previous chapter">Alternatives to Run WARES</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/06_cu-mfs.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="customer-access">
+<span id="cu-mfs"></span><h1>Customer Access<a class="headerlink" href="#customer-access" title="Permalink to this headline">¶</a></h1>
+<p>WARES includes an extensive user access security security system, which allows
+reliable customer connection to a WARES system while protecting confidentiality
+and security of data. These protections consist of four parts:</p>
+<ul class="simple">
+<li>Operating System user login control from local and remote computers,</li>
+<li>Database-level document access controlled by WARES user account,</li>
+<li>Application menu selection access control by WARES user, and</li>
+<li>Access level and posting process restriction by WARES user.</li>
+</ul>
+<p>The following guide describes the most-restrictive configuration of access
+security, intended for customer access to a single WARES account. Menu
+selections and data entry are restricted to a minimum to prevent confusion. The
+following notes are important for using this guide:</p>
+<ul class="simple">
+<li>A SYSPROG password is required. Call support for this information.</li>
+<li>Data access is restricted by WARES account identifier. Throughout these
+instructions, replace text <strong>{ACCTID}</strong> with an actual WARES account id.</li>
+<li>The <strong>{ACCTID}</strong> used below must start with a letter. If the actual WARES
+account identifier is numeric, then insert a letter in front to make an
+<strong>{ACCTID}</strong> meeting this requirement. Then in the User Logon Setup step 6,
+fields 3, 4, and 5 would be just the WARES numeric account identifier.</li>
+</ul>
+<div class="section" id="wares-user-system-setup">
+<h2>WARES User System Setup<a class="headerlink" href="#wares-user-system-setup" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">At the WARES top menu, press <tt class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></tt> to see <em class="guilabel">Available Menus</em>.
+Select menu <em class="menuselection">STARTUPAPP</em>.</p>
+</li>
+<li><p class="first">Choose <em class="menuselection">Open</em> to display the <em class="guilabel">Open Application</em>
+dialog, and enter Name <tt class="kbd docutils literal"><span class="pre">SYSPROG</span></tt>.</p>
+</li>
+<li><p class="first">Enter the Sysprog password ____________________ when prompted for it, and
+Press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt> to dismiss the message about missing menu <tt class="docutils literal"><span class="pre">MENU</span></tt>.</p>
+</li>
+<li><p class="first">Enter <tt class="kbd docutils literal"><span class="pre">RUNMENU</span> <span class="pre">STARTUPCONFIG</span> <span class="pre">&lt;Enter&gt;</span></tt> at the <em class="guilabel">Command</em> window.</p>
+</li>
+<li><p class="first">Select <em class="menuselection">User</em> from the Config menu, and fill in the options:</p>
+<div class="highlight-python"><pre>Name         {ACCTID}
+Application  WARES
+Password     (leave blank)</pre>
+</div>
+</li>
+<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;F10&gt;</span></tt>, then <tt class="kbd docutils literal"><span class="pre">A</span></tt> to select <em class="menuselection">Advanced</em> from
+the window. Fill in fields:</p>
+<div class="highlight-python"><pre>Startup Command  (leave blank)
+Environment      {ACCTID}
+Security Level   5</pre>
+</div>
+</li>
+<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;F9&gt;,</span> <span class="pre">&lt;F9&gt;,</span> <span class="pre">&lt;Esc&gt;,</span> <span class="pre">&lt;Esc&gt;</span></tt> to save the new user and return to the
+WARES command line.</p>
+</li>
+<li><p class="first">Type the command:</p>
+<div class="highlight-python"><pre>COPYROW SYSENV CU_ENVIRONMENT TO: {ACCTID}_ENVIRONMENT (O)</pre>
+</div>
+</li>
+<li><p class="first">Type <tt class="kbd docutils literal"><span class="pre">OFF</span> <span class="pre">&lt;Enter&gt;</span></tt> to quit WARES.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="wares-user-logon-setup">
+<h2>WARES User Logon Setup<a class="headerlink" href="#wares-user-logon-setup" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Start WARES from a user login, and logon at the supervisor access level.</p>
+</li>
+<li><p class="first">Choose <em class="menuselection">Tools ‣ Define ‣ Controls</em> from the menu.</p>
+</li>
+<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;F10&gt;,</span> <span class="pre">F</span></tt> and select filename <em class="menuselection">UTIL_CONTROLS</em>.</p>
+</li>
+<li><p class="first">Enter the control record key fields:</p>
+<div class="highlight-python"><pre>Type        LOGON
+Identifier  {ACCTID}</pre>
+</div>
+</li>
+<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;Esc&gt;</span></tt> to leave the Logon Setup Control window.</p>
+</li>
+<li><p class="first">Fill in fields 1 through 5 as follows:</p>
+<div class="highlight-python"><pre>Field 1:  WARES
+Field 2:  WARES.DATA (or other volume identifier)
+Field 3:  {ACCTID}
+Field 4:  {ACCTID}
+Field 5:  {ACCTID}</pre>
+</div>
+</li>
+<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></tt> to save. Then logoff with <em class="menuselection">Access/Quit</em>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="testing-the-login">
+<h2>Testing the login<a class="headerlink" href="#testing-the-login" title="Permalink to this headline">¶</a></h2>
+<p>WARES must be started from a <tt class="file docutils literal"><span class="pre">.pif</span></tt> file.</p>
+<ol class="arabic">
+<li><p class="first">Using a WARES workstation, &lt;Right-click&gt; the existing <tt class="file docutils literal"><span class="pre">WARES.pif</span></tt>
+desktop icon and choose <em class="menuselection">Copy</em>, then &lt;Right-click&gt; a blank
+spot on the desktop and choose <em class="menuselection">Paste</em>.</p>
+</li>
+<li><p class="first">&lt;Right-click&gt; the copy of <tt class="file docutils literal"><span class="pre">WARES.pif</span></tt> you just created, and choose
+<em class="menuselection">Properties</em>, Then select tab <em class="menuselection">Program</em>.</p>
+</li>
+<li><p class="first">The Program tab <em class="guilabel">cmd:</em> line will contain text such as
+<tt class="kbd docutils literal"><span class="pre">WARES.BAT</span> <span class="pre">WARES</span></tt> or <tt class="kbd docutils literal"><span class="pre">ATLAS.BAT</span> <span class="pre">USER00</span></tt>. Replace the word following
+<tt class="kbd docutils literal"><span class="pre">.BAT</span></tt> with the :kbd:<a href="#id1"><span class="problematic" id="id2">`</span></a>{ACCTID} for the new WARES user.</p>
+</li>
+<li><p class="first">Click <em class="guilabel">Apply</em> and <em class="guilabel">OK</em> to close the Properties dialog.</p>
+</li>
+<li><p class="first">&lt;Double-click&gt; the copy of <tt class="file docutils literal"><span class="pre">WARES.pif</span></tt> to start the WARES program.</p>
+</li>
+<li><p class="first">A restricted WARES menu for the user should display the following keywords:</p>
+<blockquote>
+<div><p>Products  Receipts  Orders  Shipments  Lots  -Reports  Quit</p>
+</div></blockquote>
+</li>
+<li><p class="first">Display the <em class="menuselection">Products</em> window, then press <tt class="kbd docutils literal"><span class="pre">&lt;SF10&gt;</span></tt> to
+list products. Only products for this one customer should display.</p>
+</li>
+<li><p class="first">When finished viewing, choose Quit from the menu to exit WARES.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="05_alternatives.html" title="Alternatives to Run WARES"
+             >previous</a></li>
+        <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Gerald Lovel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>
