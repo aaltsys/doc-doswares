@@ -5,7 +5,7 @@ Downloads
 #############################
 
 DOS COMMAND FILES
------------------------------
+=============================
 
 :download:`wares.pif <_downloads/WARES.pif>` desktop .pif file to start WARES.
 
