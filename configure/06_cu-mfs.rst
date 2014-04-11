@@ -38,19 +38,19 @@ WARES User System Setup
    Step 6 uses Security Level :kbd:`5`, which is equivalent to WARES status 
    :kbd:`1 (reserved)`. Security levels are shown following:
    
-   +-----------------+----------------+
-   | Security level  | WARES Status   |
-   +=================+================+
-   | 5               |  1 (reserved)  |
-   +-----------------+----------------+
-   | 4               |   2 (posted)   |
-   +-----------------+----------------+
-   | 3               |   3 (verified) |
-   +-----------------+----------------+
-   | 2               |   4 (billed)   |
-   +-----------------+----------------+
-   | 1               |   5 (closed)   |
-   +-----------------+----------------+
+   +-----------------+-----------------+
+   | Security level  | WARES Status    |
+   +=================+=================+
+   | 5               | 1 (reserved)    |
+   +-----------------+-----------------+
+   | 4               | 2 (posted)      |
+   +-----------------+-----------------+
+   | 3               | 3 (verified)    |
+   +-----------------+-----------------+
+   | 2               | 4 (billed)      |
+   +-----------------+-----------------+
+   | 1               | 5 (closed)      |
+   +-----------------+-----------------+
 
 .. note::
    #. Step 7 of the System Setup below imposes a restricted menu on the user. 

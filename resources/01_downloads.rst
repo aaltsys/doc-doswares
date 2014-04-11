@@ -4,10 +4,7 @@
 Downloads
 #############################
 
-WARES
-=============================
-
-DOS Command Files
+DOS COMMAND FILES
 -----------------------------
 
 :download:`wares.pif <_downloads/WARES.pif>` desktop .pif file to start WARES.
@@ -23,6 +20,9 @@ batch file.
 
 :download:`rdpprint.bat <_downloads/rdpprint.bat>` sample file for remote 
 printer sharing.
+
+WARES
+=============================
 
 Update Patches files
 -----------------------------
