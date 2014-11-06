@@ -24,19 +24,23 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="DOS WARES Error Recovery 1.0 documentation" href="index.html" />
-    <link rel="prev" title="DOS WARES Support Documentation" href="index.html" /> 
+    <link rel="next" title="Lot Detail Account Mismatch" href="05_detail-acct.html" />
+    <link rel="prev" title="DOS WARES Support Pages" href="index.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="index.html" title="DOS WARES Support Documentation"
-             accesskey="P">previous</a></li>
+          <a href="05_detail-acct.html" title="Lot Detail Account Mismatch"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="index.html" title="DOS WARES Support Pages"
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">DOS WARES Error Recovery 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -52,13 +56,18 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
-                        title="previous chapter">DOS WARES Support Documentation</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/04_move-data.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+                        title="previous chapter">DOS WARES Support Pages</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="05_detail-acct.html"
+                        title="next chapter">Lot Detail Account Mismatch</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/04_move-data.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -77,7 +86,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="moving-wares-data">
 <span id="move-data"></span><h1>Moving WARES Data<a class="headerlink" href="#moving-wares-data" title="Permalink to this headline">¶</a></h1>
@@ -96,7 +105,7 @@ on one central server.</p>
 <p>When each WARES database at stand-alone WARES copies has a unique identifier
 for its dataset, the separate datasets can be copied directly to separate
 directories on the central WARES server. However, WARES will not work with
-separate volumes which all use volume name <tt class="file docutils literal"><span class="pre">WARES.DATA</span></tt>, and which contain
+separate volumes which all use volume name <code class="file docutils literal"><span class="pre">WARES.DATA</span></code>, and which contain
 identical underlying file names.</p>
 <p>Therefore moving WARES data from separate systems to a consolidated server
 always requires copying whole directories of data files, and may require
@@ -162,8 +171,8 @@ shows example selections for creating these volumes:</p>
 period. If it starts with two, then fix the default as follows:</p>
 <ul class="last simple">
 <li>Go to <em class="menuselection">Tools ‣ Define ‣ Controls</em>.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">[F10],</span> <span class="pre">F,</span> <span class="pre">N</span></tt> and choose to open file <tt class="file docutils literal"><span class="pre">APP_CONTROLS</span></tt>.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">[Shift-F10]</span></tt>, then select <tt class="file docutils literal"><span class="pre">CREATE*DEFAULT</span></tt>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">[F10],</span> <span class="pre">F,</span> <span class="pre">N</span></code> and choose to open file <code class="file docutils literal"><span class="pre">APP_CONTROLS</span></code>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">[Shift-F10]</span></code>, then select <code class="file docutils literal"><span class="pre">CREATE*DEFAULT</span></code>.</li>
 <li>Edit the <em class="guilabel">Source Volume</em> and other entries as required.</li>
 </ul>
 </div>
@@ -171,25 +180,25 @@ period. If it starts with two, then fix the default as follows:</p>
 <p class="first admonition-title">Note</p>
 <p class="last">If desired, the DISPLAY list of WARES volumes may be edited at
 <em class="menuselection">Tools ‣ Define ‣ Popups</em>. Enter <em class="guilabel">Filename</em>
-<tt class="file docutils literal"><span class="pre">APP_POPUPS</span></tt> and <em class="guilabel">Popup Name</em> <tt class="file docutils literal"><span class="pre">ACCESS</span></tt>.</p>
+<code class="file docutils literal"><span class="pre">APP_POPUPS</span></code> and <em class="guilabel">Popup Name</em> <code class="file docutils literal"><span class="pre">ACCESS</span></code>.</p>
 </div>
 </div>
 <div class="section" id="copy-data-onto-server">
 <span id="copy-data"></span><h2>Copy data onto server<a class="headerlink" href="#copy-data-onto-server" title="Permalink to this headline">¶</a></h2>
 <p>Where multiple data sets will be combined on one system, initially copy data to
-<strong>SHARED</strong> drive <tt class="file docutils literal"><span class="pre">S:</span></tt> as described following.</p>
+<strong>SHARED</strong> drive <code class="file docutils literal"><span class="pre">S:</span></code> as described following.</p>
 <ol class="arabic simple">
 <li>At a stand-alone WARES station, copy the ATLAS directory to a USB drive.</li>
 <li>Insert the USB drive into a workstation attached to the server.</li>
 <li>Open the USB drive in a file Explorer window.</li>
-<li>Locate the <tt class="file docutils literal"><span class="pre">WARES</span></tt> folder within the ATLAS (or ATLAS/AREV) directory.</li>
-<li>Click the <tt class="file docutils literal"><span class="pre">WARES</span></tt> folder, and press <tt class="kbd docutils literal"><span class="pre">&lt;Ctrl-C&gt;</span></tt> to copy.</li>
+<li>Locate the <code class="file docutils literal"><span class="pre">WARES</span></code> folder within the ATLAS (or ATLAS/AREV) directory.</li>
+<li>Click the <code class="file docutils literal"><span class="pre">WARES</span></code> folder, and press <code class="kbd docutils literal"><span class="pre">&lt;Ctrl-C&gt;</span></code> to copy.</li>
 <li>At <em class="menuselection">Start ‣ Computer ‣ Network Drives</em>, Double-Click the
-<tt class="file docutils literal"><span class="pre">S:</span></tt> drive to open it.</li>
-<li>Click in the blank area of the <tt class="file docutils literal"><span class="pre">S:</span></tt> window, and press <tt class="kbd docutils literal"><span class="pre">&lt;Ctrl-V&gt;</span></tt>
+<code class="file docutils literal"><span class="pre">S:</span></code> drive to open it.</li>
+<li>Click in the blank area of the <code class="file docutils literal"><span class="pre">S:</span></code> window, and press <code class="kbd docutils literal"><span class="pre">&lt;Ctrl-V&gt;</span></code>
 to paste.</li>
-<li>Click on the pasted <tt class="file docutils literal"><span class="pre">WARES</span></tt> folder, and press <tt class="kbd docutils literal"><span class="pre">F2</span></tt> to rename it to
-reflect its source. That is, rename <tt class="file docutils literal"><span class="pre">WARES</span></tt> to <tt class="file docutils literal"><span class="pre">BLDG_2</span></tt> if it
+<li>Click on the pasted <code class="file docutils literal"><span class="pre">WARES</span></code> folder, and press <code class="kbd docutils literal"><span class="pre">F2</span></code> to rename it to
+reflect its source. That is, rename <code class="file docutils literal"><span class="pre">WARES</span></code> to <code class="file docutils literal"><span class="pre">BLDG_2</span></code> if it
 represents Building 2, and so forth.</li>
 </ol>
 <div class="admonition note">
@@ -197,8 +206,8 @@ represents Building 2, and so forth.</li>
 <p class="last">A note on names: Volume names may be longer, but the WARES program
 requires that filesystem directory or folder names representing volumes be
 no more than 8 characters and include only letters, digits, and underscore or
-hyphen characters. This is why the instructions show name <tt class="kbd docutils literal"><span class="pre">BLDG_2</span></tt>
-instead of the (invalid) directory name <tt class="kbd docutils literal"><span class="pre">Building</span> <span class="pre">2</span></tt>.</p>
+hyphen characters. This is why the instructions show name <code class="kbd docutils literal"><span class="pre">BLDG_2</span></code>
+instead of the (invalid) directory name <code class="kbd docutils literal"><span class="pre">Building</span> <span class="pre">2</span></code>.</p>
 </div>
 <p>Repeat these steps for each data volume to be added to the server.</p>
 </div>
@@ -212,23 +221,23 @@ Generally this would be true either zero or one times per system.</p>
 </div>
 <ol class="arabic simple">
 <li>At a workstation attached to the server, open a file Explorer widow.</li>
-<li>Open drive <tt class="file docutils literal"><span class="pre">W:</span></tt>, then open the <tt class="file docutils literal"><span class="pre">WARES</span></tt> folder on drive
-<tt class="file docutils literal"><span class="pre">W:</span></tt>.</li>
+<li>Open drive <code class="file docutils literal"><span class="pre">W:</span></code>, then open the <code class="file docutils literal"><span class="pre">WARES</span></code> folder on drive
+<code class="file docutils literal"><span class="pre">W:</span></code>.</li>
 <li>Locate the data folder to be replaced, right-click the data folder, and
 choose <em class="menuselection">Rename</em>.</li>
 <li>Change the folder name to indicate that the folder should be deleted later
 (much later).</li>
-<li>Open drive <tt class="file docutils literal"><span class="pre">S:</span></tt>, then open the source folder on drive <tt class="file docutils literal"><span class="pre">S:</span></tt>.</li>
+<li>Open drive <code class="file docutils literal"><span class="pre">S:</span></code>, then open the source folder on drive <code class="file docutils literal"><span class="pre">S:</span></code>.</li>
 <li>Locate the data folder to be copied, right-click the folder, and choose
 <em class="menuselection">Rename</em>.</li>
-<li>Rename the folder to match the old folder name from drive <tt class="file docutils literal"><span class="pre">W:</span></tt>.</li>
+<li>Rename the folder to match the old folder name from drive <code class="file docutils literal"><span class="pre">W:</span></code>.</li>
 <li>Right-click the folder and choose copy.</li>
-<li>Again, open drive <tt class="file docutils literal"><span class="pre">W:</span></tt>, then open the <tt class="file docutils literal"><span class="pre">WARES</span></tt> folder on drive
-<tt class="file docutils literal"><span class="pre">W:</span></tt>.</li>
-<li>Click in a blank space within drive <tt class="file docutils literal"><span class="pre">W:</span></tt>, and press <tt class="kbd docutils literal"><span class="pre">&lt;Ctrl-V&gt;</span></tt> to
-paste the folder from drive <tt class="file docutils literal"><span class="pre">S:</span></tt>.</li>
+<li>Again, open drive <code class="file docutils literal"><span class="pre">W:</span></code>, then open the <code class="file docutils literal"><span class="pre">WARES</span></code> folder on drive
+<code class="file docutils literal"><span class="pre">W:</span></code>.</li>
+<li>Click in a blank space within drive <code class="file docutils literal"><span class="pre">W:</span></code>, and press <code class="kbd docutils literal"><span class="pre">&lt;Ctrl-V&gt;</span></code> to
+paste the folder from drive <code class="file docutils literal"><span class="pre">S:</span></code>.</li>
 <li>Close the file Explorer windows, and start WARES.</li>
-<li>Inside WARES, press <tt class="kbd docutils literal"><span class="pre">[F5]</span></tt> to display a command window. Type commands
+<li>Inside WARES, press <code class="kbd docutils literal"><span class="pre">[F5]</span></code> to display a command window. Type commands
 <strong class="command">REBUILD.IMAGE ALL</strong> and then <strong class="command">OFF</strong>. Then restart WARES.</li>
 </ol>
 </div>
@@ -237,57 +246,57 @@ paste the folder from drive <tt class="file docutils literal"><span class="pre">
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Before using this procedure, copy one or more data sets onto drive
-<tt class="file docutils literal"><span class="pre">S:</span></tt> as <a class="reference internal" href="#copy-data"><em>described previously</em></a>.</p>
+<code class="file docutils literal"><span class="pre">S:</span></code> as <a class="reference internal" href="#copy-data"><em>described previously</em></a>.</p>
 </div>
 <div class="sidebar">
 <p class="first sidebar-title">Adding a volume to the ACCESS popup.</p>
 <img alt="_images/transfer1.png" class="last" src="_images/transfer1.png" />
 </div>
 <p>There are two parts to moving data between volumes by account. In this first
-section, a temporary volume on drive <tt class="file docutils literal"><span class="pre">S:</span></tt> is set as the source of the
+section, a temporary volume on drive <code class="file docutils literal"><span class="pre">S:</span></code> is set as the source of the
 transfer.</p>
 <ol class="arabic">
 <li><p class="first">Open WARES at the supervisor level on a workstation attached to the server.</p>
 </li>
 <li><p class="first">Go to <em class="menuselection">Tools ‣ Define ‣ Popups</em>. Enter
-<em class="guilabel">Filename</em> <tt class="file docutils literal"><span class="pre">APP_POPUPS</span></tt> and <em class="guilabel">Popup Name</em>
-<tt class="file docutils literal"><span class="pre">ACCESS</span></tt>.</p>
+<em class="guilabel">Filename</em> <code class="file docutils literal"><span class="pre">APP_POPUPS</span></code> and <em class="guilabel">Popup Name</em>
+<code class="file docutils literal"><span class="pre">ACCESS</span></code>.</p>
 </li>
-<li><p class="first">Add <em class="guilabel">Code</em> <tt class="kbd docutils literal"><span class="pre">WARES.TRANSFER</span></tt> and <em class="guilabel">Description</em>
-<tt class="kbd docutils literal"><span class="pre">Drive</span> <span class="pre">S:</span> <span class="pre">data</span></tt> at the bottom of the WARES data volumes list, then press
-<tt class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></tt> to save the change.</p>
+<li><p class="first">Add <em class="guilabel">Code</em> <code class="kbd docutils literal"><span class="pre">WARES.TRANSFER</span></code> and <em class="guilabel">Description</em>
+<code class="kbd docutils literal"><span class="pre">Drive</span> <span class="pre">S:</span> <span class="pre">data</span></code> at the bottom of the WARES data volumes list, then press
+<code class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></code> to save the change.</p>
 </li>
 <li><p class="first">Go to <em class="menuselection">Tools ‣ Utilities ‣ Bundle</em>.</p>
 </li>
-<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;Shift-F1&gt;</span></tt> to display the <em class="guilabel">SetVolume</em> window.</p>
+<li><p class="first">Press <code class="kbd docutils literal"><span class="pre">&lt;Shift-F1&gt;</span></code> to display the <em class="guilabel">SetVolume</em> window.</p>
 </li>
-<li><p class="first">Enter <em class="guilabel">Volume Name</em> <tt class="kbd docutils literal"><span class="pre">WARES.TRANSFER</span></tt>.</p>
+<li><p class="first">Enter <em class="guilabel">Volume Name</em> <code class="kbd docutils literal"><span class="pre">WARES.TRANSFER</span></code>.</p>
 </li>
-<li><p class="first">At <em class="guilabel">Data Type</em>, Press <tt class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></tt> and select
+<li><p class="first">At <em class="guilabel">Data Type</em>, Press <code class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></code> and select
 <em class="guilabel">Advanced Revelation (Linear Hash)</em>.</p>
 </li>
 <li><p class="first">Enter a <em class="guilabel">Data Location</em> path, comprised of drive, source directory,
-and data folder in the form <tt class="kbd docutils literal"><span class="pre">S:\{source}\{folder}</span></tt>. See illustration
+and data folder in the form <code class="kbd docutils literal"><span class="pre">S:\{source}\{folder}</span></code>. See illustration
 below.</p>
 </li>
-<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></tt> to save.</p>
+<li><p class="first">Press <code class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></code> to save.</p>
 <img alt="_images/setvolume1.png" src="_images/setvolume1.png" />
 </li>
 </ol>
 <p>Once a source data volume has been named, the Move Data utility will transfer
 accounts between volumes.</p>
 <ol class="arabic simple">
-<li>Go to <em class="menuselection">Tools ‣ General ‣ Move data</em>, and enter <tt class="kbd docutils literal"><span class="pre">Y</span></tt>
+<li>Go to <em class="menuselection">Tools ‣ General ‣ Move data</em>, and enter <code class="kbd docutils literal"><span class="pre">Y</span></code>
 to start the process.</li>
-<li>At <em class="guilabel">Table Name</em>, press <tt class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></tt> and choose <tt class="kbd docutils literal"><span class="pre">ACCOUNTS</span></tt>.</li>
-<li>Under <em class="guilabel">From: Source</em>, press <tt class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></tt> at <em class="guilabel">Volume</em> and
-select <tt class="kbd docutils literal"><span class="pre">WARES.TRANSFER</span></tt>, as setup in the first part of this section.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></tt> at <em class="guilabel">Identifier</em> to select an account to move.</li>
-<li>Under <em class="guilabel">To: Destination</em>, press <tt class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></tt> at <em class="guilabel">Volume</em>
+<li>At <em class="guilabel">Table Name</em>, press <code class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></code> and choose <code class="kbd docutils literal"><span class="pre">ACCOUNTS</span></code>.</li>
+<li>Under <em class="guilabel">From: Source</em>, press <code class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></code> at <em class="guilabel">Volume</em> and
+select <code class="kbd docutils literal"><span class="pre">WARES.TRANSFER</span></code>, as setup in the first part of this section.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></code> at <em class="guilabel">Identifier</em> to select an account to move.</li>
+<li>Under <em class="guilabel">To: Destination</em>, press <code class="kbd docutils literal"><span class="pre">&lt;F2&gt;</span></code> at <em class="guilabel">Volume</em>
 and select the destination data volume.</li>
-<li>At <em class="guilabel">Identifier</em>, press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt> to use the old identifer, or
+<li>At <em class="guilabel">Identifier</em>, press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code> to use the old identifer, or
 enter a new account code.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></tt> to start the data transfer. Expect an account transfer to
+<li>Press <code class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></code> to start the data transfer. Expect an account transfer to
 take at least several minutes.</li>
 </ol>
 <p>Repeat the set of steps immediately above for each account to be transferred. If
@@ -297,11 +306,11 @@ this section for each database.</p>
 should be deleted from the WARES volume list.</p>
 <ol class="arabic simple">
 <li>Go to <em class="menuselection">Tools ‣ Define ‣ Popups</em>.
-Enter <em class="guilabel">Filename</em> <tt class="file docutils literal"><span class="pre">APP_POPUPS</span></tt> and <em class="guilabel">Popup Name</em>
-<tt class="file docutils literal"><span class="pre">ACCESS</span></tt>.</li>
-<li>Press the <tt class="kbd docutils literal"><span class="pre">&lt;Down-cursor&gt;</span></tt> to go to the <em class="guilabel">Code</em> entry line
-<tt class="kbd docutils literal"><span class="pre">WARES.TRANSFER</span></tt>.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">&lt;Ctrl-D&gt;</span></tt> to delete the line, and then <tt class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></tt> to save the
+Enter <em class="guilabel">Filename</em> <code class="file docutils literal"><span class="pre">APP_POPUPS</span></code> and <em class="guilabel">Popup Name</em>
+<code class="file docutils literal"><span class="pre">ACCESS</span></code>.</li>
+<li>Press the <code class="kbd docutils literal"><span class="pre">&lt;Down-cursor&gt;</span></code> to go to the <em class="guilabel">Code</em> entry line
+<code class="kbd docutils literal"><span class="pre">WARES.TRANSFER</span></code>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">&lt;Ctrl-D&gt;</span></code> to delete the line, and then <code class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></code> to save the
 ACCESS popup record.</li>
 </ol>
 </div>
@@ -313,18 +322,21 @@ ACCESS popup record.</li>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="index.html" title="DOS WARES Support Documentation"
-             >previous</a></li>
+          <a href="05_detail-acct.html" title="Lot Detail Account Mismatch"
+             >next</a></li>
+        <li class="right" >
+          <a href="index.html" title="DOS WARES Support Pages"
+             >previous</a> |</li>
         <li><a href="index.html">DOS WARES Error Recovery 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013, Gerald Lovel.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
     </div>
   </body>
 </html>

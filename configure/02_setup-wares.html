@@ -27,8 +27,8 @@
     <link rel="next" title="DOS Programs and NET USE" href="03_net-use.html" />
     <link rel="prev" title="DOS WARES Configuration documentation" href="index.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,7 +40,7 @@
         <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -66,12 +66,14 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="03_net-use.html"
                         title="next chapter">DOS Programs and NET USE</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/02_setup-wares.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/02_setup-wares.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -90,19 +92,19 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="move-wares-to-aaltsys-server">
 <span id="setup-wares"></span><h1>Move WARES to AAltSys Server<a class="headerlink" href="#move-wares-to-aaltsys-server" title="Permalink to this headline">¶</a></h1>
 <p>This basic guide describes moving <strong>WARES</strong> from a single user computer
 or other shared drive onto an AAltSys Server. This guide is appropriate when
-the <strong>WARES</strong> copy is stored within an <tt class="file docutils literal"><span class="pre">ATLAS</span></tt> folder. When finished,
-<strong>WARES</strong> will be accessed from a server share mounted as drive <tt class="file docutils literal"><span class="pre">W:\</span></tt> at
+the <strong>WARES</strong> copy is stored within an <code class="file docutils literal"><span class="pre">ATLAS</span></code> folder. When finished,
+<strong>WARES</strong> will be accessed from a server share mounted as drive <code class="file docutils literal"><span class="pre">W:\</span></code> at
 each workstation.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This guide assumes that WARES patches and support files have been
-added to the <strong>Shared</strong> share or drive <tt class="file docutils literal"><span class="pre">S:\</span></tt>. Make sure these files
+added to the <strong>Shared</strong> share or drive <code class="file docutils literal"><span class="pre">S:\</span></code>. Make sure these files
 are present beforehand.</p>
 </div>
 <div class="section" id="prep-wares-on-the-old-server">
@@ -114,13 +116,13 @@ currently using a proprietary network driver.</p>
 </div>
 <ul class="simple">
 <li>From a workstation, log into <strong>WARES</strong> using the supervisor level password.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">F2</span></tt> to see all menus, choose <em class="menuselection">STARTUP</em>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">F2</span></code> to see all menus, choose <em class="menuselection">STARTUP</em>.</li>
 <li>Select <em class="menuselection">Application ‣ Open</em>, and enter the account
-<tt class="kbd docutils literal"><span class="pre">SYSPROG</span></tt>, password <tt class="kbd docutils literal"><span class="pre">_____________</span></tt>.</li>
+<code class="kbd docutils literal"><span class="pre">SYSPROG</span></code>, password <code class="kbd docutils literal"><span class="pre">_____________</span></code>.</li>
 <li>In the <em class="guilabel">Commands</em> window, enter <strong class="command">RUNMENU LANPACK</strong>.</li>
 <li>Choose <em class="menuselection">Lanpack ‣ Network Type</em> from the menu.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">F2</span></tt> for options, and switch to <em class="guilabel">Microsoft Lan Manager</em>.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">F9</span></tt> to save the setting,  (A message will display saying revboot
+<li>Press <code class="kbd docutils literal"><span class="pre">F2</span></code> for options, and switch to <em class="guilabel">Microsoft Lan Manager</em>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">F9</span></code> to save the setting,  (A message will display saying revboot
 is rebuilt.)</li>
 <li>Choose <em class="menuselection">Exit</em> to exit the application.</li>
 </ul>
@@ -139,11 +141,11 @@ the following instructions specific to the WARES program.</p>
 <li>Set &#8220;read/write&#8221; Access Control permissions on this share for group &#8220;Users&#8221;
 (or group &#8220;fsusers&#8221;).</li>
 <li>At a workstation, test to see that this share is visible.</li>
-<li>Map this share to drive letter <tt class="file docutils literal"><span class="pre">W:</span></tt>.</li>
+<li>Map this share to drive letter <code class="file docutils literal"><span class="pre">W:</span></code>.</li>
 <li>Define the <strong>shared</strong> share as a directory <strong>public</strong> under Zentyal.</li>
 <li>Set &#8220;read/write&#8221; Access Control permissions on this share for group &#8220;fsusers&#8221;
 (or group &#8220;Users&#8221;).</li>
-<li>See that the share is visible, and map the share to drive letter <tt class="file docutils literal"><span class="pre">S:\</span></tt>.</li>
+<li>See that the share is visible, and map the share to drive letter <code class="file docutils literal"><span class="pre">S:\</span></code>.</li>
 </ul>
 </div>
 </div>
@@ -152,37 +154,37 @@ the following instructions specific to the WARES program.</p>
 <div class="section" id="copy-wares-to-the-server">
 <h3>Copy WARES to the Server<a class="headerlink" href="#copy-wares-to-the-server" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>At a workstation, open the saved <tt class="file docutils literal"><span class="pre">ATLAS</span></tt> folder. If there is an
-<tt class="file docutils literal"><span class="pre">AREV</span></tt> folder within <tt class="file docutils literal"><span class="pre">ATLAS</span></tt>, open that folder.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">&lt;Ctrl-A&gt;</span> <span class="pre">&lt;Ctrl-C&gt;</span></tt> to select all files within the open folder.</li>
-<li>Open the drive <tt class="file docutils literal"><span class="pre">W:\</span></tt>, and click in the window.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">Ctrl-V</span></tt> to paste the contents of the folder into drive
-<tt class="file docutils literal"><span class="pre">W:\</span></tt>.</li>
-<li>Create folders <tt class="file docutils literal"><span class="pre">W:\exchange</span></tt> and <tt class="file docutils literal"><span class="pre">W:\export</span></tt>, if missing.</li>
-<li>Copy the contents of <tt class="file docutils literal"><span class="pre">S:\arev</span></tt> to <tt class="file docutils literal"><span class="pre">W\</span></tt> (usually folder
-<tt class="file docutils literal"><span class="pre">patches</span></tt>).</li>
-<li>If <tt class="file docutils literal"><span class="pre">ATLAS</span></tt> contained an <tt class="file docutils literal"><span class="pre">AREV</span></tt> folder, copy any other folders in
-<tt class="file docutils literal"><span class="pre">ATLAS</span></tt> but not included in <tt class="file docutils literal"><span class="pre">AREV</span></tt>, such as <tt class="file docutils literal"><span class="pre">CONNECT</span></tt>, to
-<tt class="file docutils literal"><span class="pre">W:\</span></tt>.</li>
+<li>At a workstation, open the saved <code class="file docutils literal"><span class="pre">ATLAS</span></code> folder. If there is an
+<code class="file docutils literal"><span class="pre">AREV</span></code> folder within <code class="file docutils literal"><span class="pre">ATLAS</span></code>, open that folder.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">&lt;Ctrl-A&gt;</span> <span class="pre">&lt;Ctrl-C&gt;</span></code> to select all files within the open folder.</li>
+<li>Open the drive <code class="file docutils literal"><span class="pre">W:\</span></code>, and click in the window.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Ctrl-V</span></code> to paste the contents of the folder into drive
+<code class="file docutils literal"><span class="pre">W:\</span></code>.</li>
+<li>Create folders <code class="file docutils literal"><span class="pre">W:\exchange</span></code> and <code class="file docutils literal"><span class="pre">W:\export</span></code>, if missing.</li>
+<li>Copy the contents of <code class="file docutils literal"><span class="pre">S:\arev</span></code> to <code class="file docutils literal"><span class="pre">W\</span></code> (usually folder
+<code class="file docutils literal"><span class="pre">patches</span></code>).</li>
+<li>If <code class="file docutils literal"><span class="pre">ATLAS</span></code> contained an <code class="file docutils literal"><span class="pre">AREV</span></code> folder, copy any other folders in
+<code class="file docutils literal"><span class="pre">ATLAS</span></code> but not included in <code class="file docutils literal"><span class="pre">AREV</span></code>, such as <code class="file docutils literal"><span class="pre">CONNECT</span></code>, to
+<code class="file docutils literal"><span class="pre">W:\</span></code>.</li>
 </ul>
 </div>
 <div class="section" id="configure-wares-on-the-server">
 <h3>Configure WARES on the Server<a class="headerlink" href="#configure-wares-on-the-server" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Copy <tt class="file docutils literal"><span class="pre">W:WARES.pif</span></tt> to a workstation desktop.</li>
-<li>Double-click the <tt class="file docutils literal"><span class="pre">WARES.pif</span></tt> icon, and log into WARES at the supervisor
+<li>Copy <code class="file docutils literal"><span class="pre">W:WARES.pif</span></code> to a workstation desktop.</li>
+<li>Double-click the <code class="file docutils literal"><span class="pre">WARES.pif</span></code> icon, and log into WARES at the supervisor
 level.</li>
 <li>Select <em class="menuselection">Tools ‣ Utilities ‣ Bundle</em> from the menu.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">Shift-F1</span></tt> to display the <em class="guilabel">SetVolume</em> window.</li>
-<li>Enter volume name <tt class="file docutils literal"><span class="pre">PATCHES</span></tt>.</li>
-<li>If the data location is <tt class="file docutils literal"><span class="pre">..PATCHES</span></tt>, change it to <tt class="file docutils literal"><span class="pre">.PATCHES</span></tt>
+<li>Press <code class="kbd docutils literal"><span class="pre">Shift-F1</span></code> to display the <em class="guilabel">SetVolume</em> window.</li>
+<li>Enter volume name <code class="file docutils literal"><span class="pre">PATCHES</span></code>.</li>
+<li>If the data location is <code class="file docutils literal"><span class="pre">..PATCHES</span></code>, change it to <code class="file docutils literal"><span class="pre">.PATCHES</span></code>
 (that is, remove one period).</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">F9</span></tt> to save changes and <tt class="kbd docutils literal"><span class="pre">Esc</span></tt> to return to Bundle Records.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">Enter</span></tt> to accept the default volume name, <tt class="file docutils literal"><span class="pre">PATCHES</span></tt>.</li>
-<li>At <em class="guilabel">Filename</em>, press <tt class="kbd docutils literal"><span class="pre">F2</span></tt> and select <em class="guilabel">OTHER</em>.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">Alt-T</span></tt> to move to <em class="guilabel">Actions</em>, press <tt class="kbd docutils literal"><span class="pre">F2</span></tt>, and
+<li>Press <code class="kbd docutils literal"><span class="pre">F9</span></code> to save changes and <code class="kbd docutils literal"><span class="pre">Esc</span></code> to return to Bundle Records.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Enter</span></code> to accept the default volume name, <code class="file docutils literal"><span class="pre">PATCHES</span></code>.</li>
+<li>At <em class="guilabel">Filename</em>, press <code class="kbd docutils literal"><span class="pre">F2</span></code> and select <em class="guilabel">OTHER</em>.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">Alt-T</span></code> to move to <em class="guilabel">Actions</em>, press <code class="kbd docutils literal"><span class="pre">F2</span></code>, and
 choose <em class="guilabel">RESTORE</em>.</li>
-<li>Press <tt class="kbd docutils literal"><span class="pre">F9</span></tt> to restore the WARES update.</li>
+<li>Press <code class="kbd docutils literal"><span class="pre">F9</span></code> to restore the WARES update.</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -206,7 +208,7 @@ described at <a class="reference internal" href="03_net-use.html#netuse"><em>DOS
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -218,9 +220,9 @@ described at <a class="reference internal" href="03_net-use.html#netuse"><em>DOS
         <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013, Gerald Lovel.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
     </div>
   </body>
 </html>

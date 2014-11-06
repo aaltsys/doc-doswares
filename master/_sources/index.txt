@@ -21,6 +21,9 @@ Contents:
 
 +  Upgrade files and instructions to convert from version 4.34B to 4.50E
 
+Resources
+-----------------------------
+
 :ref:`resources:downloads`
 
 This page consolidates the various DOS support files for WARES, including:
@@ -30,8 +33,15 @@ This page consolidates the various DOS support files for WARES, including:
 +  A demo copy of WARES Warehousing
 +  EDI standards table data
 
+Support Documents
+-----------------------------
+
+For discussions of specific problems, see :ref:`support:index`.
+
 .. toctree::
    :maxdepth: 0
+
+---
 
 :ref:`search`
 

@@ -27,8 +27,8 @@
     <link rel="next" title="Customer Access" href="06_cu-mfs.html" />
     <link rel="prev" title="DOS Programs and EMS" href="04_dos-ems.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,7 +40,7 @@
         <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -62,12 +62,14 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="06_cu-mfs.html"
                         title="next chapter">Customer Access</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/05_alternatives.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/05_alternatives.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -86,7 +88,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="alternatives-to-run-wares">
 <span id="alternatives"></span><h1>Alternatives to Run WARES<a class="headerlink" href="#alternatives-to-run-wares" title="Permalink to this headline">¶</a></h1>
@@ -111,10 +113,10 @@ printers to virtual LPT devices. See <a class="reference internal" href="03_net-
 <p>DOSBox with printer support requires an extension such as DOSBox SVN-Daum. A
 download link for a known-working version is installed as follows:</p>
 <ul class="simple">
-<li>download <a class="reference download internal" href="_downloads/DOSBox_daum-win32-installer.exe"><tt class="xref download docutils literal"><span class="pre">DOSBox_SVN_daum</span></tt></a>.
-Windows will probably save this file in your <tt class="file docutils literal"><span class="pre">Downloads</span></tt> folder</li>
-<li>Open your <tt class="file docutils literal"><span class="pre">Downloads</span></tt> folder in Windows Explorer</li>
-<li>Double-Click the installer file <tt class="file docutils literal"><span class="pre">DOSBox_daum-win32-installer.exe</span></tt></li>
+<li>download <a class="reference download internal" href="_downloads/DOSBox_daum-win32-installer.exe"><code class="xref download docutils literal"><span class="pre">DOSBox_SVN_daum</span></code></a>.
+Windows will probably save this file in your <code class="file docutils literal"><span class="pre">Downloads</span></code> folder</li>
+<li>Open your <code class="file docutils literal"><span class="pre">Downloads</span></code> folder in Windows Explorer</li>
+<li>Double-Click the installer file <code class="file docutils literal"><span class="pre">DOSBox_daum-win32-installer.exe</span></code></li>
 <li>In the <em class="guilabel">User Account Control</em> panel, click <em class="guilabel">Yes</em> to run
 the installer (for Windows XP, click <em class="guilabel">Run</em> in the
 <em class="guilabel">Security Warning</em>)</li>
@@ -123,7 +125,7 @@ the installer (for Windows XP, click <em class="guilabel">Run</em> in the
 GNU public license terms, and <em class="guilabel">Next</em> to continue</li>
 <li>Click <em class="guilabel">Next</em> at <em class="guilabel">Before Installation</em> Information panel</li>
 <li>At the <em class="guilabel">Destination Folder</em>, just click <em class="guilabel">Install</em> to
-use the default location <tt class="file docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\DOSBox</span> <span class="pre">SVN-daum</span></tt></li>
+use the default location <code class="file docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files\DOSBox</span> <span class="pre">SVN-daum</span></code></li>
 <li>Click <em class="guilabel">OK</em> to exit the installer when finished.</li>
 </ul>
 </div>
@@ -145,7 +147,7 @@ mappings. This configuration is installed in the next section.</p>
 </div>
 <div class="sidebar">
 <p class="first sidebar-title">DOSBox WARES Configuration</p>
-<div class="last highlight-python"><pre>[sdl]
+<div class="last highlight-python"><div class="highlight"><pre>[sdl]
 windowresolution=960x600
 output=overlay
 autolock=false
@@ -167,74 +169,79 @@ parallel2=file dev:lpt2
 [autoexec]
 mount w {path}
 w:
-wares wares</pre>
+wares wares
+</pre></div>
 </div>
 </div>
 <p>Before configuring <strong class="program">DOSBox</strong>, determine the directory path for the
 program to be run. Then in the following instructions, change the token
-<tt class="kbd docutils literal"><span class="pre">{path}</span></tt> to the actual directory path. For example, if program WARES is
-started from directory <tt class="file docutils literal"><span class="pre">C:\ATLAS\</span></tt>, replace the line
-<tt class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></tt> with the text <tt class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">C:\ATLAS\</span></tt>. DOSBox
+<code class="kbd docutils literal"><span class="pre">{path}</span></code> to the actual directory path. For example, if program WARES is
+started from directory <code class="file docutils literal"><span class="pre">C:\ATLAS\</span></code>, replace the line
+<code class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></code> with the text <code class="kbd docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">C:\ATLAS\</span></code>. DOSBox
 requires an absolute path including the drive letter for this entry.</p>
 <ul class="simple">
-<li>Download the following files to your <tt class="file docutils literal"><span class="pre">Downloads</span></tt> folder:</li>
+<li>Download the following files to your <code class="file docutils literal"><span class="pre">Downloads</span></code> folder:</li>
 </ul>
 <blockquote>
 <div><div class="line-block">
-<div class="line"><a class="reference download internal" href="_downloads/dosbox-wares.conf"><tt class="xref download docutils literal"><span class="pre">dosbox-wares.conf</span></tt></a></div>
-<div class="line"><a class="reference download internal" href="_downloads/dosbox-wares.map"><tt class="xref download docutils literal"><span class="pre">dosbox-wares.map</span></tt></a></div>
+<div class="line"><a class="reference download internal" href="_downloads/dosbox-wares.conf"><code class="xref download docutils literal"><span class="pre">dosbox-wares.conf</span></code></a></div>
+<div class="line"><a class="reference download internal" href="_downloads/dosbox-wares.map"><code class="xref download docutils literal"><span class="pre">dosbox-wares.map</span></code></a></div>
 </div>
 </div></blockquote>
 <ul>
-<li><p class="first">At the task bar <em class="guilabel">Start</em> menu, type <tt class="kbd docutils literal"><span class="pre">cmd</span> <span class="pre">&lt;Enter&gt;</span></tt> in the search
-box. (For Windows XP, type <tt class="kbd docutils literal"><span class="pre">cmd</span> <span class="pre">&lt;Enter&gt;</span></tt> in the <em class="guilabel">Run</em> box.)
+<li><p class="first">At the task bar <em class="guilabel">Start</em> menu, type <code class="kbd docutils literal"><span class="pre">cmd</span> <span class="pre">&lt;Enter&gt;</span></code> in the search
+box. (For Windows XP, type <code class="kbd docutils literal"><span class="pre">cmd</span> <span class="pre">&lt;Enter&gt;</span></code> in the <em class="guilabel">Run</em> box.)
 A <strong class="command">cmd</strong> console window should appear.</p>
 </li>
 <li><p class="first">At the console command line, copy the files with the following commands
 (Windows 7):</p>
-<div class="highlight-python"><pre>md AppData\Local\DOSBox
+<div class="highlight-python"><div class="highlight"><pre>md AppData\Local\DOSBox
 copy Downloads\dosbox-wares.* appdata\local\dosbox\
-edit AppData\Local\DOSBox\dosbox-wares.conf</pre>
+edit AppData\Local\DOSBox\dosbox-wares.conf
+</pre></div>
 </div>
 </li>
-<li><p class="first">In the text editor, change the configuration line <tt class="docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></tt> to
+<li><p class="first">In the text editor, change the configuration line <code class="docutils literal"><span class="pre">mount</span> <span class="pre">w</span> <span class="pre">{path}</span></code> to
 represent the path to your WARES files.</p>
 </li>
-<li><p class="first">Press <tt class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">S</span></tt> to save, then <tt class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">X</span></tt> to exit the editor</p>
+<li><p class="first">Press <code class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">S</span></code> to save, then <code class="kbd docutils literal"><span class="pre">&lt;Alt-F&gt;,</span> <span class="pre">X</span></code> to exit the editor</p>
 </li>
-<li><p class="first">Type <tt class="kbd docutils literal"><span class="pre">exit</span> <span class="pre">&lt;Enter&gt;</span></tt> to close the command window.</p>
+<li><p class="first">Type <code class="kbd docutils literal"><span class="pre">exit</span> <span class="pre">&lt;Enter&gt;</span></code> to close the command window.</p>
 </li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>The commands given above are for Windows 7. Correct commands for
 Windows 8 are unknown. Commands for Windows XP would be:</p>
-<div class="last highlight-python"><pre>copy "My Documents\Downloads\dosbox-wares.*" "\Program Files\DOSBox SVN-Daum\"
-edit "\Program Files\DOSBox SVN-Daum\dosbox-wares.conf"</pre>
+<div class="last highlight-python"><div class="highlight"><pre>copy &quot;My Documents\Downloads\dosbox-wares.*&quot; &quot;\Program Files\DOSBox SVN-Daum\&quot;
+edit &quot;\Program Files\DOSBox SVN-Daum\dosbox-wares.conf&quot;
+</pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="configure-desktop-icon">
 <h3>Configure desktop icon<a class="headerlink" href="#configure-desktop-icon" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p class="first">On the desktop, <tt class="kbd docutils literal"><span class="pre">&lt;Right-Click&gt;</span></tt> the <em class="guilabel">DOSBox SVN-daum</em> icon and
+<li><p class="first">On the desktop, <code class="kbd docutils literal"><span class="pre">&lt;Right-Click&gt;</span></code> the <em class="guilabel">DOSBox SVN-daum</em> icon and
 choose menu option <em class="menuselection">Properties</em></p>
 </li>
 <li><p class="first">Change the Shortcut <em class="guilabel">Target</em> text to read as follows:</p>
-<div class="highlight-python"><pre>"C:\Program Files\DOSBox SVN-Daum\DOSBox.exe" -conf "%userprofile%\AppData\Local\DOSBox\dosbox-wares.conf" -noconsole</pre>
+<div class="highlight-python"><div class="highlight"><pre>&quot;C:\Program Files\DOSBox SVN-Daum\DOSBox.exe&quot; -conf &quot;%userprofile%\AppData\Local\DOSBox\dosbox-wares.conf&quot; -noconsole
+</pre></div>
 </div>
 </li>
 <li><p class="first">Click <em class="guilabel">Apply</em> and <em class="guilabel">OK</em> to save the changes</p>
 </li>
 <li><p class="first">Test the DOSBox configuration by double-clicking the desktop icon.</p>
 </li>
-<li><p class="first">After quitting the program, type <tt class="kbd docutils literal"><span class="pre">EXIT</span></tt> to close the DOSBox window.</p>
+<li><p class="first">After quitting the program, type <code class="kbd docutils literal"><span class="pre">EXIT</span></code> to close the DOSBox window.</p>
 </li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>On Windows XP, the correct Shortcut Target text would be:</p>
-<div class="last highlight-python"><pre>"C:\Program Files\DOSBox SVN-Daum\DOSBox.exe -conf "dosbox-wares.conf" -noconsole</pre>
+<div class="last highlight-python"><div class="highlight"><pre>&quot;C:\Program Files\DOSBox SVN-Daum\DOSBox.exe -conf &quot;dosbox-wares.conf&quot; -noconsole
+</pre></div>
 </div>
 </div>
 <div class="admonition note">
@@ -246,7 +253,7 @@ desktop and over rdp.</p>
 <p>(3) DOSBox does not have native support for NETBIOS record locking as is
 required for multiuser operation.</p>
 <p class="last">(4) With Windows 7, DOSBox local configuration files are saved at:
-<tt class="file docutils literal"><span class="pre">%userprofile%\appdata\local\dosbox\</span></tt>.</p>
+<code class="file docutils literal"><span class="pre">%userprofile%\appdata\local\dosbox\</span></code>.</p>
 </div>
 </div>
 </div>
@@ -258,7 +265,7 @@ required for multiuser operation.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -270,9 +277,9 @@ required for multiuser operation.</p>
         <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013, Gerald Lovel.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
     </div>
   </body>
 </html>

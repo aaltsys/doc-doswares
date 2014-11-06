@@ -26,8 +26,8 @@
     <link rel="top" title="DOS WARES Updates 1.0 documentation" href="index.html" />
     <link rel="prev" title="DOS WARES Updates documentation" href="index.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -36,7 +36,7 @@
         <li><a href="index.html">DOS WARES Updates 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -73,12 +73,14 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
                         title="previous chapter">DOS WARES Updates documentation</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/01_434B-450E.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/01_434B-450E.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -97,7 +99,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="wares-4-34b-to-4-50e-upgrade">
 <span id="upd-450e"></span><h1>WARES 4.34B to 4.50E Upgrade<a class="headerlink" href="#wares-4-34b-to-4-50e-upgrade" title="Permalink to this headline">¶</a></h1>
@@ -133,7 +135,7 @@ transactions with charges.</p>
 <div class="section" id="custom-reports">
 <h3>Custom reports<a class="headerlink" href="#custom-reports" title="Permalink to this headline">¶</a></h3>
 <p>At <em class="menuselection">Tools ‣ Reports ‣ Control Reports</em>, Press
-<tt class="kbd docutils literal"><span class="pre">[Shift-F10]</span></tt> to see a list of customized reports. Reports which use files
+<code class="kbd docutils literal"><span class="pre">[Shift-F10]</span></code> to see a list of customized reports. Reports which use files
 CHARGES, INVOICES, PAYMENTS, PROFILES or RATES will have to be redesigned or
 discarded after this update. PRODUCTS reports may require redesign. New reports
 must be created wherever a customer requires special auditing for billing.</p>
@@ -147,7 +149,7 @@ do not work after this update, refer to help note 90153 for instructions.</p>
 </div>
 <div class="section" id="window-menu-keys">
 <h3>Window menu keys<a class="headerlink" href="#window-menu-keys" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="kbd docutils literal"><span class="pre">[F10]</span></tt> window menu has been enhanced to include every key commonly
+<p>The <code class="kbd docutils literal"><span class="pre">[F10]</span></code> window menu has been enhanced to include every key commonly
 required in data entry or review. Every window uses the same menu, except for
 window-specific softkeys and relations. The following keys changed:</p>
 <table border="1" class="bd docutils">
@@ -243,10 +245,10 @@ window-specific softkeys and relations. The following keys changed:</p>
 <div class="section" id="download-and-extract-update">
 <h2>Download and Extract Update<a class="headerlink" href="#download-and-extract-update" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Create an empty folder at the root of your local drive, <tt class="file docutils literal"><span class="pre">C:\TEMP</span></tt>.</li>
-<li><a class="reference download internal" href="_downloads/upw_450.zip"><tt class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">update</span></tt></a>.</li>
-<li>&lt;Right-Click&gt; file <tt class="file docutils literal"><span class="pre">upw_450.zip</span></tt>, and extract the archive contents to
-folder <tt class="file docutils literal"><span class="pre">C:\TEMP</span></tt>.</li>
+<li>Create an empty folder at the root of your local drive, <code class="file docutils literal"><span class="pre">C:\TEMP</span></code>.</li>
+<li><a class="reference download internal" href="_downloads/upw_450.zip"><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">the</span> <span class="pre">update</span></code></a>.</li>
+<li>&lt;Right-Click&gt; file <code class="file docutils literal"><span class="pre">upw_450.zip</span></code>, and extract the archive contents to
+folder <code class="file docutils literal"><span class="pre">C:\TEMP</span></code>.</li>
 </ol>
 </div>
 <div class="section" id="running-module-updates">
@@ -256,14 +258,14 @@ each of the modules AREV, TOOLS, CONTACTS, EXCHANGE, and WARES, perform the
 following sequence of steps:</p>
 <ol class="arabic simple">
 <li>Start WARES and login using the supervisor level password.</li>
-<li>At <em class="menuselection">Tools ‣ Actions ‣ Update</em>, press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt> to
+<li>At <em class="menuselection">Tools ‣ Actions ‣ Update</em>, press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code> to
 start the updater.</li>
 <li>When asked for the drive and path to the update files, enter
-<tt class="file docutils literal"><span class="pre">C:\TEMP</span></tt>.</li>
+<code class="file docutils literal"><span class="pre">C:\TEMP</span></code>.</li>
 <li>From the popup list of available update sets, select and run updates in the
 sequence AREV, TOOLS, CONTACTS, EXCHANGE, and WARES.</li>
-<li>Highlight an update to perform and press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt>. When asked to
-install the update, type <tt class="kbd docutils literal"><span class="pre">Y</span></tt> and press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt>.</li>
+<li>Highlight an update to perform and press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code>. When asked to
+install the update, type <code class="kbd docutils literal"><span class="pre">Y</span></code> and press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code>.</li>
 <li>Your WARES session will terminate when each update finishes.</li>
 </ol>
 </div>
@@ -275,19 +277,20 @@ install the update, type <tt class="kbd docutils literal"><span class="pre">Y</s
 ignore this message and continue. Instead, follow the directions below. You
 may need technical assistance with these instructions. Call if you are unsure
 how to proceed.</p>
-<div class="last highlight-python"><pre>┌─[FS290]────────────────────────────────────────────────────────┐
+<div class="last highlight-python"><div class="highlight"><pre>┌─[FS290]────────────────────────────────────────────────────────┐
 │                                                                │
 │           You cannot write or delete records because           │
 │         Quick/Rightdex for this file does not use the          │
-│  "DEFAULT" language set specified in the current environment.  │
+│  &quot;DEFAULT&quot; language set specified in the current environment.  │
 │                                                                │
 │                            Either:                             │
 │                                                                │
-│                  Reload the "-" language set                   │
+│                  Reload the &quot;-&quot; language set                   │
 │                             - or -                             │
 │                 Re-install the Quick/Rightdex.                 │
 │                                                                │
-└────────────────────────────────────────────────────────────────┘</pre>
+└────────────────────────────────────────────────────────────────┘
+</pre></div>
 </div>
 </div>
 <p>While this message is displayed, perform these steps:</p>
@@ -318,9 +321,9 @@ how to proceed.</p>
 </tr>
 <tr class="row-odd"><td>&lt;type&gt;</td>
 <td><div class="first last line-block">
-<div class="line"><tt class="kbd docutils literal"><span class="pre">AW</span> <span class="pre">UTIL_WINDOWS</span> <span class="pre">MAKEINDEX</span></tt>, press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt></div>
+<div class="line"><code class="kbd docutils literal"><span class="pre">AW</span> <span class="pre">UTIL_WINDOWS</span> <span class="pre">MAKEINDEX</span></code>, press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code></div>
 <div class="line">(command to display the Make Indexes window.)</div>
-<div class="line">(WARES versions before 4.30 type <tt class="kbd docutils literal"><span class="pre">AW</span> <span class="pre">MAKEINDEX</span></tt>)</div>
+<div class="line">(WARES versions before 4.30 type <code class="kbd docutils literal"><span class="pre">AW</span> <span class="pre">MAKEINDEX</span></code>)</div>
 </div>
 </td>
 </tr>
@@ -329,7 +332,7 @@ how to proceed.</p>
 </tr>
 <tr class="row-odd"><td>&lt;type&gt;</td>
 <td><div class="first last line-block">
-<div class="line"><tt class="kbd docutils literal"><span class="pre">DICT.filename</span></tt>, press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span> <span class="pre">&lt;Enter&gt;</span></tt></div>
+<div class="line"><code class="kbd docutils literal"><span class="pre">DICT.filename</span></code>, press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span> <span class="pre">&lt;Enter&gt;</span></code></div>
 <div class="line">(Type the DICT.filename in the Get Filename window,</div>
 <div class="line">Press &lt;Enter&gt; to accept the filename,</div>
 <div class="line">Press &lt;Enter&gt; for &#8220;Yes&#8221; to remove the Quickdex.)</div>
@@ -341,7 +344,7 @@ how to proceed.</p>
 </tr>
 <tr class="row-odd"><td>&lt;type&gt;</td>
 <td><div class="first last line-block">
-<div class="line"><tt class="kbd docutils literal"><span class="pre">DICT.filename</span></tt>, press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span> <span class="pre">&lt;Enter&gt;</span> <span class="pre">&lt;Enter&gt;</span></tt></div>
+<div class="line"><code class="kbd docutils literal"><span class="pre">DICT.filename</span></code>, press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span> <span class="pre">&lt;Enter&gt;</span> <span class="pre">&lt;Enter&gt;</span></code></div>
 <div class="line">(Type the DICT.filename in the Get Filename window,</div>
 <div class="line">Press &lt;Enter&gt; to accept the filename,</div>
 <div class="line">Press &lt;Enter&gt; for &#8220;Q&#8221; to install a Quickdex,</div>
@@ -390,10 +393,10 @@ how to proceed.</p>
 <td>Press [F5] to display a Command window</td>
 </tr>
 <tr class="row-odd"><td>&lt;type&gt;</td>
-<td><tt class="kbd docutils literal"><span class="pre">REBUILD.IMAGE</span> <span class="pre">ALL</span></tt>, press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt></td>
+<td><code class="kbd docutils literal"><span class="pre">REBUILD.IMAGE</span> <span class="pre">ALL</span></code>, press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code></td>
 </tr>
 <tr class="row-even"><td>&lt;type&gt;</td>
-<td><tt class="kbd docutils literal"><span class="pre">OFF</span></tt>, press <tt class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></tt></td>
+<td><code class="kbd docutils literal"><span class="pre">OFF</span></code>, press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code></td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
 <td>Restart WARES and perform the update</td>
@@ -435,15 +438,15 @@ information about program changes.</p>
 <p>Choose APP_NOTE.HELP.TOC from menu selection <em class="menuselection">Access ‣ =Notes</em>
 to view or print a Table of Contents for Help Notes.</p>
 <p>To print a specific help note, go to <em class="menuselection">Contacts ‣ Notes</em>. Then
-enter the number of the desired note, and press <tt class="kbd docutils literal"><span class="pre">[SF9]</span></tt> to print out the
+enter the number of the desired note, and press <code class="kbd docutils literal"><span class="pre">[SF9]</span></code> to print out the
 help document.</p>
-<p>To display notes related to an entry window, press <tt class="kbd docutils literal"><span class="pre">[F10],H,N</span></tt> in the
-window. Navigate between notes with <tt class="kbd docutils literal"><span class="pre">[Alt-F]</span></tt> and <tt class="kbd docutils literal"><span class="pre">[Alt-B]</span></tt>, or view
-a list of notes with <tt class="kbd docutils literal"><span class="pre">[Shift-F10]</span></tt>.</p>
+<p>To display notes related to an entry window, press <code class="kbd docutils literal"><span class="pre">[F10],H,N</span></code> in the
+window. Navigate between notes with <code class="kbd docutils literal"><span class="pre">[Alt-F]</span></code> and <code class="kbd docutils literal"><span class="pre">[Alt-B]</span></code>, or view
+a list of notes with <code class="kbd docutils literal"><span class="pre">[Shift-F10]</span></code>.</p>
 <p>View or print program change notes from menu <em class="menuselection">Access ‣ =Notes</em>.
-Choose report APP_NOTE.RESOLUTIONS, enter the date range <tt class="kbd docutils literal"><span class="pre">03/01/01</span></tt>
-through <tt class="kbd docutils literal"><span class="pre">04/15/03</span></tt> for notes related to this release, and enter the
-employee code <tt class="kbd docutils literal"><span class="pre">PN</span></tt> for Programmer Notes.</p>
+Choose report APP_NOTE.RESOLUTIONS, enter the date range <code class="kbd docutils literal"><span class="pre">03/01/01</span></code>
+through <code class="kbd docutils literal"><span class="pre">04/15/03</span></code> for notes related to this release, and enter the
+employee code <code class="kbd docutils literal"><span class="pre">PN</span></code> for Programmer Notes.</p>
 </div>
 <div class="section" id="e-version-new-features">
 <h2>4.50E Version New Features<a class="headerlink" href="#e-version-new-features" title="Permalink to this headline">¶</a></h2>
@@ -854,7 +857,7 @@ employee code <tt class="kbd docutils literal"><span class="pre">PN</span></tt> 
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -863,9 +866,9 @@ employee code <tt class="kbd docutils literal"><span class="pre">PN</span></tt> 
         <li><a href="index.html">DOS WARES Updates 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2013, Gerald Lovel.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
     </div>
   </body>
 </html>
