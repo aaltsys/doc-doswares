@@ -99,9 +99,9 @@ folder tabs, and one of them is :guilabel:`Memory`, then you have a
 EMS turned off in .pif
 -----------------------------
 
-<Right-click> your :file:`.pif` start file, choose :guilabel:`Properties`, and  
+<Right-click> your :file:`.pif` start file, choose :guilabel:`Properties`, and 
 display the :guilabel:`Memory` tab. If the :guilabel:`Expanded (EMS) Memory` 
-total is set to :option:`None`, change it to :option:`Auto`.
+total is set to :guilabel:`None`, change it to :guilabel:`Auto`.
 
 EMS blocked by virus scan
 -----------------------------
