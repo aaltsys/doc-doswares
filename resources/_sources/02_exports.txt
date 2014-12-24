@@ -10,37 +10,11 @@ at menu selection :menuselection:`eXchange --> Export-Import --> Exports`.
 
 Three recent improvements to the WARES export mapping capability include:
 
-*  the ability to write transactions in either YAML or JSON format,
-*  creating export files by transaction using WARES record keys, and
-*  creating transaction export files automatically using database triggers.
+*  creating export files by transaction using WARES record keys, 
+*  creating transaction export files automatically using database triggers, and
+*  the ability to write transactions in JSON format.
 
 Each of these new capabilities is documented following.
-
-JSON and YAML Formats
-=============================
-
-The new JSON and YAML formats are enabled by control header settings for
-delimiters and preprocess, and special control and value entries in the export 
-map details. The following table shows recommended settings for JSON and YAML 
-export headings.
-
-+--------------+---------+---------+------------------+
-| Entry        | JSON    | YAML    | Char             |
-+==============+=========+=========+==================+
-| Delim Table  | 0A      | 0A      | \n (NL)          |
-+--------------+---------+---------+------------------+
-| Delim Row    | 0A      | 0A      | \n (NL)          |
-+--------------+---------+---------+------------------+
-| Delim Column | 2C      | 2C      | , (comma)        |
-+--------------+---------+---------+------------------+
-| Delim Value  | 3A20    | 3A20    | : (colon/space)  |
-+--------------+---------+---------+------------------+
-| Delim Quote  | 22      |         | " (quote)        |
-+--------------+---------+---------+------------------+
-| Preprocess   | JSON,32 | YAML,9  | 32=space, 9=tab  |
-+--------------+---------+---------+------------------+
-
-
 
 Transaction Exports
 =============================
@@ -54,7 +28,8 @@ record key will be used as a filename during the export.
 
 Due to the similarity of Report and Process functionality in WARES, transaction 
 export commands may be executed as report forms, callable from the report group 
-popups within windows and from menus.
+popups within windows and from menus. This allows records to be exported 
+selectively as a step in data entry.
 
 Database Trigger Exports
 =============================
@@ -73,5 +48,112 @@ system actions. Implement an automatic transaction export as follows.
    control identifier in the :guilabel:`Branch` column. 
 #. Fill in the :guilabel:`Test`, :guilabel:`Value`, and :guilabel:`Occur` 
    entries to determine the rule or condition which will trigger the export.
-   For example, *Test=***GT**, *Value=***1**, *Occur=***Always* will write 
-   posted transactions and update the exported file with each change.
+   For example, *Test=GT*, *Value=1*, *Occur=Always* will write posted 
+   transactions and update the exported file with each change.
+
+JSON and YAML Formats
+=============================
+
+JSON encoding is enabled by control header settings for delimiters and 
+preprocess, and special control and value entries in the export map details. 
+
+Export map heading settings
+-----------------------------
+
+The following table lists recommended settings for JSON in the export
+map heading fields. 
+
++--------------+-----------+------------------+
+| Entry        | JSON      | Char             |
++==============+===========+==================+
+| Delim Table  | (blank)   |                  |
++--------------+-----------+------------------+
+| Delim Row    | (blank)   |                  |
++--------------+-----------+------------------+
+| Delim Column | 0A        | \\n (NL)         |
++--------------+-----------+------------------+
+| Delim Value  | 3A20      | : (colon/space)  |
++--------------+-----------+------------------+
+| Delim Quote  | 22        | " (quote)        |
++--------------+-----------+------------------+
+| Preprocess   | JSON,32,2 | 32=space, 9=tab  |
++--------------+-----------+------------------+
+
+Export map detail entries
+-----------------------------
+
+There are just seven entry patterns for a JSON encoding. Three of these produce 
+opening or closing brackets "[]" and braces "{}", and two more patterns provide
+labeled brace and bracket lines. The remaining two lines are the standard data 
+lines for static values or data values, but with name labels in the Heading 
+column.
+
++---------+---------+-------+--------+---------+--------+-----------------------------+
+| Heading | Control | Value | Field  | Command | Format | Result                      |
++=========+=========+=======+========+=========+========+=============================+
+| (blank) | JSON    | {     |         (blank)           | { ; \n ; indent +=          |
++---------+---------+-------+--------+---------+--------+-----------------------------+
+| label   | JSON    | {     |         (blank)           | "label": { ; \n, indent +=  |
++---------+---------+-------+--------+---------+--------+-----------------------------+
+| label   | JSON    | [     |         (blank)           | "label": [ ; \n, indent +=  |
++---------+---------+-------+--------+---------+--------+-----------------------------+
+| label   |         | value |         (blank)           | "label": "value", \n        |
++---------+---------+-------+--------+---------+--------+-----------------------------+
+| label   |         |       | name   | command | [JSON] | "label": "@ANS", \n         |
++---------+---------+-------+--------+---------+--------+-----------------------------+
+|         | JSON    | ]     |         (blank)           | ], ; indent -=              |
++---------+---------+-------+--------+---------+--------+-----------------------------+
+|         | JSON    | }     |         (blank)           | }, ; indent -=              |
++---------+---------+-------+--------+---------+--------+-----------------------------+
+
+Character representations
+-----------------------------
+
+The following characters will be escaped with preceding back-slashes when 
+embedded in JSON data:
+
++------+------------------+---------+------+
+| Char | Description      | Hex     | Dec  |
++======+==================+=========+======+
+| \\   | reverse solidus  | \\5C\\  |  92  |
++------+------------------+---------+------+
+| \/   | solidus (slash)  | \\2F\\  |  47  |
++------+------------------+---------+------+
+| \"   | quotation mark   | \\22\\  |  34  |
++------+------------------+---------+------+
+| \\b  | backspace        | \\7F\\  | 127  |
++------+------------------+---------+------+
+| \\f  | form feed        | \\0B\\  |  11  |
++------+------------------+---------+------+
+| \\n  | new line         | \\0A\\  |  10  |
++------+------------------+---------+------+
+| \\r  | carriage return  | \\0D\\  |  13  |
++------+------------------+---------+------+
+| \\t  | horizontal tab   | \\09\\  |   9  |
++------+------------------+---------+------+
+
+JSON format description
+-----------------------------
+
+JSON describes a data set with unordered lists of descriptor/value pairs 
+enclosed in braces ({}), and ordered arrays of descriptor/value pairs enclosed 
+in brackets ([]). For readability, nested groups of elements are indicated by
+indentation using white space (spaces). Documentation of JSON standards is 
+available at http://json.org/. An example portion of a shipment record is shown
+following:
+
+.. code_block:: JSON
+
+   {
+     "references": [
+       {
+         "referenceCode": "CO", 
+         "reference": "5343463643"
+       },
+       {
+         "referenceCode": "PO", 
+         "reference": "INV450470452"
+       },
+     ],
+   }
+

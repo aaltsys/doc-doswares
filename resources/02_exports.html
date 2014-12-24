@@ -41,9 +41,15 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">DOS WARES Export Mapper</a><ul>
-<li><a class="reference internal" href="#json-and-yaml-formats">JSON and YAML Formats</a></li>
 <li><a class="reference internal" href="#transaction-exports">Transaction Exports</a></li>
 <li><a class="reference internal" href="#database-trigger-exports">Database Trigger Exports</a></li>
+<li><a class="reference internal" href="#json-and-yaml-formats">JSON and YAML Formats</a><ul>
+<li><a class="reference internal" href="#export-map-heading-settings">Export map heading settings</a></li>
+<li><a class="reference internal" href="#export-map-detail-entries">Export map detail entries</a></li>
+<li><a class="reference internal" href="#character-representations">Character representations</a></li>
+<li><a class="reference internal" href="#json-format-description">JSON format description</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -86,65 +92,11 @@ records, selected record cursors, and entire tables (files), using the mapper
 at menu selection <em class="menuselection">eXchange ‣ Export-Import ‣ Exports</em>.</p>
 <p>Three recent improvements to the WARES export mapping capability include:</p>
 <ul class="simple">
-<li>the ability to write transactions in either YAML or JSON format,</li>
-<li>creating export files by transaction using WARES record keys, and</li>
-<li>creating transaction export files automatically using database triggers.</li>
+<li>creating export files by transaction using WARES record keys,</li>
+<li>creating transaction export files automatically using database triggers, and</li>
+<li>the ability to write transactions in JSON format.</li>
 </ul>
 <p>Each of these new capabilities is documented following.</p>
-<div class="section" id="json-and-yaml-formats">
-<h2>JSON and YAML Formats<a class="headerlink" href="#json-and-yaml-formats" title="Permalink to this headline">¶</a></h2>
-<p>The new JSON and YAML formats are enabled by control header settings for
-delimiters and preprocess, and special control and value entries in the export
-map details. The following table shows recommended settings for JSON and YAML
-export headings.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="28%" />
-<col width="18%" />
-<col width="18%" />
-<col width="36%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Entry</th>
-<th class="head">JSON</th>
-<th class="head">YAML</th>
-<th class="head">Char</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Delim Table</td>
-<td>0A</td>
-<td>0A</td>
-<td>n (NL)</td>
-</tr>
-<tr class="row-odd"><td>Delim Row</td>
-<td>0A</td>
-<td>0A</td>
-<td>n (NL)</td>
-</tr>
-<tr class="row-even"><td>Delim Column</td>
-<td>2C</td>
-<td>2C</td>
-<td>, (comma)</td>
-</tr>
-<tr class="row-odd"><td>Delim Value</td>
-<td>3A20</td>
-<td>3A20</td>
-<td>: (colon/space)</td>
-</tr>
-<tr class="row-even"><td>Delim Quote</td>
-<td>22</td>
-<td>&nbsp;</td>
-<td>&#8221; (quote)</td>
-</tr>
-<tr class="row-odd"><td>Preprocess</td>
-<td>JSON,32</td>
-<td>YAML,9</td>
-<td>32=space, 9=tab</td>
-</tr>
-</tbody>
-</table>
-</div>
 <div class="section" id="transaction-exports">
 <h2>Transaction Exports<a class="headerlink" href="#transaction-exports" title="Permalink to this headline">¶</a></h2>
 <p>When the <em class="guilabel">Export FileName</em> entry on an export map is left blank,
@@ -155,7 +107,8 @@ naming limitations of DOS. Similarly, only the left-most 8 characters of a
 record key will be used as a filename during the export.</p>
 <p>Due to the similarity of Report and Process functionality in WARES, transaction
 export commands may be executed as report forms, callable from the report group
-popups within windows and from menus.</p>
+popups within windows and from menus. This allows records to be exported
+selectively as a step in data entry.</p>
 </div>
 <div class="section" id="database-trigger-exports">
 <h2>Database Trigger Exports<a class="headerlink" href="#database-trigger-exports" title="Permalink to this headline">¶</a></h2>
@@ -173,9 +126,204 @@ new line. Use the program name <strong class="program">POST_EXPORTDATA</strong>,
 control identifier in the <em class="guilabel">Branch</em> column.</li>
 <li>Fill in the <em class="guilabel">Test</em>, <em class="guilabel">Value</em>, and <em class="guilabel">Occur</em>
 entries to determine the rule or condition which will trigger the export.
-For example, <em>Test=***GT*</em>, <em>Value=***1*</em>, <em>Occur=***Always</em> will write
-posted transactions and update the exported file with each change.</li>
+For example, <em>Test=GT</em>, <em>Value=1</em>, <em>Occur=Always</em> will write posted
+transactions and update the exported file with each change.</li>
 </ol>
+</div>
+<div class="section" id="json-and-yaml-formats">
+<h2>JSON and YAML Formats<a class="headerlink" href="#json-and-yaml-formats" title="Permalink to this headline">¶</a></h2>
+<p>JSON encoding is enabled by control header settings for delimiters and
+preprocess, and special control and value entries in the export map details.</p>
+<div class="section" id="export-map-heading-settings">
+<h3>Export map heading settings<a class="headerlink" href="#export-map-heading-settings" title="Permalink to this headline">¶</a></h3>
+<p>The following table lists recommended settings for JSON in the export
+map heading fields.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="26%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Entry</th>
+<th class="head">JSON</th>
+<th class="head">Char</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Delim Table</td>
+<td>(blank)</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Delim Row</td>
+<td>(blank)</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>Delim Column</td>
+<td>0A</td>
+<td>\n (NL)</td>
+</tr>
+<tr class="row-odd"><td>Delim Value</td>
+<td>3A20</td>
+<td>: (colon/space)</td>
+</tr>
+<tr class="row-even"><td>Delim Quote</td>
+<td>22</td>
+<td>&#8221; (quote)</td>
+</tr>
+<tr class="row-odd"><td>Preprocess</td>
+<td>JSON,32,2</td>
+<td>32=space, 9=tab</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="export-map-detail-entries">
+<h3>Export map detail entries<a class="headerlink" href="#export-map-detail-entries" title="Permalink to this headline">¶</a></h3>
+<p>There are just seven entry patterns for a JSON encoding. Three of these produce
+opening or closing brackets &#8220;[]&#8221; and braces &#8220;{}&#8221;, and two more patterns provide
+labeled brace and bracket lines. The remaining two lines are the standard data
+lines for static values or data values, but with name labels in the Heading
+column.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="9%" />
+<col width="10%" />
+<col width="11%" />
+<col width="10%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Heading</th>
+<th class="head">Control</th>
+<th class="head">Value</th>
+<th class="head">Field</th>
+<th class="head">Command</th>
+<th class="head">Format</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>(blank)</td>
+<td>JSON</td>
+<td>{</td>
+<td colspan="3">(blank)</td>
+<td>{ ; n ; indent +=</td>
+</tr>
+<tr class="row-odd"><td>label</td>
+<td>JSON</td>
+<td>{</td>
+<td colspan="3">(blank)</td>
+<td>&#8220;label&#8221;: { ; n, indent +=</td>
+</tr>
+<tr class="row-even"><td>label</td>
+<td>JSON</td>
+<td>[</td>
+<td colspan="3">(blank)</td>
+<td>&#8220;label&#8221;: [ ; n, indent +=</td>
+</tr>
+<tr class="row-odd"><td>label</td>
+<td>&nbsp;</td>
+<td>value</td>
+<td colspan="3">(blank)</td>
+<td>&#8220;label&#8221;: &#8220;value&#8221;, n</td>
+</tr>
+<tr class="row-even"><td>label</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>name</td>
+<td>command</td>
+<td>[JSON]</td>
+<td>&#8220;label&#8221;: &#8220;&#64;ANS&#8221;, n</td>
+</tr>
+<tr class="row-odd"><td>&nbsp;</td>
+<td>JSON</td>
+<td>]</td>
+<td colspan="3">(blank)</td>
+<td>], ; indent -=</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>JSON</td>
+<td>}</td>
+<td colspan="3">(blank)</td>
+<td>}, ; indent -=</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="character-representations">
+<h3>Character representations<a class="headerlink" href="#character-representations" title="Permalink to this headline">¶</a></h3>
+<p>The following characters will be escaped with preceding back-slashes when
+embedded in JSON data:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="46%" />
+<col width="23%" />
+<col width="15%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Char</th>
+<th class="head">Description</th>
+<th class="head">Hex</th>
+<th class="head">Dec</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>\</td>
+<td>reverse solidus</td>
+<td>\5C\</td>
+<td>92</td>
+</tr>
+<tr class="row-odd"><td>/</td>
+<td>solidus (slash)</td>
+<td>\2F\</td>
+<td>47</td>
+</tr>
+<tr class="row-even"><td>&#8220;</td>
+<td>quotation mark</td>
+<td>\22\</td>
+<td>34</td>
+</tr>
+<tr class="row-odd"><td>\b</td>
+<td>backspace</td>
+<td>\7F\</td>
+<td>127</td>
+</tr>
+<tr class="row-even"><td>\f</td>
+<td>form feed</td>
+<td>\0B\</td>
+<td>11</td>
+</tr>
+<tr class="row-odd"><td>\n</td>
+<td>new line</td>
+<td>\0A\</td>
+<td>10</td>
+</tr>
+<tr class="row-even"><td>\r</td>
+<td>carriage return</td>
+<td>\0D\</td>
+<td>13</td>
+</tr>
+<tr class="row-odd"><td>\t</td>
+<td>horizontal tab</td>
+<td>\09\</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="json-format-description">
+<h3>JSON format description<a class="headerlink" href="#json-format-description" title="Permalink to this headline">¶</a></h3>
+<p>JSON describes a data set with unordered lists of descriptor/value pairs
+enclosed in braces ({}), and ordered arrays of descriptor/value pairs enclosed
+in brackets ([]). For readability, nested groups of elements are indicated by
+indentation using white space (spaces). Documentation of JSON standards is
+available at <a class="reference external" href="http://json.org/">http://json.org/</a>. An example portion of a shipment record is shown
+following:</p>
+</div>
 </div>
 </div>
 
