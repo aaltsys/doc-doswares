@@ -142,7 +142,7 @@ indentation using white space (spaces). Documentation of JSON standards is
 available at http://json.org/. An example portion of a shipment record is shown
 following:
 
-.. code_block:: JSON
+.. code-block:: JSON
 
    {
      "references": [
