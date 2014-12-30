@@ -43,7 +43,7 @@
 <li><a class="reference internal" href="#">DOS WARES Export Mapper</a><ul>
 <li><a class="reference internal" href="#transaction-exports">Transaction Exports</a></li>
 <li><a class="reference internal" href="#database-trigger-exports">Database Trigger Exports</a></li>
-<li><a class="reference internal" href="#json-and-yaml-formats">JSON and YAML Formats</a><ul>
+<li><a class="reference internal" href="#json-formatting">JSON Formatting</a><ul>
 <li><a class="reference internal" href="#export-map-heading-settings">Export map heading settings</a></li>
 <li><a class="reference internal" href="#export-map-detail-entries">Export map detail entries</a></li>
 <li><a class="reference internal" href="#character-representations">Character representations</a></li>
@@ -130,8 +130,8 @@ For example, <em>Test=GT</em>, <em>Value=1</em>, <em>Occur=Always</em> will writ
 transactions and update the exported file with each change.</li>
 </ol>
 </div>
-<div class="section" id="json-and-yaml-formats">
-<h2>JSON and YAML Formats<a class="headerlink" href="#json-and-yaml-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="json-formatting">
+<h2>JSON Formatting<a class="headerlink" href="#json-formatting" title="Permalink to this headline">¶</a></h2>
 <p>JSON encoding is enabled by control header settings for delimiters and
 preprocess, and special control and value entries in the export map details.</p>
 <div class="section" id="export-map-heading-settings">
@@ -177,6 +177,11 @@ map heading fields.</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Delimiters show characters by hex value, but the preprocess JSON command
+requires the white-space character value to be expressed in decimal instead.</p>
+</div>
 </div>
 <div class="section" id="export-map-detail-entries">
 <h3>Export map detail entries<a class="headerlink" href="#export-map-detail-entries" title="Permalink to this headline">¶</a></h3>
@@ -210,33 +215,33 @@ column.</p>
 <td>JSON</td>
 <td>{</td>
 <td colspan="3">(blank)</td>
-<td>{ ; n ; indent +=</td>
+<td>{ ; \n ; indent +=</td>
 </tr>
 <tr class="row-odd"><td>label</td>
 <td>JSON</td>
 <td>{</td>
 <td colspan="3">(blank)</td>
-<td>&#8220;label&#8221;: { ; n, indent +=</td>
+<td>&#8220;label&#8221;: { ; \n, indent +=</td>
 </tr>
 <tr class="row-even"><td>label</td>
 <td>JSON</td>
 <td>[</td>
 <td colspan="3">(blank)</td>
-<td>&#8220;label&#8221;: [ ; n, indent +=</td>
+<td>&#8220;label&#8221;: [ ; \n, indent +=</td>
 </tr>
 <tr class="row-odd"><td>label</td>
 <td>&nbsp;</td>
 <td>value</td>
 <td colspan="3">(blank)</td>
-<td>&#8220;label&#8221;: &#8220;value&#8221;, n</td>
+<td>&#8220;label&#8221;: &#8220;value&#8221;, \n, &#8221;,&#8221;</td>
 </tr>
 <tr class="row-even"><td>label</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>name</td>
 <td>command</td>
-<td>[JSON]</td>
-<td>&#8220;label&#8221;: &#8220;&#64;ANS&#8221;, n</td>
+<td>&nbsp;</td>
+<td>&#8220;label&#8221;: &#8220;&#64;ANS&#8221;, \n, &#8221;,&#8221;</td>
 </tr>
 <tr class="row-odd"><td>&nbsp;</td>
 <td>JSON</td>

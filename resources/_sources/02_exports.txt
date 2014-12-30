@@ -51,7 +51,7 @@ system actions. Implement an automatic transaction export as follows.
    For example, *Test=GT*, *Value=1*, *Occur=Always* will write posted 
    transactions and update the exported file with each change.
 
-JSON and YAML Formats
+JSON Formatting
 =============================
 
 JSON encoding is enabled by control header settings for delimiters and 
@@ -79,6 +79,10 @@ map heading fields.
 | Preprocess   | JSON,32,2 | 32=space, 9=tab  |
 +--------------+-----------+------------------+
 
+.. note::
+   Delimiters show characters by hex value, but the preprocess JSON command
+   requires the white-space character value to be expressed in decimal instead.
+
 Export map detail entries
 -----------------------------
 
@@ -91,15 +95,15 @@ column.
 +---------+---------+-------+--------+---------+--------+-----------------------------+
 | Heading | Control | Value | Field  | Command | Format | Result                      |
 +=========+=========+=======+========+=========+========+=============================+
-| (blank) | JSON    | {     |         (blank)           | { ; \n ; indent +=          |
+| (blank) | JSON    | {     |         (blank)           | { ; \\n ; indent +=         |
 +---------+---------+-------+--------+---------+--------+-----------------------------+
-| label   | JSON    | {     |         (blank)           | "label": { ; \n, indent +=  |
+| label   | JSON    | {     |         (blank)           | "label": { ; \\n, indent += |
 +---------+---------+-------+--------+---------+--------+-----------------------------+
-| label   | JSON    | [     |         (blank)           | "label": [ ; \n, indent +=  |
+| label   | JSON    | [     |         (blank)           | "label": [ ; \\n, indent += |
 +---------+---------+-------+--------+---------+--------+-----------------------------+
-| label   |         | value |         (blank)           | "label": "value", \n        |
+| label   |         | value |         (blank)           | "label": "value", \\n, ","  |
 +---------+---------+-------+--------+---------+--------+-----------------------------+
-| label   |         |       | name   | command | [JSON] | "label": "@ANS", \n         |
+| label   |         |       | name   | command |        | "label": "@ANS", \\n, ","   |
 +---------+---------+-------+--------+---------+--------+-----------------------------+
 |         | JSON    | ]     |         (blank)           | ], ; indent -=              |
 +---------+---------+-------+--------+---------+--------+-----------------------------+
