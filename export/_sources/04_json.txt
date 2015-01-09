@@ -72,8 +72,8 @@ Recommended Configurations
    JSON expects a *Value* of **null** for blank field entries in arrays.
 #. Text entry lines in the WARES database are delimited with @VM, @ASVM, or @TM. 
    JSON does not recognize these delimiters, and line ending characters are not 
-   permitted in JSON data. Use conversion command **([JSON])** to change these
-   delimiters to embedded newline symbols wherever text may be multiline.
+   permitted in JSON data. JSON exports will change these delimiters to escaped
+   newline symbols (\\n) wherever text may be multiline.
 
 Character representations
 =============================
