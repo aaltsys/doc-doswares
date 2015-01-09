@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>DOS WARES Configuration &mdash; DOS WARES Configure 1.0 documentation</title>
+    <title>DOS WARES Export Facility &mdash; DOS WARES Export 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/aaltsys.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,15 +23,15 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="DOS WARES Configure 1.0 documentation" href="#" />
-    <link rel="next" title="Share WARES on AAltSys Server" href="02_setup-wares.html" /> 
+    <link rel="top" title="DOS WARES Export 1.0 documentation" href="#" />
+    <link rel="next" title="DOS WARES Export Mapper" href="01_introduction.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="02_setup-wares.html" title="Share WARES on AAltSys Server"
+          <a href="01_introduction.html" title="DOS WARES Export Mapper"
              accesskey="N">next</a></li>
         <li><a class="external reference" href="../index.html">AAltsys Project Main Index</a>  &raquo;</li> 
       </ul>
@@ -40,13 +40,13 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">DOS WARES Configuration</a></li>
+<li><a class="reference internal" href="#">DOS WARES Export Facility</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 
   <h4>Next topic</h4>
-  <p class="topless"><a href="02_setup-wares.html"
-                        title="next chapter">Share WARES on AAltSys Server</a></p>
+  <p class="topless"><a href="01_introduction.html"
+                        title="next chapter">DOS WARES Export Mapper</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -75,39 +75,29 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="dos-wares-configuration">
-<span id="index"></span><h1>DOS WARES Configuration<a class="headerlink" href="#dos-wares-configuration" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="dos-wares-export-facility">
+<span id="index"></span><h1>DOS WARES Export Facility<a class="headerlink" href="#dos-wares-export-facility" title="Permalink to this headline">¶</a></h1>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="02_setup-wares.html">Share WARES on AAltSys Server</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_setup-wares.html#prep-wares-on-the-old-server">Prep WARES on the old server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_setup-wares.html#install-an-aaltsys-server">Install an AAltSys Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_setup-wares.html#setup-wares-on-the-server">Setup WARES on the Server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_setup-wares.html#configure-workstations">Configure Workstations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">DOS WARES Export Mapper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#executing-an-export">Executing an Export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#database-trigger-exports">Database Trigger Exports</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="03_net-use.html">DOS Programs and NET USE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="03_net-use.html#download-links">Download links</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_net-use.html#configure-32-bit-windows">Configure 32-bit Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_net-use.html#bit-windows-virtual-mode">64-bit Windows Virtual Mode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_files.html">Export Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_files.html#transaction-exports">Transaction Exports</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="04_dos-ems.html">EMS Memory Under MS Windows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="04_dos-ems.html#operating-system-ems-problems">Operating System EMS Problems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_dos-ems.html#hardware-drivers-and-ems">Hardware Drivers and EMS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_dos-ems.html#replacing-microsoft-ems">Replacing Microsoft EMS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_dos-ems.html#other-references">Other References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="05_alternatives.html">Run WARES Under DOSBox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="05_alternatives.html#dosbox-emulation">DOSBOX emulation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="06_cu-mfs.html">Customer Access</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="06_cu-mfs.html#wares-user-system-setup">WARES User System Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06_cu-mfs.html#wares-user-logon-setup">WARES User Logon Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06_cu-mfs.html#testing-the-login">Testing the login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_execute.html">Batch Export Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_execute.html#transaction-export-reports">Transaction Export Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_execute.html#database-trigger-exports">Database Trigger Exports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_json.html">JSON Transaction Formatting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_json.html#export-map-heading-settings">Export map heading settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_json.html#export-map-detail-entries">Export map detail entries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_json.html#recommended-configurations">Recommended Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_json.html#character-representations">Character representations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_json.html#json-format-description">JSON format description</a></li>
 </ul>
 </li>
 </ul>
@@ -132,7 +122,7 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="02_setup-wares.html" title="Share WARES on AAltSys Server"
+          <a href="01_introduction.html" title="DOS WARES Export Mapper"
              >next</a></li>
         <li><a class="external reference" href="../index.html">AAltsys Project Main Index</a>  &raquo;</li> 
       </ul>

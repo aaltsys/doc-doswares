@@ -1,9 +1,9 @@
-.. DOS WARES Configure documentation master file, created by
-   sphinx-quickstart on Thu Mar 21 14:29:08 2013.
+.. DOS WARES Export documentation master file, created by
+   sphinx-quickstart on Thu Mar 21 14:30:57 2013.
 
 .. _index:
 
-DOS WARES Configuration 
+DOS WARES Export Facility
 =============================
 
 Contents:

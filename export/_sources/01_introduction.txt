@@ -1,0 +1,47 @@
+.. _intro:
+
+#############################
+DOS WARES Export Mapper
+#############################
+
+DOS WARES is capable of writing flat-file and structured exports of individual 
+transaction records, selected database cursors, and entire tables (files).
+
+From menu selection :menuselection:`eXchange --> Export-Import --> Exports`, 
+export maps may be defined to write masterfile and transaction text data in 
+specialized formats, such as
+
+*  JSON structured documents (.JSN).
+*  QUICKBOOKS import format (.IIF).
+
+Executing an Export
+=============================
+
+Export maps define both the structure of the exported data and the method for 
+naming and locating the exported files. Demand exports are executed through the 
+:program:`EXPORTDATA` command, which is usually managed through either a 
+control record for either a :program:`PROCESS` or a :program:`REPORT`.
+
+WARES posting controls can generate transaction exports using database triggers. 
+This alternative to demand exports will create export files from database 
+activity without user interaction.
+
+Database Trigger Exports
+=============================
+
+A new export program has been added to be called from the file posting controls. 
+Program :program:`POST_EXPORTDATA` uses the data mapper and definition records 
+as previously mentioned, but will perform exports automatically based on file 
+system actions. Implement an automatic transaction export as follows.
+
+#. At :menuselection:`Tools --> Define --> Controls` enter a control 
+   :guilabel:`Type` of :kbd:`POST` and enter a WARES filename such as 
+   :file:`SHIPMENTS` in the :guilabel:`Identifier`. The current posting 
+   control will display.
+#. Select a location for the export call, and press :kbd:`<Ctrl-N>` to enter a 
+   new line. Use the program name :program:`POST_EXPORTDATA`, and an export
+   control identifier in the :guilabel:`Branch` column. 
+#. Fill in the :guilabel:`Test`, :guilabel:`Value`, and :guilabel:`Occur` 
+   entries to determine the rule or condition which will trigger the export.
+   For example, *Test=GT*, *Value=1*, *Occur=Always* will write posted 
+   transactions and update the exported file with each change.

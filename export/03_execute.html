@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Batch Export Processes &mdash; DOS WARES Export 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/aaltsys.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DOS WARES Export 1.0 documentation" href="index.html" />
+    <link rel="next" title="JSON Transaction Formatting" href="04_json.html" />
+    <link rel="prev" title="Export Files" href="02_files.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="04_json.html" title="JSON Transaction Formatting"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="02_files.html" title="Export Files"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">DOS WARES Export 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Batch Export Processes</a></li>
+<li><a class="reference internal" href="#transaction-export-reports">Transaction Export Reports</a></li>
+<li><a class="reference internal" href="#database-trigger-exports">Database Trigger Exports</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="02_files.html"
+                        title="previous chapter">Export Files</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="04_json.html"
+                        title="next chapter">JSON Transaction Formatting</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/03_execute.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="batch-export-processes">
+<span id="execution"></span><h1>Batch Export Processes<a class="headerlink" href="#batch-export-processes" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="transaction-export-reports">
+<h1>Transaction Export Reports<a class="headerlink" href="#transaction-export-reports" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="database-trigger-exports">
+<h1>Database Trigger Exports<a class="headerlink" href="#database-trigger-exports" title="Permalink to this headline">¶</a></h1>
+<p>Export program <strong class="program">POST_EXPORTDATA</strong> is called from the file posting
+controls to perform exports automatically based on database actions.
+Implement an automatic transaction export as follows.</p>
+<ol class="arabic simple">
+<li>At <em class="menuselection">Tools ‣ Define ‣ Controls</em> enter a control
+<em class="guilabel">Type</em> of <code class="kbd docutils literal"><span class="pre">POST</span></code> and enter a WARES filename such as
+<code class="file docutils literal"><span class="pre">SHIPMENTS</span></code> in the <em class="guilabel">Identifier</em>. The current posting
+control will display.</li>
+<li>Select a location for the export call, and press <code class="kbd docutils literal"><span class="pre">&lt;Ctrl-N&gt;</span></code> to enter a
+new line. Use the program name <strong class="program">POST_EXPORTDATA</strong>, and an export
+control identifier in the <em class="guilabel">Branch</em> column.</li>
+<li>Fill in the <em class="guilabel">Test</em>, <em class="guilabel">Value</em>, and <em class="guilabel">Occur</em>
+entries to determine the rule or condition which will trigger the export.
+For example, <em>Test=GT</em>, <em>Value=1</em>, <em>Occur=Always</em> will write posted
+transactions and update the exported file with each change.</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="04_json.html" title="JSON Transaction Formatting"
+             >next</a></li>
+        <li class="right" >
+          <a href="02_files.html" title="Export Files"
+             >previous</a> |</li>
+        <li><a href="index.html">DOS WARES Export 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, Gerald Lovel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>
