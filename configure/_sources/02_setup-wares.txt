@@ -1,7 +1,7 @@
 .. _setup-wares:
 
 #############################
- Move WARES to AAltSys Server
+Share WARES on AAltSys Server
 #############################
 
 This basic guide describes moving **WARES** from a single user computer

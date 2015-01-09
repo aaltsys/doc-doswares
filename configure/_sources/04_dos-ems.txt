@@ -1,7 +1,7 @@
 .. _dosems:
 
 #############################
-DOS Programs and EMS
+EMS Memory Under MS Windows
 #############################
 
 Some DOS programs, including WARES, use an EMS (Expanded Memory System) driver 
