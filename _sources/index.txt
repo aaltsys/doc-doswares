@@ -26,7 +26,7 @@ exports may be batched, or be selected during printing, or be triggered when
 transactions are saved. The Export Mapper can write JSON documents to interface 
 DOSWARES with web applications. 
 
-For details, see :ref:`exports:index`.
+For details, see :ref:`export:index`.
 
 Resources
 -----------------------------
@@ -40,7 +40,7 @@ This page consolidates the various DOS support files for WARES, including:
 +  A demo copy of WARES Warehousing
 +  EDI standards table data
 
-+  :ref:`updates:upd-450e`
++  :ref:`resources:upd-450e`
 
 +  Upgrade files and instructions to convert from version 4.34B to 4.50E
 
