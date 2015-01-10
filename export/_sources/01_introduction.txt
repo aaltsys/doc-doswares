@@ -38,10 +38,10 @@ datafile from the patches. This bundle includes:
 *  Export maps :file:`JSON_RECEIPTS`, :file:`JSON_SHIPMENTS`, 
    :file:`JSON_ADJUSTS` and :file:`JSON_HISTORY`.
 *  Dictionary updates adding fieldnames required for JSON exports.
-*  Process records to perform batch exports of :filename:`RECEIPTS`, 
-   :filename:`SHIPMENTS`, :file:`ADJUSTS` and :file:`HISTORY`.
+*  Process records to perform batch exports of :file:`RECEIPTS`, 
+   :file:`SHIPMENTS`, :file:`ADJUSTS` and :file:`HISTORY`.
 *  Control records :file:`POST_RECEIPTS`, :file:`POST_SHIPMENTS`, 
-   and :filename:`POST_ADJUSTS` to export transactions using database triggers.
+   and :file:`POST_ADJUSTS` to export transactions using database triggers.
 
 .. note::
    On-line WARES documentation is not updated to explain JSON exporting or the 
