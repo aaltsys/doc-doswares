@@ -30,17 +30,17 @@ Add JSON Exporting to WARES
 =============================
 
 The WARES 450 patches bundle has been updated to include JSON exports. Use the 
-patch instructions from :ref:`resources:patches` to install the :filename:`JSON`
+patch instructions from :ref:`resources:patches` to install the :file:`JSON`
 datafile from the patches. This bundle includes:
 
 *  Revised programs :program:`EXPORTDATA` and :program:`POST_EXPORTDATA`.
 *  Updated mapper window :program:`CTL_EXPORT` with added JSON features.
-*  Export maps :filename:`JSON_RECEIPTS`, :filename:`JSON_SHIPMENTS`, 
-   :filename:`JSON_ADJUSTS` and :filename:`JSON_HISTORY`.
+*  Export maps :file:`JSON_RECEIPTS`, :file:`JSON_SHIPMENTS`, 
+   :file:`JSON_ADJUSTS` and :file:`JSON_HISTORY`.
 *  Dictionary updates adding fieldnames required for JSON exports.
 *  Process records to perform batch exports of :filename:`RECEIPTS`, 
-   :filename:`SHIPMENTS`, :filename:`ADJUSTS` and :filename:`HISTORY`.
-*  Control records :filename:`POST_RECEIPTS`, :filename:`POST_SHIPMENTS`, 
+   :filename:`SHIPMENTS`, :file:`ADJUSTS` and :file:`HISTORY`.
+*  Control records :file:`POST_RECEIPTS`, :file:`POST_SHIPMENTS`, 
    and :filename:`POST_ADJUSTS` to export transactions using database triggers.
 
 .. note::
