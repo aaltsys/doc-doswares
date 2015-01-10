@@ -24,6 +24,8 @@ printer sharing.
 WARES
 =============================
 
+.. _patches:
+
 Update Patches files
 -----------------------------
 
@@ -61,6 +63,8 @@ Install patches as follows:
 #. At :guilabel:`Action`, press :kbd:`F2` and choose :guilabel:`RESTORE`
 #. Press :kbd:`F9` to complete the restore and exit the Bundle utility.
 
+.. _evaluation:
+
 Evaluation copy of 4.50E
 -----------------------------
 
@@ -73,6 +77,8 @@ Install this program at a Windows command prompt with the following commands::
    waresdem.exe .\waresdem
    cd waresdem
    install c:
+
+.. _standards:
 
 EDI Standards packages
 =============================

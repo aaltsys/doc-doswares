@@ -46,7 +46,7 @@
   <ul>
 <li><a class="reference internal" href="#">DOS WARES Export Mapper</a><ul>
 <li><a class="reference internal" href="#executing-an-export">Executing an Export</a></li>
-<li><a class="reference internal" href="#database-trigger-exports">Database Trigger Exports</a></li>
+<li><a class="reference internal" href="#add-json-exporting-to-wares">Add JSON Exporting to WARES</a></li>
 </ul>
 </li>
 </ul>
@@ -100,31 +100,33 @@ specialized formats, such as</p>
 <h2>Executing an Export<a class="headerlink" href="#executing-an-export" title="Permalink to this headline">¶</a></h2>
 <p>Export maps define both the structure of the exported data and the method for
 naming and locating the exported files. Demand exports are executed through the
-<strong class="program">EXPORTDATA</strong> command, which is usually managed through either a
-control record for either a <strong class="program">PROCESS</strong> or a <strong class="program">REPORT</strong>.</p>
+<strong class="program">EXPORTDATA</strong> command, which is usually managed through a control record
+for either a <strong class="program">PROCESS</strong> or a <strong class="program">REPORT</strong>.</p>
 <p>WARES posting controls can generate transaction exports using database triggers.
 This alternative to demand exports will create export files from database
 activity without user interaction.</p>
 </div>
-<div class="section" id="database-trigger-exports">
-<h2>Database Trigger Exports<a class="headerlink" href="#database-trigger-exports" title="Permalink to this headline">¶</a></h2>
-<p>A new export program has been added to be called from the file posting controls.
-Program <strong class="program">POST_EXPORTDATA</strong> uses the data mapper and definition records
-as previously mentioned, but will perform exports automatically based on file
-system actions. Implement an automatic transaction export as follows.</p>
-<ol class="arabic simple">
-<li>At <em class="menuselection">Tools ‣ Define ‣ Controls</em> enter a control
-<em class="guilabel">Type</em> of <code class="kbd docutils literal"><span class="pre">POST</span></code> and enter a WARES filename such as
-<code class="file docutils literal"><span class="pre">SHIPMENTS</span></code> in the <em class="guilabel">Identifier</em>. The current posting
-control will display.</li>
-<li>Select a location for the export call, and press <code class="kbd docutils literal"><span class="pre">&lt;Ctrl-N&gt;</span></code> to enter a
-new line. Use the program name <strong class="program">POST_EXPORTDATA</strong>, and an export
-control identifier in the <em class="guilabel">Branch</em> column.</li>
-<li>Fill in the <em class="guilabel">Test</em>, <em class="guilabel">Value</em>, and <em class="guilabel">Occur</em>
-entries to determine the rule or condition which will trigger the export.
-For example, <em>Test=GT</em>, <em>Value=1</em>, <em>Occur=Always</em> will write posted
-transactions and update the exported file with each change.</li>
-</ol>
+<div class="section" id="add-json-exporting-to-wares">
+<h2>Add JSON Exporting to WARES<a class="headerlink" href="#add-json-exporting-to-wares" title="Permalink to this headline">¶</a></h2>
+<p>The WARES 450 patches bundle has been updated to include JSON exports. Use the
+patch instructions from <a class="reference external" href="resources/01_downloads.html#patches" title="(in DOS WARES Resources v1.0)"><em>Update Patches files</em></a> to install the <a href="#id1"><span class="problematic" id="id2">:filename:`JSON`</span></a>
+datafile from the patches. This bundle includes:</p>
+<ul class="simple">
+<li>Revised programs <strong class="program">EXPORTDATA</strong> and <strong class="program">POST_EXPORTDATA</strong>.</li>
+<li>Updated mapper window <strong class="program">CTL_EXPORT</strong> with added JSON features.</li>
+<li>Export maps <a href="#id3"><span class="problematic" id="id4">:filename:`JSON_RECEIPTS`</span></a>, <a href="#id5"><span class="problematic" id="id6">:filename:`JSON_SHIPMENTS`</span></a>,
+<a href="#id7"><span class="problematic" id="id8">:filename:`JSON_ADJUSTS`</span></a> and <a href="#id9"><span class="problematic" id="id10">:filename:`JSON_HISTORY`</span></a>.</li>
+<li>Dictionary updates adding fieldnames required for JSON exports.</li>
+<li>Process records to perform batch exports of <a href="#id11"><span class="problematic" id="id12">:filename:`RECEIPTS`</span></a>,
+<a href="#id13"><span class="problematic" id="id14">:filename:`SHIPMENTS`</span></a>, <a href="#id15"><span class="problematic" id="id16">:filename:`ADJUSTS`</span></a> and <a href="#id17"><span class="problematic" id="id18">:filename:`HISTORY`</span></a>.</li>
+<li>Control records <a href="#id19"><span class="problematic" id="id20">:filename:`POST_RECEIPTS`</span></a>, <a href="#id21"><span class="problematic" id="id22">:filename:`POST_SHIPMENTS`</span></a>,
+and <a href="#id23"><span class="problematic" id="id24">:filename:`POST_ADJUSTS`</span></a> to export transactions using database triggers.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On-line WARES documentation is not updated to explain JSON exporting or the
+steps for transaction exporting as reports or through posting controls.</p>
+</div>
 </div>
 </div>
 
