@@ -1,7 +1,7 @@
 .. _alternatives:
 
 #############################
-Alternatives to Run WARES
+Run WARES Under DOSBox
 #############################
 
 The move to 64-bit Windows 7 and Windows 8 eliminates running WARES natively on 

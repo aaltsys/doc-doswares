@@ -1,25 +1,32 @@
 .. DOS WARES Website Index, by sphinx-quickstart on Thu Mar 21 14:34:22 2013.
 
 DOS WARES Site Index
-==================================================
+=============================
 
-Contents:
+Configuration
+-----------------------------
 
-:ref:`configure:dosems`
+Numerous WARES configuration issues result from Microsoft's negligent handling 
+of DOS execution under Windows. Some of these topics are addressed here: 
 
-+ Getting DOS EMS memory management to work in Windows XP and Windows 7
+:ref:`configure:index`.
 
-:ref:`configure:netuse`
+Support Documents
+-----------------------------
 
-+ Mapping Windows network drives and printers for DOS programs
+Specific WARES problems are addressed at :ref:`support:index`.
 
-:ref:`configure:alternatives`
+Data Export Mapping
+-----------------------------
 
-+ Alternatives for executing WARES on 64-bit Windows
+The export mapper at :menuselection:`eXchange --> Export/import --> Exports` 
+can define flat-file and structured text exports of WARES data records. WARES
+can export individual records, selected groups, or entire files (tables), and 
+exports may be batched, or be selected during printing, or be triggered when
+transactions are saved. The Export Mapper can write JSON documents to interface 
+DOSWARES with web applications. 
 
-:ref:`updates:upd-450e`
-
-+  Upgrade files and instructions to convert from version 4.34B to 4.50E
+For details, see :ref:`export:index`.
 
 Resources
 -----------------------------
@@ -33,10 +40,9 @@ This page consolidates the various DOS support files for WARES, including:
 +  A demo copy of WARES Warehousing
 +  EDI standards table data
 
-Support Documents
------------------------------
++  :ref:`resources:upd-450e`
 
-For discussions of specific problems, see :ref:`support:index`.
++  Upgrade files and instructions to convert from version 4.34B to 4.50E
 
 .. toctree::
    :maxdepth: 0
