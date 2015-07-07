@@ -109,19 +109,26 @@ activity without user interaction.</p>
 <div class="section" id="add-json-exporting-to-wares">
 <h2>Add JSON Exporting to WARES<a class="headerlink" href="#add-json-exporting-to-wares" title="Permalink to this headline">¶</a></h2>
 <p>The WARES 450 patches bundle has been updated to include JSON exports. Use the
-patch instructions from <a class="reference external" href="resources/01_downloads.html#patches" title="(in DOS WARES Resources v1.0)"><em>Update Patches files</em></a> to install the <code class="file docutils literal"><span class="pre">JSON</span></code>
+patch instructions from <em class="xref std std-ref">downloads:patches</em> to install the <code class="file docutils literal"><span class="pre">JSON</span></code>
 datafile from the patches. This bundle includes:</p>
 <ul class="simple">
 <li>Revised programs <strong class="program">EXPORTDATA</strong> and <strong class="program">POST_EXPORTDATA</strong>.</li>
 <li>Updated mapper window <strong class="program">CTL_EXPORT</strong> with added JSON features.</li>
-<li>Export maps <code class="file docutils literal"><span class="pre">JSON_RECEIPTS</span></code>, <code class="file docutils literal"><span class="pre">JSON_SHIPMENTS</span></code>,
-<code class="file docutils literal"><span class="pre">JSON_ADJUSTS</span></code> and <code class="file docutils literal"><span class="pre">JSON_HISTORY</span></code>.</li>
+<li>Export maps for setup files <code class="file docutils literal"><span class="pre">ADDRESSES</span></code>, <code class="file docutils literal"><span class="pre">ACCOUNTS</span></code>, and
+<code class="file docutils literal"><span class="pre">PRODUCTS</span></code>.</li>
+<li>Export maps for inventory transactions: <code class="file docutils literal"><span class="pre">RECEIPTS</span></code>, <code class="file docutils literal"><span class="pre">SHIPMENTS</span></code>,
+<code class="file docutils literal"><span class="pre">ADJUSTS</span></code>, <code class="file docutils literal"><span class="pre">HISTORY</span></code>, <code class="file docutils literal"><span class="pre">DETAILS</span></code>, <code class="file docutils literal"><span class="pre">DETAIL_HISTORY</span></code>.</li>
+<li>Export maps for billing files: <code class="file docutils literal"><span class="pre">TARIFFS</span></code>, <code class="file docutils literal"><span class="pre">CHARGES</span></code>,
+<code class="file docutils literal"><span class="pre">INVOICES</span></code>, and <code class="file docutils literal"><span class="pre">PAYMENTS</span></code>.</li>
 <li>Dictionary updates adding fieldnames required for JSON exports.</li>
-<li>Process records to perform batch exports of <code class="file docutils literal"><span class="pre">RECEIPTS</span></code>,
-<code class="file docutils literal"><span class="pre">SHIPMENTS</span></code>, <code class="file docutils literal"><span class="pre">ADJUSTS</span></code> and <code class="file docutils literal"><span class="pre">HISTORY</span></code>.</li>
-<li>Control records <code class="file docutils literal"><span class="pre">POST_RECEIPTS</span></code>, <code class="file docutils literal"><span class="pre">POST_SHIPMENTS</span></code>,
-and <code class="file docutils literal"><span class="pre">POST_ADJUSTS</span></code> to export transactions using database triggers.</li>
+<li>Process records to perform batch exports of the files previously listed.</li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For interactive export of transactions, changes to control records
+<code class="file docutils literal"><span class="pre">POST_RECEIPTS</span></code>, <code class="file docutils literal"><span class="pre">POST_SHIPMENTS</span></code>, and <code class="file docutils literal"><span class="pre">POST_ADJUSTS</span></code>
+to export transactions using database triggers.</p>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">On-line WARES documentation is not updated to explain JSON exporting or the
