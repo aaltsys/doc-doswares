@@ -242,7 +242,7 @@ texinfo_documents = [
 #texinfo_show_urls = 'footnote'
 
 intersphinx_mapping = {
- 'resources': ('resources', '../_deploy/resources/objects.inv'),
- 'configure': ('configure', '../_deploy/configure/objects.inv'),
- 'support': ('support', '../_deploy/support/objects.inv'),
+ 'resources': ('../resources', '../_deploy/resources/objects.inv'),
+ 'configure': ('../configure', '../_deploy/configure/objects.inv'),
+ 'support': ('../support', '../_deploy/support/objects.inv'),
 }
