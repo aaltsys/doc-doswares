@@ -30,7 +30,7 @@ Add JSON Exporting to WARES
 =============================
 
 The WARES 450 patches bundle has been updated to include JSON exports. Use the 
-patch instructions from :ref:`downloads:patches` to install the :file:`JSON`
+patch instructions from :ref:`resources:patches` to install the :file:`JSON`
 datafile from the patches. This bundle includes:
 
 *  Revised programs :program:`EXPORTDATA` and :program:`POST_EXPORTDATA`.
