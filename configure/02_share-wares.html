@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="DOS WARES Configure 1.0 documentation" href="index.html" />
     <link rel="next" title="DOS Programs and NET USE" href="03_net-use.html" />
-    <link rel="prev" title="DOS WARES Configuration" href="index.html" /> 
+    <link rel="prev" title="Setup WARES on Workstations" href="01_setup-wares.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -35,7 +35,7 @@
           <a href="03_net-use.html" title="DOS Programs and NET USE"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="index.html" title="DOS WARES Configuration"
+          <a href="01_setup-wares.html" title="Setup WARES on Workstations"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
       </ul>
@@ -55,21 +55,20 @@
 <li><a class="reference internal" href="#configure-wares-on-the-server">Configure WARES on the Server</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#configure-workstations">Configure Workstations</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">DOS WARES Configuration</a></p>
+  <p class="topless"><a href="01_setup-wares.html"
+                        title="previous chapter">Setup WARES on Workstations</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="03_net-use.html"
                         title="next chapter">DOS Programs and NET USE</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/02_setup-wares.txt"
+      <li><a href="_sources/02_share-wares.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -95,7 +94,7 @@
           <div class="body" role="main">
             
   <div class="section" id="share-wares-on-aaltsys-server">
-<span id="setup-wares"></span><h1>Share WARES on AAltSys Server<a class="headerlink" href="#share-wares-on-aaltsys-server" title="Permalink to this headline">¶</a></h1>
+<span id="share-wares"></span><h1>Share WARES on AAltSys Server<a class="headerlink" href="#share-wares-on-aaltsys-server" title="Permalink to this headline">¶</a></h1>
 <p>This basic guide describes moving <strong>WARES</strong> from a single user computer
 or other shared drive onto an AAltSys Server. This guide is appropriate when
 the <strong>WARES</strong> copy is stored within an <code class="file docutils literal"><span class="pre">ATLAS</span></code> folder. When finished,
@@ -114,7 +113,7 @@ are present beforehand.</p>
 <p class="last"><strong>WARES</strong> must be prepped on its original server if it is
 currently using a proprietary network driver.</p>
 </div>
-<ul class="simple">
+<ol class="arabic simple">
 <li>From a workstation, log into <strong>WARES</strong> using the supervisor level password.</li>
 <li>Press <code class="kbd docutils literal"><span class="pre">F2</span></code> to see all menus, choose <em class="menuselection">STARTUP</em>.</li>
 <li>Select <em class="menuselection">Application ‣ Open</em>, and enter the account
@@ -125,7 +124,7 @@ currently using a proprietary network driver.</p>
 <li>Press <code class="kbd docutils literal"><span class="pre">F9</span></code> to save the setting,  (A message will display saying revboot
 is rebuilt.)</li>
 <li>Choose <em class="menuselection">Exit</em> to exit the application.</li>
-</ul>
+</ol>
 <p>Then copy the entire ATLAS directory from the old server to a flash drive or to
 a workstation C:\ drive. Call if you have questions about what to copy.</p>
 </div>
@@ -135,25 +134,29 @@ a workstation C:\ drive. Call if you have questions about what to copy.</p>
 the following instructions specific to the WARES program.</p>
 <div class="section" id="configure-the-aaltsys-server">
 <h3>Configure the AAltSys Server<a class="headerlink" href="#configure-the-aaltsys-server" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
+<ol class="arabic simple">
+<li>In <em class="menuselection">Users and Computers</em>, define groups <strong>WARES</strong> and
+<strong>FSUSERS</strong>. Define all system users and add them to groups as appropriate.</li>
 <li>In <em class="menuselection">File Sharing</em>, define the <strong>wares</strong> share as a directory
-<strong>arev</strong> under Zentyal.</li>
-<li>Set &#8220;read/write&#8221; Access Control permissions on this share for group &#8220;Users&#8221;
-(or group &#8220;fsusers&#8221;).</li>
-<li>At a workstation, test to see that this share is visible.</li>
-<li>Map this share to drive letter <code class="file docutils literal"><span class="pre">W:</span></code>.</li>
-<li>Define the <strong>shared</strong> share as a directory <strong>public</strong> under Zentyal.</li>
-<li>Set &#8220;read/write&#8221; Access Control permissions on this share for group &#8220;fsusers&#8221;
-(or group &#8220;Users&#8221;).</li>
-<li>See that the share is visible, and map the share to drive letter <code class="file docutils literal"><span class="pre">S:\</span></code>.</li>
-</ul>
+<strong>wares</strong> under Zentyal, checking <em class="guilabel">Apply ACLs Recursively</em>.</li>
+<li>Set &#8220;administrator&#8221; Access Control permissions on this share for group
+&#8220;WARES&#8221;.</li>
+<li>At a workstation, test to see that this share is visible, and map this share
+to drive letter <code class="file docutils literal"><span class="pre">W:\</span></code>.</li>
+<li>Define the <strong>shared</strong> share as a directory <strong>shared</strong> under Zentyal, and
+checking <em class="guilabel">Apply ACLs Recursively</em>.</li>
+<li>Set &#8220;read/write&#8221; Access Control permissions on this share for group
+&#8220;FSUSERS&#8221;.</li>
+<li>At a workstation, see that the share is visible, and map the share to drive
+letter <code class="file docutils literal"><span class="pre">S:\</span></code>.</li>
+</ol>
 </div>
 </div>
 <div class="section" id="setup-wares-on-the-server">
 <h2>Setup WARES on the Server<a class="headerlink" href="#setup-wares-on-the-server" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="copy-wares-to-the-server">
 <h3>Copy WARES to the Server<a class="headerlink" href="#copy-wares-to-the-server" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
+<ol class="arabic simple">
 <li>At a workstation, open the saved <code class="file docutils literal"><span class="pre">ATLAS</span></code> folder. If there is an
 <code class="file docutils literal"><span class="pre">AREV</span></code> folder within <code class="file docutils literal"><span class="pre">ATLAS</span></code>, open that folder.</li>
 <li>Press <code class="kbd docutils literal"><span class="pre">&lt;Ctrl-A&gt;</span> <span class="pre">&lt;Ctrl-C&gt;</span></code> to select all files within the open folder.</li>
@@ -166,11 +169,11 @@ the following instructions specific to the WARES program.</p>
 <li>If <code class="file docutils literal"><span class="pre">ATLAS</span></code> contained an <code class="file docutils literal"><span class="pre">AREV</span></code> folder, copy any other folders in
 <code class="file docutils literal"><span class="pre">ATLAS</span></code> but not included in <code class="file docutils literal"><span class="pre">AREV</span></code>, such as <code class="file docutils literal"><span class="pre">CONNECT</span></code>, to
 <code class="file docutils literal"><span class="pre">W:\</span></code>.</li>
-</ul>
+</ol>
 </div>
 <div class="section" id="configure-wares-on-the-server">
 <h3>Configure WARES on the Server<a class="headerlink" href="#configure-wares-on-the-server" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
+<ol class="arabic simple">
 <li>Copy <code class="file docutils literal"><span class="pre">W:WARES.pif</span></code> to a workstation desktop.</li>
 <li>Double-click the <code class="file docutils literal"><span class="pre">WARES.pif</span></code> icon, and log into WARES at the supervisor
 level.</li>
@@ -185,20 +188,12 @@ level.</li>
 <li>Press <code class="kbd docutils literal"><span class="pre">Alt-T</span></code> to move to <em class="guilabel">Actions</em>, press <code class="kbd docutils literal"><span class="pre">F2</span></code>, and
 choose <em class="guilabel">RESTORE</em>.</li>
 <li>Press <code class="kbd docutils literal"><span class="pre">F9</span></code> to restore the WARES update.</li>
-</ul>
+</ol>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Install additional PATCHES update bundles using the same procedure,
-if desired.</p>
+<p class="last">Install other PATCHES update bundles using the same procedure, if desired.</p>
 </div>
 </div>
-</div>
-<div class="section" id="configure-workstations">
-<h2>Configure Workstations<a class="headerlink" href="#configure-workstations" title="Permalink to this headline">¶</a></h2>
-<p>Prepare each workstation to run WARES using
-<a class="reference external" href="http://servers.aaltsys.info/workstation">workstation management guidelines</a>.
-In addition, each workstation will require batch files and pif files as
-described at <a class="reference internal" href="03_net-use.html#netuse"><em>DOS Programs and NET USE</em></a> and <a class="reference internal" href="04_dos-ems.html#dosems"><em>EMS Memory Under MS Windows</em></a>.</p>
 </div>
 </div>
 
@@ -215,7 +210,7 @@ described at <a class="reference internal" href="03_net-use.html#netuse"><em>DOS
           <a href="03_net-use.html" title="DOS Programs and NET USE"
              >next</a></li>
         <li class="right" >
-          <a href="index.html" title="DOS WARES Configuration"
+          <a href="01_setup-wares.html" title="Setup WARES on Workstations"
              >previous</a> |</li>
         <li><a href="index.html">DOS WARES Configure 1.0 documentation</a> &raquo;</li> 
       </ul>
