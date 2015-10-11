@@ -7,7 +7,7 @@
 .. note::
    Operating system considerations for local and remote access to WARES are not 
    discussed in this article. Remote access to WARES using a secure terminal 
-   server is explained at http://servers.aaltsys.info/install/07_aadserver.html.
+   server is explained at http://servers.aaltsys.info/install/08_aadserver.html.
 
 WARES includes an extensive user access security security system, which allows 
 reliable customer connection to a WARES system while protecting confidentiality 
