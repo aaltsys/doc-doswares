@@ -7,7 +7,8 @@
 .. note::
    Operating system considerations for local and remote access to WARES are not 
    discussed in this article. Remote access to WARES using a secure terminal 
-   server is explained at http://servers.aaltsys.info/install/07_aadserver.html.
+   server is explained in 
+   `Installing an AAD Server <http://servers.aaltsys.info/install/08_aadserver.html>`_.
 
 WARES includes an extensive user access security security system, which allows 
 reliable customer connection to a WARES system while protecting confidentiality 
@@ -134,4 +135,3 @@ WARES must be started from a :file:`.pif` file.
    list products. Only products for this one customer should display. 
 #. When finished viewing, choose :menuselection:`Quit` from the menu to exit 
    WARES. 
-
