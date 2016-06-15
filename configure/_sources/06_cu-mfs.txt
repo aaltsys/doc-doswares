@@ -135,4 +135,3 @@ WARES must be started from a :file:`.pif` file.
    list products. Only products for this one customer should display. 
 #. When finished viewing, choose :menuselection:`Quit` from the menu to exit 
    WARES. 
-

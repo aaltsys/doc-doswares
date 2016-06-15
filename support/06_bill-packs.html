@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mandatory Picking Charge &mdash; DOS WARES Error Recovery 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/aaltsys.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DOS WARES Error Recovery 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Lot Detail Account Mismatch" href="05_detail-acct.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="05_detail-acct.html" title="Lot Detail Account Mismatch"
+             accesskey="P">previous</a></li>
+        <li><a href="index.html">DOS WARES Error Recovery 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mandatory Picking Charge</a><ul>
+<li><a class="reference internal" href="#adding-case-pick-quantity">Adding Case Pick Quantity</a></li>
+<li><a class="reference internal" href="#verify-the-dictionary-entry">Verify the Dictionary Entry</a></li>
+<li><a class="reference internal" href="#adding-case-pick-billing">Adding Case Pick Billing</a></li>
+<li><a class="reference internal" href="#verifying-case-pick-billing">Verifying Case Pick Billing</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="05_detail-acct.html"
+                        title="previous chapter">Lot Detail Account Mismatch</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/06_bill-packs.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mandatory-picking-charge">
+<span id="bill-packs"></span><h1>Mandatory Picking Charge<a class="headerlink" href="#mandatory-picking-charge" title="Permalink to this headline">¶</a></h1>
+<p>DOS WARES does not seem to have a way to calculate number of separate cases or
+packages picked when shipping both full pallets and picked cases. Similarly,
+there is not an obvious way to automate the calculation and billing of case
+picking fees.</p>
+<p>BUT! WARES has very flexible programming which allows the calculation and
+billing of case picking to be added quite simply. Just follow this guide.</p>
+<div class="section" id="adding-case-pick-quantity">
+<h2>Adding Case Pick Quantity<a class="headerlink" href="#adding-case-pick-quantity" title="Permalink to this headline">¶</a></h2>
+<p>Adding the case pick quantity for billing means adding a symbolic entry to the
+shipments dictionary. Here is how:</p>
+<ol class="arabic">
+<li><p class="first">Go to menu selection <em class="menuselection">Tools ‣ Reports ‣ Dictionary Edit</em>.</p>
+</li>
+<li><p class="first">Enter <em class="guilabel">Table name</em> = <strong>SHIPMENTS</strong> and <em class="guilabel">Column name</em> =
+<strong>BILL_PARTIAL</strong>. A record will display as shown following:</p>
+<img alt="_images/dict-bill_partial.png" src="_images/dict-bill_partial.png" />
+</li>
+<li><p class="first"><a href="#id1"><span class="problematic" id="id2">:keyboard:`up-arrow`</span></a> to the <em class="guilabel">Column name</em>, and enter the new name
+<strong>BILL_PACKS</strong>. The window will clear to create a new dictionary item.</p>
+</li>
+<li><p class="first">Press <a href="#id3"><span class="problematic" id="id4">:keyboard:`Alt-C`</span></a> to copy the previous information into the new entry
+for <strong>BILL_PACKS</strong>.</p>
+</li>
+<li><p class="first">Press <a href="#id5"><span class="problematic" id="id6">:keyboard:`Enter`</span></a> until the cursor is in the <em class="guilabel">Formula</em> entry.
+Press function key <a href="#id7"><span class="problematic" id="id8">:keyboard:`F3`</span></a> to expand the formula for editing. The
+original formula will display:</p>
+<img alt="_images/dict-code-bill_partial.png" src="_images/dict-code-bill_partial.png" />
+</li>
+<li><p class="first">Use the mouse or arrow keys to move around the edit window, and change the
+last four lines to read as shown highlighted in the following image:</p>
+<img alt="_image/dict-code-bill_packs.png" src="_image/dict-code-bill_packs.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If you accidentally press <a href="#id9"><span class="problematic" id="id10">:keyboard:`Enter`</span></a>, place the cursor on the
+resulting blank line and press <a href="#id11"><span class="problematic" id="id12">:keyboard:`Ctrl-D`</span></a> to remove the line.</p>
+</div>
+</li>
+<li><p class="first">Press keys <a href="#id13"><span class="problematic" id="id14">:keyboard:`F9`</span></a> and <a href="#id15"><span class="problematic" id="id16">:keyboard:`Esc`</span></a> to save the changed formula
+and exit the edit subwindow.</p>
+</li>
+<li><p class="first">Change the <em class="guilabel">Column heading</em> = <strong>Packs</strong> for the new dictionary,
+then press <a href="#id17"><span class="problematic" id="id18">:keyboard:`F9`</span></a> to save the entry.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="verify-the-dictionary-entry">
+<h2>Verify the Dictionary Entry<a class="headerlink" href="#verify-the-dictionary-entry" title="Permalink to this headline">¶</a></h2>
+<p>Enter the <em class="guilabel">Column name</em> <strong>BILL_PACKS</strong> again and press
+<a href="#id19"><span class="problematic" id="id20">:keyboard:`Enter`</span></a> to redisplay the Dictionary entry. Enter to the
+<em class="guilabel">Formula</em>, press <a href="#id21"><span class="problematic" id="id22">:keyboard:`F3`</span></a> to display the formula and read the
+changes to verify them. If everything is good, press <a href="#id23"><span class="problematic" id="id24">:keyboard:`Esc Esc`</span></a> to
+exit the dictionary window.</p>
+</div>
+<div class="section" id="adding-case-pick-billing">
+<h2>Adding Case Pick Billing<a class="headerlink" href="#adding-case-pick-billing" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Display the window at <em class="menuselection">Billing ‣ Tariffs Setup</em>.</p>
+</li>
+<li><p class="first">Enter a new tariff <em class="guilabel">Identifier</em> and <em class="guilabel">Code</em> to start a
+new rate, <em class="guilabel">Applied</em> <strong>Mandatory</strong>.</p>
+</li>
+<li><p class="first">On the new rate record, enter the <em class="guilabel">Table Name</em> and
+<em class="guilabel">Per Code</em> exactly as shown in the following image:</p>
+<img alt="_images/tariff-bill_packs.png" src="_images/tariff-bill_packs.png" />
+</li>
+<li><p class="first">Complete the <em class="guilabel">Rate</em>, <em class="guilabel">Quantity</em>, and <em class="guilabel">Minimum</em>
+Fields and press <a href="#id25"><span class="problematic" id="id26">:keyboard:`F9`</span></a> to save the new rate.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="verifying-case-pick-billing">
+<h2>Verifying Case Pick Billing<a class="headerlink" href="#verifying-case-pick-billing" title="Permalink to this headline">¶</a></h2>
+<p>As with any mandatory charge, go to the <em class="menuselection">Entry ‣ Shipments</em>
+window, and enter or display a shipment record which will require this charge.
+The shipment must be saved with <em class="guilabel">Status</em> <strong>2</strong> or <strong>3</strong>.</p>
+<ol class="arabic simple">
+<li>Change the shipment record <em class="guilabel">Status</em> to <strong>4</strong>, press <a href="#id27"><span class="problematic" id="id28">:keyboard:`F9`</span></a>.</li>
+<li>Press <a href="#id29"><span class="problematic" id="id30">:keyboard:`Alt-O, Enter`</span></a> to redisplay the record, and then press
+<a href="#id31"><span class="problematic" id="id32">:keyboard:`F3`</span></a> to bring up the charges.</li>
+<li>Check that the case picking charge is on the list of calculated charges.</li>
+<li>Press <a href="#id33"><span class="problematic" id="id34">:keyboard:`Esc`</span></a> to remove the charges subwindow, then change the
+<em class="guilabel">Status</em> back to <strong>2</strong> or <strong>3</strong> and save the record again to
+restore the state of the shipment.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="05_detail-acct.html" title="Lot Detail Account Mismatch"
+             >previous</a></li>
+        <li><a href="index.html">DOS WARES Error Recovery 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, Gerald Lovel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>
