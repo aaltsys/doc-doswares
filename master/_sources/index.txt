@@ -28,6 +28,12 @@ DOSWARES with web applications.
 
 For details, see :ref:`export:index`.
 
+JSON Orders Import 
+-----------------------------
+
+Part of export development has produced a JSON orders import for orders 
+exchange with accounts. Implementation details are at :ref:`JSON-import`.
+
 Resources
 -----------------------------
 
