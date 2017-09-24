@@ -92,6 +92,12 @@
             
   <div class="section" id="json-import-implementation">
 <span id="json-import"></span><h1>JSON Import Implementation<a class="headerlink" href="#json-import-implementation" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In the following documentation, replace the terms <strong>{JSONshare}</strong> and
+<strong>JSONshare</strong> with the corresponding folder name in DropBox that is used for
+file exchange.</p>
+</div>
 <div class="section" id="update-windows-workstations">
 <h2>Update Windows Workstations<a class="headerlink" href="#update-windows-workstations" title="Permalink to this headline">¶</a></h2>
 <p>Although WARES runs entirely from a server fileshare, using Dropbox for file
@@ -105,7 +111,7 @@ user path.</p>
 <div class="section" id="view-or-setup-json-share">
 <span id="json-integrate-view"></span><h3>View or Setup JSON Share<a class="headerlink" href="#view-or-setup-json-share" title="Permalink to this headline">¶</a></h3>
 <p>Open Windows File Explorer to view the contents of your Dropbox directory.
-Identify the JSON share {foldername} which will be used for JSON orders
+Identify the {JSONshare} foldername which will be used for JSON orders
 exchange. Verify the contents of this folder. The following directory tree is
 required:</p>
 <div class="highlight-python"><div class="highlight"><pre>┌─────────────────────────────────────────────────────────────────────────┐
@@ -114,7 +120,7 @@ required:</p>
 │                     │ └────────────┘   ┌────────────┐ │ └────────────┘  │
 │                     │     . . .      ┌─┤  ORDERS    ├─┤ ┌────────────┐  │
 │                     │ ┌────────────┐ │ └────────────┘ └─┤  STREAMS   │  │
-│ User\Name\Dropbox\ ─┼─┤ JSON share ├─┤                  └────────────┘  │
+│ User\Name\Dropbox\ ─┼─┤ JSONshare  ├─┤                  └────────────┘  │
 │                     │ └────────────┘ │ ┌────────────┐   ┌────────────┐  │
 │                     │     . . .      └─┤  SHIPPERS  ├───┤  HISTORY   │  │
 │                     │ ┌────────────┐   └────────────┘   └────────────┘  │
@@ -231,14 +237,17 @@ For example, account-specific controls for account <strong>ABC</strong> might be
 <strong>JSONIMPORT*ORDERS_ABC</strong> and <strong>EXPORT*JSONSHIPPERS_ABC</strong>.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">Menu selection <em class="menuselection">Tools ‣ Define ‣ Controls</em> may be used to edit import controls (and any other controls) just as selections on the
+<p class="last">Menu selection <em class="menuselection">Tools ‣ Define ‣ Controls</em> may be used to
+edit import controls (and any other controls) just as selections on the
 <em class="menuselection">eXchange ‣ Export-Import</em> menu are used.</p>
 </div>
 </div>
 <div class="section" id="add-wares-process-selections">
 <h3>Add WARES Process Selections<a class="headerlink" href="#add-wares-process-selections" title="Permalink to this headline">¶</a></h3>
 <p>JSON orders import includes new processes <strong>JSONIMPORT_ORDERS</strong> and
-<strong>EXPORT_JSONSHIPPERS</strong> to import orders and create response documents. Custom versions of these processes are needed for each participating account. Use menu item <em class="menuselection">Tools ‣ Processes ‣ Processes Setup</em> to create the new
+<strong>EXPORT_JSONSHIPPERS</strong> to import orders and create response documents. Custom
+versions of these processes are needed for each participating account. Use menu
+item <em class="menuselection">Tools ‣ Processes ‣ Processes Setup</em> to create the new
 processes, as described here:</p>
 <ul class="simple">
 <li>Display the <em class="guilabel">Processes</em> window from the menu.</li>

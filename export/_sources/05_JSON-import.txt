@@ -4,6 +4,11 @@
 JSON Import Implementation
 #############################
 
+.. note::
+   In the following documentation, replace the terms **{JSONshare}** and 
+   **JSONshare** with the corresponding folder name in DropBox that is used for 
+   file exchange.
+
 Update Windows Workstations
 =============================
 
@@ -23,7 +28,7 @@ View or Setup JSON Share
 -----------------------------
 
 Open Windows File Explorer to view the contents of your Dropbox directory. 
-Identify the JSON share {foldername} which will be used for JSON orders 
+Identify the {JSONshare} foldername which will be used for JSON orders 
 exchange. Verify the contents of this folder. The following directory tree is 
 required::
 
@@ -33,7 +38,7 @@ required::
  │                     │ └────────────┘   ┌────────────┐ │ └────────────┘  │
  │                     │     . . .      ┌─┤  ORDERS    ├─┤ ┌────────────┐  │
  │                     │ ┌────────────┐ │ └────────────┘ └─┤  STREAMS   │  │
- │ User\Name\Dropbox\ ─┼─┤ JSON share ├─┤                  └────────────┘  │
+ │ User\Name\Dropbox\ ─┼─┤ JSONshare  ├─┤                  └────────────┘  │
  │                     │ └────────────┘ │ ┌────────────┐   ┌────────────┐  │
  │                     │     . . .      └─┤  SHIPPERS  ├───┤  HISTORY   │  │
  │                     │ ┌────────────┐   └────────────┘   └────────────┘  │
@@ -107,14 +112,17 @@ For example, account-specific controls for account **ABC** might be
 **JSONIMPORT\*ORDERS_ABC** and **EXPORT\*JSONSHIPPERS_ABC**.
 
 .. tip::
-   Menu selection :menuselection:`Tools --> Define --> Controls` may be used to edit import controls (and any other controls) just as selections on the 
+   Menu selection :menuselection:`Tools --> Define --> Controls` may be used to 
+   edit import controls (and any other controls) just as selections on the 
    :menuselection:`eXchange --> Export-Import` menu are used.
 
 Add WARES Process Selections
 -----------------------------
 
 JSON orders import includes new processes **JSONIMPORT_ORDERS** and 
-**EXPORT_JSONSHIPPERS** to import orders and create response documents. Custom versions of these processes are needed for each participating account. Use menu item :menuselection:`Tools --> Processes --> Processes Setup` to create the new
+**EXPORT_JSONSHIPPERS** to import orders and create response documents. Custom 
+versions of these processes are needed for each participating account. Use menu 
+item :menuselection:`Tools --> Processes --> Processes Setup` to create the new
 processes, as described here:
 
 *  Display the :guilabel:`Processes` window from the menu.
