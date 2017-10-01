@@ -153,7 +153,7 @@ WARES Uses Short Filenames
 Windows has two file naming conventions: upper-cased 8-character short names, 
 and 256-character case-sensitive long names. File operations may be performed 
 using either the short name or the long name, as directory entries track both 
-names. Using short names, when a file operation results in a name collosion, 
+names. Using short names, when a file operation results in a name collision, 
 new files may overwrite previous files, resulting in data loss.
 
 WARES performs file operations using 8-character short filenames. This is not 
