@@ -10,7 +10,7 @@ Due to Microsoft's negligence, Windows has many barriers to executing DOS
 programs such as WARES. Many developers have worked on these problems, and as a 
 result there is now an excellent tool for addressing Windows/DOS issues:
 
-:ref:`vDosPlus`.
+:ref:`vdosplus`.
 
 Configuration
 -----------------------------

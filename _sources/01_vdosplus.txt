@@ -39,7 +39,7 @@ you would make. Donate `here <https://www.paypal.com/donate/?token=NVfuTMJzDGqiJ
 Installing vDosPlus
 =============================
 
-*  First, :download:`download the latest version of vDosPlus from 
+*  First, download the latest version of vDosPlus from 
    http://files.vdosplus.org/vDosPlus-current-setup.exe. 
    Windows will probably save this file in your :file:`Downloads` folder
 *  Open the download link in the browser to begin a default install, or open 
@@ -99,7 +99,7 @@ The sample text for :file:`config.txt` follows:
 
 .. codeblock:: 
 
-   `_downloads/config.txt`
+   _downloads/config.txt
 
 The sample text for :file:`autoexec.txt` follows:
 
