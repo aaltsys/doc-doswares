@@ -160,13 +160,52 @@ included in the configuration files but commented out (lines starting with &#821
 or &#8216;rem&#8217;). If you are good with DOS, change these settings to your liking. But
 read the <code class="file docutils literal"><span class="pre">README.TXT</span></code> file for <strong class="program">vDosPlus</strong> before making changes.</p>
 <p>The sample text for <code class="file docutils literal"><span class="pre">config.txt</span></code> follows:</p>
-<div class="highlight-text"><div class="highlight"><pre>.. include:: _downloads/config.txt
+<blockquote>
+<div><div class="highlight-text"><div class="highlight"><pre>
 </pre></div>
 </div>
+<p>XMEM = 32 XMS
+MOUSE = ON
+# BLINKC = OFF
+FONT = CONSOLA
+ITALFONT = CONSOLAI
+BOLDFONT = CONSOLAB
+BOITFONT = CONSOLAZ
+USEDRVS = ON
+FRAME = ON
+PADDING = 2
+TITLE = WARES Warehousing
+ICON = W:AREV.ICO
+# ICON = C:ATLASAREV.ICO</p>
+</div></blockquote>
 <p>The sample text for <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> follows:</p>
-<div class="highlight-text"><div class="highlight"><pre>.. include:: _downloads/autoexec.txt
+<blockquote>
+<div><div class="highlight-text"><div class="highlight"><pre>
 </pre></div>
 </div>
+<p>&#64;ECHO OFF
+SETLOCAL
+SET AREVUSER=WARES
+SET AREVSHARE=W:
+SET AREVLOCAL=C:ATLASPATH %PATH%;C:4DOS;C:DOSZIP;C:.;..
+SET TEMP=%%TEMP%%
+IF NOT EXIST %TEMP%NUL SET TEMP=C:.
+EMSMAGIC.COM /RAM=MAX
+IF NOT EXIST %AREVLOCAL%WARES.BAT GOTO SHARED
+CD %AREVLOCAL%
+GOTO RUN
+:SHARED
+IF NOT EXIST %AREVSHARE%WARES.BAT GOTO MISSING
+%AREVSHARE%
+:RUN
+CALL WARES.BAT %AREVUSER%
+GOTO EXIT
+:MISSING
+ECHO The WARES.BAT command program cannot be found
+PAUSE .
+:EXIT
+EXIT</p>
+</div></blockquote>
 </div>
 <div class="section" id="change-desktop-icon">
 <h2>Change Desktop Icon<a class="headerlink" href="#change-desktop-icon" title="Permalink to this headline">¶</a></h2>
