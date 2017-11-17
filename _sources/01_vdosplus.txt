@@ -97,15 +97,15 @@ read the :file:`README.TXT` file for :program:`vDosPlus` before making changes.
 
 The sample text for :file:`config.txt` follows:
 
-   .. code:: 
+.. code:: 
 
-      .. include:: _downloads/config.txt
+   .. include:: _downloads/config.txt
 
 The sample text for :file:`autoexec.txt` follows:
 
-   .. code::
+.. code::
 
-      .. include:: _downloads/autoexec.txt
+   .. include:: _downloads/autoexec.txt
 
 Change Desktop Icon
 =============================
