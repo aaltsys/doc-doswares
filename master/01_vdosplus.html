@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>WARES Execution Alternatives &mdash; DOS WARES Master Index 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/aaltsys.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DOS WARES Master Index 1.0 documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">DOS WARES Master Index 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">WARES Execution Alternatives</a><ul>
+<li><a class="reference internal" href="#vdosplus-emulation-program">vDosPlus Emulation Program</a></li>
+<li><a class="reference internal" href="#installing-vdosplus">Installing vDosPlus</a></li>
+<li><a class="reference internal" href="#configuring-vdosplus">Configuring vDosPlus</a></li>
+<li><a class="reference internal" href="#modifying-the-configuration">Modifying the Configuration</a></li>
+<li><a class="reference internal" href="#change-desktop-icon">Change Desktop Icon</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/01_vdosplus.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wares-execution-alternatives">
+<span id="vdosplus"></span><h1>WARES Execution Alternatives<a class="headerlink" href="#wares-execution-alternatives" title="Permalink to this headline">¶</a></h1>
+<p>The move to 64-bit Windows 7, 8, and 10 eliminates running WARES natively on a
+Windows operating system. There are other options, however. These are:</p>
+<ul class="simple">
+<li>DOS emulation using <strong class="program">vDosPlus</strong> on Windows 7, 8, and 10</li>
+<li><strong class="program">VmWare</strong> or similar virtual machine execution of DOS/WARES</li>
+<li>Microsoft&#8217;s <strong class="program">Virtual Windows XP</strong> emulation (32-bit Windows only)</li>
+<li>Remote desktop access to WARES on an ADDS Server (32-bit Windows only)</li>
+<li>Linux Ubuntu desktop operating system, and <strong class="program">DOSEMU</strong></li>
+</ul>
+<p>Of these options, the easiest and most effective solution is the first one,
+<strong class="program">VDosPlus</strong>.</p>
+<div class="section" id="vdosplus-emulation-program">
+<h2>vDosPlus Emulation Program<a class="headerlink" href="#vdosplus-emulation-program" title="Permalink to this headline">¶</a></h2>
+<p><strong class="program">VDosPlus</strong>, subsequently referred to as <strong class="program">VDP</strong>, addresses the
+following concerns with running DOS applications today:</p>
+<ul class="simple">
+<li>DOS programs cannot run on 64-bit Windows systems</li>
+<li>DOS uses Windows Short File Names (SFN) and not Long File Names (LFN)</li>
+<li>DOS does not print directly to Windows printers</li>
+<li>DOS characters do not scale, the resulting display may be illegible</li>
+<li>Programs requiring EMS memory (e.g., <strong class="program">WARES</strong>) may not work</li>
+<li>NETBIOS networking (SMBv1) is deprecated and may not work</li>
+</ul>
+<p><strong class="program">VDP</strong> is an emulation, and therefore it runs more slowly than native
+DOS would. The other benefits of <strong class="program">VDP</strong> far outweigh the performance
+cost when using <strong class="program">WARES</strong>.</p>
+<p>program:<cite>VDP</cite> is freeware, but its developers would appreciate any donation
+you would make. Donate <a class="reference external" href="https://www.paypal.com/donate/?token=NVfuTMJzDGqiJ66VJ25gDNZcnTj_FU61I06AZCj11uGuhmlFCJWT9Pv1O28gQh6uE6ixhW&amp;country.x=US&amp;locale.x=US">here</a>.</p>
+</div>
+<div class="section" id="installing-vdosplus">
+<h2>Installing vDosPlus<a class="headerlink" href="#installing-vdosplus" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>First, <code class="xref download docutils literal"><span class="pre">download</span> <span class="pre">the</span> <span class="pre">latest</span> <span class="pre">version</span> <span class="pre">of</span> <span class="pre">vDosPlus</span></code>.
+Windows will probably save this file in your <code class="file docutils literal"><span class="pre">Downloads</span></code> folder</li>
+<li>Open the download link in the browser to begin a default install, or open
+your <code class="file docutils literal"><span class="pre">Downloads</span></code> folder in File Explorer, Right-Click file
+<code class="file docutils literal"><span class="pre">vDosPlus-current-setup.exe</span></code>, and choose <em class="guilabel">Run</em>. Do not run
+as administrator.</li>
+<li>Click <em class="guilabel">Next</em> to start the installer. If necessary, click
+<em class="guilabel">I Agree</em> to accept the license terms, and <em class="guilabel">Next</em> to
+continue ...</li>
+<li>At the <em class="guilabel">Destination Folder</em>, just click <em class="guilabel">Install</em> to
+use the default location <code class="file docutils literal"><span class="pre">C:\vDOSPlus</span></code></li>
+<li>Accept any other options, particularly the option to create a desktop icon</li>
+<li>Click <em class="guilabel">OK</em> to exit the installer when finished.</li>
+</ul>
+</div>
+<div class="section" id="configuring-vdosplus">
+<h2>Configuring vDosPlus<a class="headerlink" href="#configuring-vdosplus" title="Permalink to this headline">¶</a></h2>
+<p>In the same way as traditional DOS programs, <strong class="program">vDosPlus</strong> uses two files
+to set the system configuration: <code class="file docutils literal"><span class="pre">config.txt</span></code> and <code class="file docutils literal"><span class="pre">autoexec.txt</span></code>.
+<strong class="program">vDosPlus</strong> ships with a default files <code class="file docutils literal"><span class="pre">config.txt</span></code> and
+<code class="file docutils literal"><span class="pre">autoexec.txt</span></code>, and these files must be replaced to run <strong class="program">WARES</strong>.</p>
+<p>The following sample files have been tested to work with <strong class="program">WARES</strong> for
+most installations. (Call support if these do not work correctly.) Install
+these files as follows:</p>
+<ul class="simple">
+<li>Open Windows <strong class="program">File Explorer</strong>, and navigate to folder directory
+<em class="menuselection">This PC ‣ Local Disk (C:) ‣ vDosPlus</em></li>
+<li><code class="kbd docutils literal"><span class="pre">Right-click</span></code> file <code class="file docutils literal"><span class="pre">config.txt</span></code>, and rename it something like
+<code class="file docutils literal"><span class="pre">config_orig.txt</span></code></li>
+<li><code class="kbd docutils literal"><span class="pre">Right-click</span></code> file <code class="file docutils literal"><span class="pre">autoexec.txt</span></code>, and rename it something like
+<code class="file docutils literal"><span class="pre">autoexec_orig.txt</span></code></li>
+<li>Download <code class="xref download docutils literal"><span class="pre">config.txt</span></code>, saving it to the <code class="file docutils literal"><span class="pre">C:vDosPlus</span></code> folder</li>
+<li>Download <code class="xref download docutils literal"><span class="pre">autoexec.txt</span></code>, saving it to the <code class="file docutils literal"><span class="pre">C:vDosPlus</span></code>
+folder</li>
+<li>Start <strong class="program">WARES</strong> from the desktop icon for <strong class="program">vDosPlus</strong></li>
+</ul>
+</div>
+<div class="section" id="modifying-the-configuration">
+<h2>Modifying the Configuration<a class="headerlink" href="#modifying-the-configuration" title="Permalink to this headline">¶</a></h2>
+<p>If the message appears, &#8220;The WARES.BAT command program cannot be found&#8221;, then
+your <strong class="program">WARES</strong> installation is non-standard. You will have to edit file
+<code class="file docutils literal"><span class="pre">autoexec.txt</span></code> and change either the <em>AREVSHARE</em> or the <em>AREVLOCAL</em>
+entry to match the location where <strong class="program">WARES</strong> is installed.</p>
+<p>If you are running in a multi-user environment, each <strong class="program">WARES</strong> user
+should have a unique identifier. Edit file <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> and change the
+<em>AREVUSER</em> entry to USER01, USER02, ... as desired.</p>
+<p>There are many other display options in <strong class="program">vDosPlus</strong>, some of which are
+included in the configuration files but commented out (lines starting with &#8216;#&#8217;
+or &#8216;rem&#8217;). If you are good with DOS, change these settings to your liking. But
+read the <code class="file docutils literal"><span class="pre">README.TXT</span></code> file for <strong class="program">vDosPlus</strong> before making changes.</p>
+<p>The sample text for <code class="file docutils literal"><span class="pre">config.txt</span></code> follows:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. include:`_downloads/config.txt
+</pre></div>
+</div>
+<p>Download <code class="xref download docutils literal"><span class="pre">autoexec.txt</span></code></p>
+<p>The sample text for <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> follows:</p>
+<div class="highlight-python"><div class="highlight"><pre>.. include:`_downloads/autoexec.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-desktop-icon">
+<h2>Change Desktop Icon<a class="headerlink" href="#change-desktop-icon" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>On the desktop, <code class="kbd docutils literal"><span class="pre">&lt;Right-Click&gt;</span></code> the <strong class="program">VDosPlus</strong> icon and click
+the <em class="guilabel">Change Icon</em> button</li>
+<li>Search either <code class="file docutils literal"><span class="pre">C:\Atlas\</span></code> or <code class="file docutils literal"><span class="pre">W:\</span></code> to find the icon file
+<code class="file docutils literal"><span class="pre">arev.ico</span></code></li>
+<li>Click <em class="guilabel">Apply</em> and <em class="guilabel">OK</em> to save the changes</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">DOS WARES Master Index 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, Gerald Lovel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>

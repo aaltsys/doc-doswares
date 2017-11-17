@@ -3,11 +3,20 @@
 DOS WARES Site Index
 =============================
 
+vDosPlus Alternative to DOS
+-----------------------------
+
+Due to Microsoft's negligence, Windows has many barriers to executing DOS 
+programs such as WARES. Many developers have worked on these problems, and as a 
+result there is now an excellent tool for addressing Windows/DOS issues:
+
+:ref:`vDosPlus`.
+
 Configuration
 -----------------------------
 
-Numerous WARES configuration issues result from Microsoft's negligent handling 
-of DOS execution under Windows. Some of these topics are addressed here: 
+Where WARES is running in a 32-bit Windows environment with only one or two 
+configuration issues, some of these topics are addressed here: 
 
 :ref:`configure:index`.
 
