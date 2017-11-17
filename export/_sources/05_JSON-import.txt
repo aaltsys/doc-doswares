@@ -19,7 +19,8 @@ perform a Dropbox exchange.
 Mount Dropbox in User Space
 -----------------------------
 
-For every user requiring access to a Dropbox share, follow this link to the `Dropbox installer <https://www.dropbox.com/install>`_ to add Dropbox to their 
+For every user requiring access to a Dropbox share, follow this link to the 
+`Dropbox installer <https://www.dropbox.com/install>`_ to add Dropbox to their 
 user path.
 
 .. _JSON-integrate-view:
@@ -51,7 +52,7 @@ required::
    Explorer. Right-drag the folder to Dropbox and select "Move here" to create 
    the share. Then setup sharing in Dropbox to configure the folder, or you 
    could use the following command::
-   
+
       move "C:\path\to\folder" "%userprofile%\Dropbox"
 
 Commands to Link a Folder

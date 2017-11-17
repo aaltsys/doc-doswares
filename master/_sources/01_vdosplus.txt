@@ -39,7 +39,8 @@ you would make. Donate `here <https://www.paypal.com/donate/?token=NVfuTMJzDGqiJ
 Installing vDosPlus
 =============================
 
-*  First, :download:`download the latest version of vDosPlus <http://files.vdosplus.org/vDosPlus-current-setup.exe>`. 
+*  First, :download:`download the latest version of vDosPlus from 
+   http://files.vdosplus.org/vDosPlus-current-setup.exe. 
    Windows will probably save this file in your :file:`Downloads` folder
 *  Open the download link in the browser to begin a default install, or open 
    your :file:`Downloads` folder in File Explorer, Right-Click file 
@@ -71,8 +72,8 @@ these files as follows:
    :file:`config_orig.txt`
 *  :kbd:`Right-click` file :file:`autoexec.txt`, and rename it something like 
    :file:`autoexec_orig.txt`
-*  Download :download:`config.txt`, saving it to the :file:`C:\vDosPlus` folder
-*  Download :download:`autoexec.txt`, saving it to the :file:`C:\vDosPlus` 
+*  Download :download:`_downloads/config.txt`, saving it to the :file:`C:\vDosPlus` folder
+*  Download :download:`_downloads/autoexec.txt`, saving it to the :file:`C:\vDosPlus` 
    folder
 *  Start :program:`WARES` from the desktop icon for :program:`vDosPlus`
 
@@ -94,15 +95,15 @@ included in the configuration files but commented out (lines starting with '#'
 or 'rem'). If you are good with DOS, change these settings to your liking. But 
 read the :file:`README.TXT` file for :program:`vDosPlus` before making changes.
 
-The sample text for :file:`config.txt` follows::
+The sample text for :file:`config.txt` follows:
 
-   .. include:`_downloads/config.txt
+.. codeblock:: 
 
-Download :download:`autoexec.txt`
+   `_downloads/config.txt`
 
-The sample text for :file:`autoexec.txt` follows::
+The sample text for :file:`autoexec.txt` follows:
 
-   .. include:`_downloads/autoexec.txt
+.. include:`_downloads/autoexec.txt`
 
 Change Desktop Icon
 =============================
