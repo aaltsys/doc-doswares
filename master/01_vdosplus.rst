@@ -72,9 +72,10 @@ these files as follows:
    :file:`config_orig.txt`
 *  :kbd:`Right-click` file :file:`autoexec.txt`, and rename it something like 
    :file:`autoexec_orig.txt`
-*  Download :download:`_downloads/config.txt`, saving it to the :file:`C:\vDosPlus` folder
-*  Download :download:`_downloads/autoexec.txt`, saving it to the :file:`C:\vDosPlus` 
-   folder
+*  Download :download:`config.txt <_downloads/config.txt>`, saving it to the 
+   :file:`C:\vDosPlus` folder
+*  Download :download:`autoexec.txt <_downloads/autoexec.txt>`, saving it to 
+   the :file:`C:\vDosPlus` folder
 *  Start :program:`WARES` from the desktop icon for :program:`vDosPlus`
 
 
@@ -95,17 +96,47 @@ included in the configuration files but commented out (lines starting with '#'
 or 'rem'). If you are good with DOS, change these settings to your liking. But 
 read the :file:`README.TXT` file for :program:`vDosPlus` before making changes.
 
-The sample text for :file:`config.txt` follows:
+The sample text for :file:`config.txt` follows::
 
-.. code-block:: text
+   XMEM = 32 XMS
+   MOUSE = ON
+   # BLINKC = OFF
+   FONT = CONSOLA
+   # ITALFONT = CONSOLAI
+   # BOLDFONT = CONSOLAB
+   # BOITFONT = CONSOLAZ
+   USEDRVS = ON
+   FRAME = ON
+   PADDING = 2
+   TITLE = WARES Warehousing
+   ICON = W:\AREV.ICO
+   # ICON = C:\ATLAS\AREV.ICO
 
-   .. include:`_downloads/config.txt`
+The sample text for :file:`autoexec.txt` follows::
 
-The sample text for :file:`autoexec.txt` follows:
-
-.. code-block:: text
-
-   .. include:`_downloads/autoexec.txt`
+   @ECHO OFF
+   SETLOCAL
+   SET AREVUSER=WARES
+   SET AREVSHARE=W:
+   SET AREVLOCAL=C:\ATLAS\
+   PATH %PATH%;C:\4DOS;C:\DOSZIP;C:.;..
+   SET TEMP=%%TEMP%%
+   IF NOT EXIST %TEMP%\NUL SET TEMP=C:.
+   EMSMAGIC.COM /RAM=MAX
+   IF NOT EXIST %AREVLOCAL%WARES.BAT GOTO SHARED
+   CD %AREVLOCAL%
+   GOTO RUN
+   :SHARED
+   IF NOT EXIST %AREVSHARE%\WARES.BAT GOTO MISSING
+   %AREVSHARE%
+   :RUN
+   CALL WARES.BAT %AREVUSER%
+   GOTO EXIT
+   :MISSING
+   ECHO The WARES.BAT command program cannot be found
+   PAUSE .
+   :EXIT
+   EXIT 
 
 Change Desktop Icon
 =============================
