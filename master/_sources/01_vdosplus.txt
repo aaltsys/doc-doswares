@@ -83,9 +83,12 @@ Modifying the Configuration
 =============================
 
 If the message appears, "The WARES.BAT command program cannot be found", then 
-your :program:`WARES` installation is non-standard. You will have to edit file 
-:file:`autoexec.txt` and change either the *AREVSHARE* or the *AREVLOCAL* 
-entry to match the location where :program:`WARES` is installed. 
+either: 
+
+#. there is a mistake in your :file:`config.txt`, or
+#. your :program:`WARES` installation is non-standard. Change either the 
+   *AREVSHARE* or the *AREVLOCAL* entry in :file:`autoexec.txt` to match the 
+   location where :program:`WARES` is installed. 
 
 If you are running in a multi-user environment, each :program:`WARES` user 
 should have a unique identifier. Edit file :file:`autoexec.txt` and change the 
@@ -99,18 +102,19 @@ read the :file:`README.TXT` file for :program:`vDosPlus` before making changes.
 The sample text for :file:`config.txt` follows::
 
    XMEM = 32 XMS
-   MOUSE = ON
+   USEDRVS = ON
    # BLINKC = OFF
+   MOUSE = ON
    FONT = CONSOLA
    # ITALFONT = CONSOLAI
    # BOLDFONT = CONSOLAB
    # BOITFONT = CONSOLAZ
-   USEDRVS = ON
    FRAME = ON
-   PADDING = 2
+   PADDING = 1
    TITLE = WARES Warehousing
    ICON = W:\AREV.ICO
    # ICON = C:\ATLAS\AREV.ICO
+   LPT1 = SEL:"HP-LaserJet" RAW
 
 The sample text for :file:`autoexec.txt` follows::
 
@@ -146,3 +150,17 @@ Change Desktop Icon
 *  Search either :file:`C:\\Atlas\\` or :file:`W:\\` to find the icon file 
    :file:`arev.ico`
 *  Click :guilabel:`Apply` and :guilabel:`OK` to save the changes
+
+Configuring Printing
+=============================
+
+Notice the last line of :file:`config.txt` above. :program:`vDosPlus` ditches 
+printer sharing and the old :file:`netprint.bat` printer mapping, printing 
+directly to named Windows printer devices on your workstation instead. You can 
+map *LPT1*, *LPT2*, and *LPT3* to Windows printer names in :file:`config.txt` 
+as shown, and then :program:`WARES` will print to those printers without having 
+to display the Windows print dialog.
+
+If your default Windows printer is :guilabel:`Microsoft print to PDF`, printing 
+to a WARES printer not mapped in :file:`config.txt` will display the Windows 
+print dialog, defaulting to *Microsoft print to PDF*. 

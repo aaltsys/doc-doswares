@@ -42,6 +42,7 @@
 <li><a class="reference internal" href="#configuring-vdosplus">Configuring vDosPlus</a></li>
 <li><a class="reference internal" href="#modifying-the-configuration">Modifying the Configuration</a></li>
 <li><a class="reference internal" href="#change-desktop-icon">Change Desktop Icon</a></li>
+<li><a class="reference internal" href="#configuring-printing">Configuring Printing</a></li>
 </ul>
 </li>
 </ul>
@@ -150,9 +151,13 @@ the <code class="file docutils literal"><span class="pre">C:vDosPlus</span></cod
 <div class="section" id="modifying-the-configuration">
 <h2>Modifying the Configuration<a class="headerlink" href="#modifying-the-configuration" title="Permalink to this headline">¶</a></h2>
 <p>If the message appears, &#8220;The WARES.BAT command program cannot be found&#8221;, then
-your <strong class="program">WARES</strong> installation is non-standard. You will have to edit file
-<code class="file docutils literal"><span class="pre">autoexec.txt</span></code> and change either the <em>AREVSHARE</em> or the <em>AREVLOCAL</em>
-entry to match the location where <strong class="program">WARES</strong> is installed.</p>
+either:</p>
+<ol class="arabic simple">
+<li>there is a mistake in your <code class="file docutils literal"><span class="pre">config.txt</span></code>, or</li>
+<li>your <strong class="program">WARES</strong> installation is non-standard. Change either the
+<em>AREVSHARE</em> or the <em>AREVLOCAL</em> entry in <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> to match the
+location where <strong class="program">WARES</strong> is installed.</li>
+</ol>
 <p>If you are running in a multi-user environment, each <strong class="program">WARES</strong> user
 should have a unique identifier. Edit file <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> and change the
 <em>AREVUSER</em> entry to USER01, USER02, ... as desired.</p>
@@ -162,18 +167,19 @@ or &#8216;rem&#8217;). If you are good with DOS, change these settings to your l
 read the <code class="file docutils literal"><span class="pre">README.TXT</span></code> file for <strong class="program">vDosPlus</strong> before making changes.</p>
 <p>The sample text for <code class="file docutils literal"><span class="pre">config.txt</span></code> follows:</p>
 <div class="highlight-python"><div class="highlight"><pre>XMEM = 32 XMS
-MOUSE = ON
+USEDRVS = ON
 # BLINKC = OFF
+MOUSE = ON
 FONT = CONSOLA
 # ITALFONT = CONSOLAI
 # BOLDFONT = CONSOLAB
 # BOITFONT = CONSOLAZ
-USEDRVS = ON
 FRAME = ON
-PADDING = 2
+PADDING = 1
 TITLE = WARES Warehousing
 ICON = W:\AREV.ICO
 # ICON = C:\ATLAS\AREV.ICO
+LPT1 = SEL:&quot;HP-LaserJet&quot; RAW
 </pre></div>
 </div>
 <p>The sample text for <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> follows:</p>
@@ -212,6 +218,18 @@ the <em class="guilabel">Change Icon</em> button</li>
 <code class="file docutils literal"><span class="pre">arev.ico</span></code></li>
 <li>Click <em class="guilabel">Apply</em> and <em class="guilabel">OK</em> to save the changes</li>
 </ul>
+</div>
+<div class="section" id="configuring-printing">
+<h2>Configuring Printing<a class="headerlink" href="#configuring-printing" title="Permalink to this headline">¶</a></h2>
+<p>Notice the last line of <code class="file docutils literal"><span class="pre">config.txt</span></code> above. <strong class="program">vDosPlus</strong> ditches
+printer sharing and the old <code class="file docutils literal"><span class="pre">netprint.bat</span></code> printer mapping, printing
+directly to named Windows printer devices on your workstation instead. You can
+map <em>LPT1</em>, <em>LPT2</em>, and <em>LPT3</em> to Windows printer names in <code class="file docutils literal"><span class="pre">config.txt</span></code>
+as shown, and then <strong class="program">WARES</strong> will print to those printers without having
+to display the Windows print dialog.</p>
+<p>If your default Windows printer is <em class="guilabel">Microsoft print to PDF</em>, printing
+to a WARES printer not mapped in <code class="file docutils literal"><span class="pre">config.txt</span></code> will display the Windows
+print dialog, defaulting to <em>Microsoft print to PDF</em>.</p>
 </div>
 </div>
 
