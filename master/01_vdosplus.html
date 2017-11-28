@@ -229,7 +229,20 @@ as shown, and then <strong class="program">WARES</strong> will print to those pr
 to display the Windows print dialog.</p>
 <p>If your default Windows printer is <em class="guilabel">Microsoft print to PDF</em>, printing
 to a WARES printer not mapped in <code class="file docutils literal"><span class="pre">config.txt</span></code> will display the Windows
-print dialog, defaulting to <em>Microsoft print to PDF</em>.</p>
+print dialog, defaulting to <em>Microsoft print to PDF</em>. For example:</p>
+<ol class="arabic simple">
+<li>Copy the <em class="guilabel">HP-Laserjet</em> profile to <em class="guilabel">PDF-Printer</em> in WARES
+at <em class="menuselection">Tools ‣ Reports ‣ Printer Driver</em></li>
+<li>Associate <em class="guilabel">LPT3</em> with the <em class="guilabel">PDF-Printer</em> driver in WARES
+at <em class="menuselection">Tools ‣ Reports ‣ Setup Printers</em></li>
+<li>DO NOT assign <em class="guilabel">LPT3</em> to a Windows printer in the <strong class="program">vDosPlus</strong>
+<code class="file docutils literal"><span class="pre">autoexec.txt</span></code> file</li>
+<li>Optionally, set printer <em class="guilabel">Microsoft print to PDF</em> as the default
+printer in Windows, assuming the workstation is used primarily for WARES</li>
+<li>Simplify PDF printing of specific WARES forms or reports by copying the
+report definition in <em class="menuselection">Tools ‣ Processes ‣ Report Setup</em>
+to a new name, and adding <em class="guilabel">LPT3</em> to the <em class="guilabel">Driver</em> entry</li>
+</ol>
 </div>
 </div>
 
