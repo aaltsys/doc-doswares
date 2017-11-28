@@ -72,12 +72,11 @@ these files as follows:
    :file:`config_orig.txt`
 *  :kbd:`Right-click` file :file:`autoexec.txt`, and rename it something like 
    :file:`autoexec_orig.txt`
-*  Download :download:`config.txt <./_downloads/config.txt>`, saving it to the 
-   :file:`C:\vDosPlus` folder
-*  Download :download:`autoexec.txt <./_downloads/autoexec.txt>`, saving it to 
-   the :file:`C:\vDosPlus` folder
+*  Download :download:`config.txt <../resources/_downloads/config.txt>`, saving 
+   it to the :file:`C:\vDosPlus` folder
+*  Download :download:`autoexec.txt <../resources/_downloads/autoexec.txt>`, 
+   saving it to the :file:`C:\vDosPlus` folder
 *  Start :program:`WARES` from the desktop icon for :program:`vDosPlus`
-
 
 Modifying the Configuration
 =============================

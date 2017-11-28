@@ -21,6 +21,15 @@ batch file.
 :download:`rdpprint.bat <_downloads/rdpprint.bat>` sample file for remote 
 printer sharing.
 
+vDOS COMMAND FILES
+=============================
+
+:download:`config.txt <_downloads/config.txst>` file for :program:`vDosPlus` 
+WARES configuration.
+
+:download:`autoexec.txt <_downloads/autoexec.txt>` file for :program:`vDosPlus`
+WARES execution.
+
 WARES
 =============================
 
