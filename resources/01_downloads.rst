@@ -4,6 +4,11 @@
 Downloads
 #############################
 
+.. warning::
+   When downloading any of the following command files, the browser will change 
+   the requested file extension to :file:`.bin`. Be sure to save the files with 
+   the required name extensions, not the browser values.
+
 DOS COMMAND FILES
 =============================
 
@@ -20,6 +25,15 @@ batch file.
 
 :download:`rdpprint.bat <_downloads/rdpprint.bat>` sample file for remote 
 printer sharing.
+
+vDOS COMMAND FILES
+=============================
+
+:download:`config.txt <_downloads/config.stxt>` file for :program:`vDosPlus` 
+WARES configuration.
+
+:download:`autoexec.txt <_downloads/autoexec.stxt>` file for :program:`vDosPlus`
+WARES execution.
 
 WARES
 =============================

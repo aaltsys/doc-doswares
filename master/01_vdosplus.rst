@@ -72,12 +72,11 @@ these files as follows:
    :file:`config_orig.txt`
 *  :kbd:`Right-click` file :file:`autoexec.txt`, and rename it something like 
    :file:`autoexec_orig.txt`
-*  Download :download:`config.txt <./_downloads/config.txt>`, saving it to the 
-   :file:`C:\vDosPlus` folder
-*  Download :download:`autoexec.txt <./_downloads/autoexec.txt>`, saving it to 
-   the :file:`C:\vDosPlus` folder
+*  Download :download:`config.txt <../resources/_downloads/config.stxt>`, 
+   saving it to the :file:`C:\vDosPlus` folder
+*  Download :download:`autoexec.txt <../resources/_downloads/autoexec.stxt>`, 
+   saving it to the :file:`C:\vDosPlus` folder
 *  Start :program:`WARES` from the desktop icon for :program:`vDosPlus`
-
 
 Modifying the Configuration
 =============================
@@ -163,4 +162,18 @@ to display the Windows print dialog.
 
 If your default Windows printer is :guilabel:`Microsoft print to PDF`, printing 
 to a WARES printer not mapped in :file:`config.txt` will display the Windows 
-print dialog, defaulting to *Microsoft print to PDF*. 
+print dialog, defaulting to *Microsoft print to PDF*. For example:
+
+#. Copy the :guilabel:`HP-Laserjet` profile to :guilabel:`PDF-Printer` in WARES
+   at :menuselection:`Tools --> Reports --> Printer Driver` 
+#. Associate :guilabel:`LPT3` with the :guilabel:`PDF-Printer` driver in WARES
+   at :menuselection:`Tools --> Reports --> Setup Printers` 
+#. DO NOT assign :guilabel:`LPT3` to a Windows printer in the :program:`vDosPlus` 
+   :file:`autoexec.txt` file 
+#. Optionally, set printer :guilabel:`Microsoft print to PDF` as the default 
+   printer in Windows, assuming the workstation is used primarily for WARES 
+#. Simplify PDF printing of specific WARES forms or reports by copying the 
+   report definition in :menuselection:`Tools --> Processes --> Report Setup` 
+   to a new name, and adding :guilabel:`LPT3` to the :guilabel:`Driver` entry
+
+
