@@ -24,10 +24,10 @@ printer sharing.
 vDOS COMMAND FILES
 =============================
 
-:download:`config.txt <_downloads/config.txt>` file for :program:`vDosPlus` 
+:download:`config.txt <_downloads/config.stxt>` file for :program:`vDosPlus` 
 WARES configuration.
 
-:download:`autoexec.txt <_downloads/autoexec.txt>` file for :program:`vDosPlus`
+:download:`autoexec.txt <_downloads/autoexec.stxt>` file for :program:`vDosPlus`
 WARES execution.
 
 WARES
