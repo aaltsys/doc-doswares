@@ -169,11 +169,11 @@ print dialog, defaulting to *Microsoft print to PDF*. For example:
 #. Associate :guilabel:`LPT3` with the :guilabel:`PDF-Printer` driver in WARES
    at :menuselection:`Tools --> Reports --> Setup Printers` 
 #. DO NOT assign :guilabel:`LPT3` to a Windows printer in the :program:`vDosPlus` 
-   :file:`autoexec.txt` file 
+   :file:`config.txt` file 
 #. Optionally, set printer :guilabel:`Microsoft print to PDF` as the default 
    printer in Windows, assuming the workstation is used primarily for WARES 
 #. Simplify PDF printing of specific WARES forms or reports by copying the 
    report definition in :menuselection:`Tools --> Processes --> Report Setup` 
-   to a new name, and adding :guilabel:`LPT3` to the :guilabel:`Driver` entry
+   to a new name, and adding :guilabel:`LPT3` to the :guilabel:`Driver` entry.
 
 
