@@ -43,9 +43,9 @@ Installing vDosPlus
    Windows will probably save this file in your :file:`Downloads` folder.
 *  Open the download link in the browser, or open your :file:`Downloads` folder 
    in File Explorer and right-click file :file:`vDosPlus.zip`. 
-*  Choose :guilabel:`Extract` from the file menu, and use :file:`C:\\vDOSPlus`
+*  Choose :guilabel:`Extract` from the file menu, and use :file:`C:\\vDosPlus`
    as the :guilabel:`Destination Folder`.
-*  Open folder :file:`C:\\vDOSPlus` in :program:`File Explorer`, Right-Click 
+*  Open folder :file:`C:\\vDosPlus` in :program:`File Explorer`, Right-Click 
    program :file:`vDosPlus.exe`, and select :menuselection:`Create shortcut` to 
    create a desktop icon.
 *  In :program:`File Explorer`, copy Consolas font files from folder 
