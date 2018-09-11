@@ -19,8 +19,8 @@ Of these options, the easiest and most effective solution is the first one,
 vDosPlus Emulation Program
 =============================
 
-:program:`VDosPlus`, subsequently referred to as :program:`VDP`, addresses the 
-following concerns with running DOS applications today:
+:program:`VDosPlus` addresses the following concerns with running DOS 
+applications today:
 
 *  DOS programs cannot run on 64-bit Windows systems
 *  DOS uses Windows Short File Names (SFN) and not Long File Names (LFN)
@@ -29,17 +29,17 @@ following concerns with running DOS applications today:
 *  Programs requiring EMS memory (e.g., :program:`WARES`) may not work
 *  NETBIOS networking (SMBv1) is deprecated and may not work
 
-:program:`VDP` is an emulation, and therefore it runs more slowly than native 
-DOS would. The other benefits of :program:`VDP` far outweigh the performance 
-cost when using :program:`WARES`.
+:program:`vDosPlus` is an emulation, and therefore it runs more slowly than 
+native DOS would. The other benefits of :program:`vDosPlus` far outweigh the 
+performance cost when using :program:`WARES`.
 
-:program:`VDP` is freeware, but its developers would appreciate any donation 
-you would make when registering the program.
+:program:`vDosPlus` is freeware, but its developers would appreciate any 
+donation you would make when registering the program.
 
 Installing vDosPlus
 =============================
 
-*  Download `vDosPlus <http://www.columbia.edu/~em36/wpdos/vDosPlus.zip>`_. 
+*  Download `vDosPlus.zip <http://www.columbia.edu/~em36/wpdos/vDosPlus.zip>`_. 
    Windows will probably save this file in your :file:`Downloads` folder.
 *  Open the download link in the browser, or open your :file:`Downloads` folder 
    in File Explorer and right-click file :file:`vDosPlus.zip`. 
@@ -179,5 +179,3 @@ print dialog, defaulting to *Microsoft print to PDF*. For example:
 #. Simplify PDF printing of specific WARES forms or reports by copying the 
    report definition in :menuselection:`Tools --> Processes --> Report Setup` 
    to a new name, and adding :guilabel:`LPT3` to the :guilabel:`Driver` entry.
-
-
