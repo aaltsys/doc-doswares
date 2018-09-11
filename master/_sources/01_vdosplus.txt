@@ -39,7 +39,7 @@ you would make when registering the program.
 Installing vDosPlus
 =============================
 
-*  First, download `vDosPlus http://www.columbia.edu/~em36/wpdos/vDosPlus.zip`. 
+*  Download `vDosPlus <http://www.columbia.edu/~em36/wpdos/vDosPlus.zip>`. 
    Windows will probably save this file in your :file:`Downloads` folder.
 *  Open the download link in the browser, or open your :file:`Downloads` folder 
    in File Explorer and right-click file :file:`vDosPlus.zip`. 
@@ -48,8 +48,13 @@ Installing vDosPlus
 *  Open folder :file:`C:\\vDOSPlus` in :program:`File Explorer`, Right-Click 
    program :file:`vDosPlus.exe`, and select :menuselection:`Create shortcut` to 
    create a desktop icon.
-*  Copy Consolas font files from folder :file:`C:\Windows\Fonts\Consolas` to 
-   the new :file:`C:\\vDosPlus` folder created above
+*  In :program:`File Explorer`, copy Consolas font files from folder 
+   :file:`C:\Windows\Fonts\Consolas` to the new :file:`C:\\vDosPlus` folder 
+   created above.
+
+.. Note::
+   Program :program:`vDosPlus` is documented at http://www.vdosplus.org; the 
+   download revision is at http://www.columbia.edu/~em36/wpdos/vdosplus.html.
 
 Configuring vDosPlus
 =============================
