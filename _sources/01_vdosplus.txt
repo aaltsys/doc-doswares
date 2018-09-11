@@ -39,7 +39,7 @@ you would make when registering the program.
 Installing vDosPlus
 =============================
 
-*  Download `vDosPlus <http://www.columbia.edu/~em36/wpdos/vDosPlus.zip>`. 
+*  Download `vDosPlus <http://www.columbia.edu/~em36/wpdos/vDosPlus.zip>`_. 
    Windows will probably save this file in your :file:`Downloads` folder.
 *  Open the download link in the browser, or open your :file:`Downloads` folder 
    in File Explorer and right-click file :file:`vDosPlus.zip`. 
@@ -55,6 +55,8 @@ Installing vDosPlus
 .. Note::
    Program :program:`vDosPlus` is documented at http://www.vdosplus.org; the 
    download revision is at http://www.columbia.edu/~em36/wpdos/vdosplus.html.
+   There is also a program installer download available on sourceforge at 
+   https://sourceforge.net/projects/vdosplus/.
 
 Configuring vDosPlus
 =============================
