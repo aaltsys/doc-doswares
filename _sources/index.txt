@@ -1,7 +1,28 @@
 .. DOS WARES Website Index, by sphinx-quickstart on Thu Mar 21 14:34:22 2013.
 
-DOS WARES Site Index
+DOS WARES Site
 =============================
+
+DOS WARES has extensive user documentation integrated into the program, through 
+the :menuselection:`Access --> Manuals` selections and the :kbd:`<F1>` and 
+:kbd:`<Ctrl-F2>` key presses at all points in the program. Different from that 
+sort of program documentation, this site covers issues with program execution 
+on various Windows and other platforms.
+
+WARES Multiuser Servers
+=============================
+
+A separate website, `AAltsys Servers <http://servers.aaltsys.info>`_, is 
+dedicated to WARES server software and hardware.
+
+Briefly, in a multiuser environment, WARES requires a server to host program 
+files which are shared to users. Beneath WARES, the DOS-based 
+:program:`Advanced Revelation` database performs sharing and record-locking 
+services using Microsoft SMBv1 networking protocols. Microsoft has deprecated 
+SMBv1 in current versions of Windows 10, so we sell an alternative server which 
+does support these network protocols. The WARES server is a turnkey package of 
+Apple Mac mini hardware hosting the Ubuntu Linux-based :program:`Zentyal Server` 
+package.
 
 vDosPlus Alternative to DOS
 -----------------------------

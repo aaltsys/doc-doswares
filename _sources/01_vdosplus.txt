@@ -33,26 +33,23 @@ following concerns with running DOS applications today:
 DOS would. The other benefits of :program:`VDP` far outweigh the performance 
 cost when using :program:`WARES`.
 
-program:`VDP` is freeware, but its developers would appreciate any donation 
-you would make. Donate `here <https://www.paypal.com/donate/?token=NVfuTMJzDGqiJ66VJ25gDNZcnTj_FU61I06AZCj11uGuhmlFCJWT9Pv1O28gQh6uE6ixhW&country.x=US&locale.x=US>`_.
+:program:`VDP` is freeware, but its developers would appreciate any donation 
+you would make when registering the program.
 
 Installing vDosPlus
 =============================
 
-*  First, download the latest version of vDosPlus from 
-   http://files.vdosplus.org/vDosPlus-current-setup.exe. 
-   Windows will probably save this file in your :file:`Downloads` folder
-*  Open the download link in the browser to begin a default install, or open 
-   your :file:`Downloads` folder in File Explorer, Right-Click file 
-   :file:`vDosPlus-current-setup.exe`, and choose :guilabel:`Run`. Do not run 
-   as administrator.
-*  Click :guilabel:`Next` to start the installer. If necessary, click
-   :guilabel:`I Agree` to accept the license terms, and :guilabel:`Next` to 
-   continue ... 
-*  At the :guilabel:`Destination Folder`, just click :guilabel:`Install` to
-   use the default location :file:`C:\\vDOSPlus`
-*  Accept any other options, particularly the option to create a desktop icon
-*  Click :guilabel:`OK` to exit the installer when finished.
+*  First, download `vDosPlus http://www.columbia.edu/~em36/wpdos/vDosPlus.zip`. 
+   Windows will probably save this file in your :file:`Downloads` folder.
+*  Open the download link in the browser, or open your :file:`Downloads` folder 
+   in File Explorer and right-click file :file:`vDosPlus.zip`. 
+*  Choose :guilabel:`Extract` from the file menu, and use :file:`C:\\vDOSPlus`
+   as the :guilabel:`Destination Folder`.
+*  Open folder :file:`C:\\vDOSPlus` in :program:`File Explorer`, Right-Click 
+   program :file:`vDosPlus.exe`, and select :menuselection:`Create shortcut` to 
+   create a desktop icon.
+*  Copy Consolas font files from folder :file:`C:\Windows\Fonts\Consolas` to 
+   the new :file:`C:\\vDosPlus` folder created above
 
 Configuring vDosPlus
 =============================
