@@ -1,0 +1,125 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>WARES Execution Alternatives &#8212; VDOS Plus 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started with WARES in vDosPlus" href="02_Gettingstarted.html" />
+    <link rel="prev" title="Running WARES with vDOSPlus" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wares-execution-alternatives">
+<span id="introduction"></span><h1>WARES Execution Alternatives<a class="headerlink" href="#wares-execution-alternatives" title="Permalink to this headline">¶</a></h1>
+<p>The move to 64-bit Windows 7 or later eliminates running <strong class="program">WARES</strong> natively
+on a Windows operating system. There are other options, however. These include:</p>
+<ul class="simple">
+<li>DOS emulation using <strong class="program">vDosPlus</strong> on Windows 7 or later</li>
+<li><strong class="program">VmWare</strong> or similar virtual machine execution of DOS/WARES</li>
+<li>Microsoft’s <strong class="program">Virtual Windows XP</strong> emulation (32-bit Windows only)</li>
+<li>Remote desktop access to <strong class="program">WARES</strong> on an ADDS Server (32-bit Windows only)</li>
+<li>Linux Ubuntu desktop operating system, and <strong class="program">DOSEMU</strong></li>
+</ul>
+<p>Of these options, the easiest and most effective solution is the first one,
+<strong class="program">VDosPlus</strong>.</p>
+<div class="section" id="vdosplus-emulation-program">
+<h2>vDosPlus Emulation Program<a class="headerlink" href="#vdosplus-emulation-program" title="Permalink to this headline">¶</a></h2>
+<p><strong class="program">VDosPlus</strong> addresses the following concerns with running DOS
+applications today:</p>
+<ul class="simple">
+<li>DOS programs cannot run on 64-bit Windows systems</li>
+<li>DOS uses Windows Short File Names (SFN) and not Long File Names (LFN)</li>
+<li>DOS does not print directly to Windows printers</li>
+<li>DOS characters do not scale, the resulting display may be illegible</li>
+<li>Programs requiring EMS memory (e.g., <strong class="program">WARES</strong>) may not work</li>
+<li>NETBIOS networking (SMBv1) is deprecated and may not work</li>
+</ul>
+<p>In this brief tutorial, you will learn how to use <strong class="program">vDosPlus</strong> to fix two
+of the problems listed above: running <strong class="program">WARES</strong> on <strong class="program">vDosPlus</strong> and
+printing directly to Windows printers from <strong class="program">WARES</strong> using <strong class="program">vDosPlus</strong>.</p>
+<p><strong class="program">vDosPlus</strong> is an emulation, and therefore it runs more slowly than
+native DOS would. However, the benefits of <strong class="program">vDosPlus</strong> far outweigh the
+performance cost when using <strong class="program">WARES</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong class="program">vDosPlus</strong> is freeware, but its developers would appreciate any
+donation you would make when registering the program.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Running WARES with vDOSPlus</a></li>
+      <li>Next: <a href="02_Gettingstarted.html" title="next chapter">Getting Started with WARES in vDosPlus</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Emma Donnelly-Bullington.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/01_Introduction.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,118 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Printing with WARES in vDosPlus &#8212; VDOS Plus 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Getting Started with WARES in vDosPlus" href="02_Gettingstarted.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="printing-with-wares-in-vdosplus">
+<span id="printing"></span><h1>Printing with WARES in vDosPlus<a class="headerlink" href="#printing-with-wares-in-vdosplus" title="Permalink to this headline">¶</a></h1>
+<p>An Epson printer emulator called <strong class="program">DosPrinter</strong> is available for use with
+<strong class="program">vDosPlus</strong>. This program enables printing to Windows printers, email, RTF,
+or PDF. <strong class="program">DosPrinter</strong> is one option for printing from <strong class="program">WARES</strong> in <strong class="program">vDosPlus</strong>, but running a separate program in order to print is not always
+preferable. Instead, you can configure printing options from within <strong class="program">WARES</strong>
+with the following instructions in order to streamline the printing process.</p>
+<div class="section" id="configuring-printing-from-wares">
+<h2>Configuring Printing from WARES<a class="headerlink" href="#configuring-printing-from-wares" title="Permalink to this headline">¶</a></h2>
+<p>Notice the last line of <code class="file docutils literal"><span class="pre">config.txt</span></code>. <strong class="program">vDosPlus</strong> ditches
+printer sharing and the old <code class="file docutils literal"><span class="pre">netprint.bat</span></code> printer mapping, printing
+directly to named Windows printer devices on your workstation instead. You can
+map <em>LPT1</em>, <em>LPT2</em>, and <em>LPT3</em> to Windows printer names in <code class="file docutils literal"><span class="pre">config.txt</span></code>
+as shown, and then <strong class="program">WARES</strong> will print to those printers without having
+to display the Windows print dialog.</p>
+<p>If your default Windows printer is <span class="guilabel">Microsoft print to PDF</span>, printing
+to a <strong class="program">WARES</strong> printer not mapped in <code class="file docutils literal"><span class="pre">config.txt</span></code> will display the Windows
+print dialog, defaulting to <em>Microsoft print to PDF</em>. For example:</p>
+<ol class="arabic simple">
+<li>Copy the <span class="guilabel">HP-Laserjet</span> profile to <span class="guilabel">PDF-Printer</span> in <strong class="program">WARES</strong>
+at <span class="menuselection">Tools ‣ Reports ‣ Printer Driver</span></li>
+<li>Associate <span class="guilabel">LPT3</span> with the <span class="guilabel">PDF-Printer</span> driver in <strong class="program">WARES</strong>
+at <span class="menuselection">Tools ‣ Reports ‣ Setup Printers</span></li>
+<li>DO <cite>NOT</cite> assign <span class="guilabel">LPT3</span> to a Windows printer in the <strong class="program">vDosPlus</strong>
+<code class="file docutils literal"><span class="pre">config.txt</span></code> file</li>
+<li>Optionally, set printer <span class="guilabel">Microsoft print to PDF</span> as the default
+printer in Windows, assuming the workstation is used primarily for <strong class="program">WARES</strong></li>
+<li>Simplify PDF printing of specific <strong class="program">WARES</strong> forms or reports by copying the
+report definition in <span class="menuselection">Tools ‣ Processes ‣ Report Setup</span>
+to a new name, and adding <span class="guilabel">LPT3</span> to the <span class="guilabel">Driver</span> entry.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="02_Gettingstarted.html" title="previous chapter">Getting Started with WARES in vDosPlus</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Emma Donnelly-Bullington.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/03_Printing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

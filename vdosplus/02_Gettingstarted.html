@@ -1,0 +1,241 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Getting Started with WARES in vDosPlus &#8212; VDOS Plus 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Printing with WARES in vDosPlus" href="03_Printing.html" />
+    <link rel="prev" title="WARES Execution Alternatives" href="01_Introduction.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started-with-wares-in-vdosplus">
+<span id="gettingstarted"></span><h1>Getting Started with WARES in vDosPlus<a class="headerlink" href="#getting-started-with-wares-in-vdosplus" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="downloading-dos-support-files-for-wares">
+<h2>Downloading DOS Support Files for WARES<a class="headerlink" href="#downloading-dos-support-files-for-wares" title="Permalink to this headline">¶</a></h2>
+<p>In order to run <strong class="program">WARES</strong> with <strong class="program">vDosPlus</strong>, both <strong class="program">WARES</strong>
+and <strong class="program">vDosPlus</strong> must be downloaded and installed. The sections below
+describe how to download and configure <strong class="program">vDosPlus</strong>. To download DOS
+support files for <strong class="program">WARES</strong>, visit <a class="reference external" href="http://doswares.aaltsys.info/resources/01_downloads.html#downloads">http://doswares.aaltsys.info/resources/01_downloads.html#downloads</a>. More information is available regarding configuration
+of DOS <strong class="program">WARES</strong> at <a class="reference external" href="http://doswares.aaltsys.info/configure/index.html#index">http://doswares.aaltsys.info/configure/index.html#index</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Be sure to connect network drives to your local drive in order to use them. This
+process is not intuitive on the Windows operating system. One might expect local
+network drives to show up in <strong class="program">File Explorer</strong> in the <code class="file docutils literal"><span class="pre">Network</span></code> folder,
+but this is not the case. In order to connect to the network drives, you must navigate
+to the <span class="guilabel">Command Prompt</span> and manually add the network drives. Once you
+connect to these drives, you can then move the <code class="file docutils literal"><span class="pre">vDosPlus.exe</span></code> shortcut,
+<code class="file docutils literal"><span class="pre">netshare.bat</span></code>, <code class="file docutils literal"><span class="pre">netprint.bat</span></code>, and the <code class="file docutils literal"><span class="pre">WARES.pif</span></code> shortcut to a
+convenient location and edit them as needed.</p>
+</div>
+</div>
+<div class="section" id="installing-vdosplus">
+<h2>Installing vDosPlus<a class="headerlink" href="#installing-vdosplus" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Download <a class="reference external" href="http://www.columbia.edu/~em36/wpdos/vDosPlus.zip">vDosPlus.zip</a>.
+Windows will probably save this file in your <code class="file docutils literal"><span class="pre">Downloads</span></code> folder.</li>
+<li>Open the download link in the browser, or open your <code class="file docutils literal"><span class="pre">Downloads</span></code> folder
+in <strong class="program">File Explorer</strong> and <code class="kbd docutils literal"><span class="pre">right-click</span></code> file <code class="file docutils literal"><span class="pre">vDosPlus.zip</span></code>.</li>
+<li>Choose <span class="guilabel">Extract</span> from the file menu, and use <code class="file docutils literal"><span class="pre">C:\vDosPlus</span></code>
+as the <span class="guilabel">Destination Folder</span>.</li>
+<li>Open folder <code class="file docutils literal"><span class="pre">C:\vDosPlus</span></code> in <strong class="program">File Explorer</strong>, <code class="kbd docutils literal"><span class="pre">right-click</span></code>
+program <code class="file docutils literal"><span class="pre">vDosPlus.exe</span></code>, and select <span class="menuselection">Create shortcut</span> to
+create a desktop icon.</li>
+<li>In <strong class="program">File Explorer</strong>, copy Consolas font files from folder
+<code class="file docutils literal"><span class="pre">C:WindowsFontsConsolas</span></code> to the new <code class="file docutils literal"><span class="pre">C:\vDosPlus</span></code> folder
+created above.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Program <strong class="program">vDosPlus</strong> is documented at <a class="reference external" href="http://www.vdosplus.org">http://www.vdosplus.org</a>; the
+download revision is at <a class="reference external" href="http://www.columbia.edu/~em36/wpdos/vdosplus.html">http://www.columbia.edu/~em36/wpdos/vdosplus.html</a>.
+There is also a program installer download available on sourceforge at
+<a class="reference external" href="https://sourceforge.net/projects/vdosplus/">https://sourceforge.net/projects/vdosplus/</a>.</p>
+</div>
+</div>
+<div class="section" id="configuring-vdosplus">
+<h2>Configuring vDosPlus<a class="headerlink" href="#configuring-vdosplus" title="Permalink to this headline">¶</a></h2>
+<p>In the same way as traditional DOS programs, <strong class="program">vDosPlus</strong> uses two files
+to set the system configuration: <code class="file docutils literal"><span class="pre">config.txt</span></code> and <code class="file docutils literal"><span class="pre">autoexec.txt</span></code>.
+<strong class="program">vDosPlus</strong> ships with a default files <code class="file docutils literal"><span class="pre">config.txt</span></code> and
+<code class="file docutils literal"><span class="pre">autoexec.txt</span></code>, and these files must be replaced to run <strong class="program">WARES</strong>.</p>
+<p>The following sample files have been tested to work with <strong class="program">WARES</strong> for
+most installations. (Call support if these do not work correctly.) Install
+these files as follows:</p>
+<ul class="simple">
+<li>Open Windows <strong class="program">File Explorer</strong>, and navigate to folder directory
+<span class="menuselection">This PC ‣ Local Disk (C:) ‣ vDosPlus</span></li>
+<li><code class="kbd docutils literal"><span class="pre">Right-click</span></code> file <code class="file docutils literal"><span class="pre">config.txt</span></code>, and rename it something like
+<code class="file docutils literal"><span class="pre">config_orig.txt</span></code></li>
+<li><code class="kbd docutils literal"><span class="pre">Right-click</span></code> file <code class="file docutils literal"><span class="pre">autoexec.txt</span></code>, and rename it something like
+<code class="file docutils literal"><span class="pre">autoexec_orig.txt</span></code></li>
+<li>Download <a class="reference download internal" href="_downloads/config.stxt" download=""><code class="xref download docutils literal"><span class="pre">config.txt</span></code></a>,
+saving it to the <code class="file docutils literal"><span class="pre">C:vDosPlus</span></code> folder</li>
+<li>Download <a class="reference download internal" href="_downloads/autoexec.stxt" download=""><code class="xref download docutils literal"><span class="pre">autoexec.txt</span></code></a>,
+saving it to the <code class="file docutils literal"><span class="pre">C:vDosPlus</span></code> folder</li>
+<li>Start <strong class="program">WARES</strong> from the desktop icon for <strong class="program">vDosPlus</strong></li>
+</ul>
+</div>
+<div class="section" id="modifying-the-configuration">
+<h2>Modifying the Configuration<a class="headerlink" href="#modifying-the-configuration" title="Permalink to this headline">¶</a></h2>
+<p>If the message appears, “The WARES.BAT command program cannot be found”, then
+either:</p>
+<ol class="arabic simple">
+<li>there is a mistake in your <code class="file docutils literal"><span class="pre">config.txt</span></code>, or</li>
+<li>your <strong class="program">WARES</strong> installation is non-standard. Change either the
+<em>AREVSHARE</em> or the <em>AREVLOCAL</em> entry in <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> to match the
+location where <strong class="program">WARES</strong> is installed.</li>
+</ol>
+<p>If you are running in a multi-user environment, each <strong class="program">WARES</strong> user
+should have a unique identifier. Edit file <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> and change the
+<em>AREVUSER</em> entry to USER01, USER02, … as desired.</p>
+<p>There are many other display options in <strong class="program">vDosPlus</strong>, some of which are
+included in the configuration files but commented out (lines starting with ‘#’
+or ‘rem’). If you are good with DOS, change these settings to your liking. But
+read the <code class="file docutils literal"><span class="pre">README.TXT</span></code> file for <strong class="program">vDosPlus</strong> before making changes.</p>
+<p>The sample text for <code class="file docutils literal"><span class="pre">config.txt</span></code> follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">XMEM</span> <span class="o">=</span> <span class="o">+</span><span class="mi">32</span> <span class="n">XMS</span>
+<span class="n">USEDRVS</span> <span class="o">=</span> <span class="n">ON</span>
+
+<span class="c1"># terminal window settings --</span>
+<span class="n">MOUSE</span> <span class="o">=</span> <span class="n">ON</span>
+<span class="n">BLINKC</span> <span class="o">=</span> <span class="n">ON</span>
+<span class="n">TOPWIN</span> <span class="o">=</span> <span class="n">ON</span>
+<span class="n">SYSCLOSE</span> <span class="o">=</span> <span class="n">OFF</span>
+<span class="n">FRAME</span> <span class="o">=</span> <span class="n">ON</span>
+<span class="n">PADDING</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">TITLE</span> <span class="o">=</span> <span class="n">WARES</span> <span class="n">Warehousing</span>
+<span class="n">ICON</span> <span class="o">=</span> <span class="o">..</span>\<span class="n">AREV</span><span class="o">.</span><span class="n">ICO</span>
+
+<span class="c1"># display fonts --</span>
+<span class="n">FONT</span> <span class="o">=</span> <span class="n">CONSOLA</span>
+<span class="n">ITALFONT</span> <span class="o">=</span> <span class="n">CONSOLAI</span>
+<span class="n">BOLDFONT</span> <span class="o">=</span> <span class="n">CONSOLAB</span>
+<span class="n">BOITFONT</span> <span class="o">=</span> <span class="n">CONSOLAZ</span>
+
+<span class="c1"># printer settings and fonts --</span>
+<span class="n">TIMEOUT</span> <span class="o">=</span> <span class="n">OFF</span>
+<span class="n">TEMPDIR</span> <span class="o">=</span> <span class="o">%</span><span class="n">TEMP</span><span class="o">%</span>
+<span class="n">LPT1</span> <span class="o">=</span> <span class="n">SEL</span><span class="p">:</span><span class="s2">&quot;HP_LASERJET&quot;</span> <span class="n">FONT</span><span class="p">:</span><span class="s2">&quot;Consolas&quot;</span>
+<span class="n">LPT2</span> <span class="o">=</span> <span class="n">SEL</span><span class="p">:</span><span class="s2">&quot;HP_OFFICEJET&quot;</span> <span class="n">FONT</span><span class="p">:</span><span class="s2">&quot;Consolas&quot;</span>
+<span class="n">LPT3</span> <span class="o">=</span> <span class="n">SPOOL</span> <span class="n">SEL</span><span class="p">:</span><span class="s2">&quot;HP_LASERJET&quot;</span> <span class="n">FONT</span><span class="p">:</span><span class="s2">&quot;Consolas Bold&quot;</span>
+</pre></div>
+</div>
+<p>The sample text for <code class="file docutils literal"><span class="pre">autoexec.txt</span></code> follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>@ECHO OFF
+SETLOCAL
+
+rem -- relative location, username configuration --
+SET AREVSHARE=..\
+SET AREVUSER=%VDOSP_ARGS%
+IF $%AREVUSER%$==$$ SET AREVUSER=WARES
+
+EMSMAGIC.COM /RAM=MAX
+PATH %PATH%;.\4DOS;.\DOSZIP;.;..
+SET TEMP=%%TEMP%%
+IF NOT EXIST %TEMP%\NUL SET TEMP=C:.
+IF EXIST %AREVSHARE%WARES.BAT GOTO RUN
+
+:MISSING
+ECHO The WARES.BAT command program cannot be found
+PAUSE .
+GOTO EXIT
+
+:RUN
+CD %AREVSHARE%
+CALL WARES.BAT %AREVUSER%
+
+:EXIT
+ENDLOCAL
+EXIT
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-desktop-icon">
+<h2>Change Desktop Icon<a class="headerlink" href="#change-desktop-icon" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>On the desktop, <code class="kbd docutils literal"><span class="pre">&lt;Right-Click&gt;</span></code> the <strong class="program">VDosPlus</strong> icon and click
+the <span class="guilabel">Change Icon</span> button</li>
+<li>Search either <code class="file docutils literal"><span class="pre">C:\Atlas\</span></code> or <code class="file docutils literal"><span class="pre">W:\</span></code> to find the icon file
+<code class="file docutils literal"><span class="pre">arev.ico</span></code></li>
+<li>Click <span class="guilabel">Apply</span> and <span class="guilabel">OK</span> to save the changes</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="01_Introduction.html" title="previous chapter">WARES Execution Alternatives</a></li>
+      <li>Next: <a href="03_Printing.html" title="next chapter">Printing with WARES in vDosPlus</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Emma Donnelly-Bullington.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/02_Gettingstarted.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

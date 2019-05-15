@@ -1,0 +1,42 @@
+.. _Introduction: 
+
+#############################
+WARES Execution Alternatives
+#############################
+
+The move to 64-bit Windows 7 or later eliminates running :program:`WARES` natively 
+on a Windows operating system. There are other options, however. These include:
+
+*  DOS emulation using :program:`vDosPlus` on Windows 7 or later
+*  :program:`VmWare` or similar virtual machine execution of DOS/WARES 
+*  Microsoft's :program:`Virtual Windows XP` emulation (32-bit Windows only)
+*  Remote desktop access to :program:`WARES` on an ADDS Server (32-bit Windows only)
+*  Linux Ubuntu desktop operating system, and :program:`DOSEMU`
+
+Of these options, the easiest and most effective solution is the first one, 
+:program:`VDosPlus`.
+
+vDosPlus Emulation Program
+=============================
+
+:program:`VDosPlus` addresses the following concerns with running DOS 
+applications today:
+
+*  DOS programs cannot run on 64-bit Windows systems
+*  DOS uses Windows Short File Names (SFN) and not Long File Names (LFN)
+*  DOS does not print directly to Windows printers
+*  DOS characters do not scale, the resulting display may be illegible
+*  Programs requiring EMS memory (e.g., :program:`WARES`) may not work
+*  NETBIOS networking (SMBv1) is deprecated and may not work
+
+In this brief tutorial, you will learn how to use :program:`vDosPlus` to fix two 
+of the problems listed above: running :program:`WARES` on :program:`vDosPlus` and
+printing directly to Windows printers from :program:`WARES` using :program:`vDosPlus`. 
+
+:program:`vDosPlus` is an emulation, and therefore it runs more slowly than 
+native DOS would. However, the benefits of :program:`vDosPlus` far outweigh the 
+performance cost when using :program:`WARES`.
+
+.. Note::
+   :program:`vDosPlus` is freeware, but its developers would appreciate any 
+   donation you would make when registering the program.

@@ -1,0 +1,157 @@
+.. _Gettingstarted:
+
+######################################
+Getting Started with WARES in vDosPlus
+######################################
+
+Downloading DOS Support Files for WARES
+=======================================
+
+In order to run :program:`WARES` with :program:`vDosPlus`, both :program:`WARES`
+and :program:`vDosPlus` must be downloaded and installed. The sections below 
+describe how to download and configure :program:`vDosPlus`. To download DOS 
+support files for :program:`WARES`, visit http://doswares.aaltsys.info/resources/01_downloads.html#downloads. More information is available regarding configuration 
+of DOS :program:`WARES` at http://doswares.aaltsys.info/configure/index.html#index.
+
+.. Note::
+   Be sure to connect network drives to your local drive in order to use them. This
+   process is not intuitive on the Windows operating system. One might expect local 
+   network drives to show up in :program:`File Explorer` in the :file:`Network` folder, 
+   but this is not the case. In order to connect to the network drives, you must navigate 
+   to the :guilabel:`Command Prompt` and manually add the network drives. Once you 
+   connect to these drives, you can then move the :file:`vDosPlus.exe` shortcut, 
+   :file:`netshare.bat`, :file:`netprint.bat`, and the :file:`WARES.pif` shortcut to a 
+   convenient location and edit them as needed.
+
+Installing vDosPlus
+=============================
+
+*  Download `vDosPlus.zip <http://www.columbia.edu/~em36/wpdos/vDosPlus.zip>`_. 
+   Windows will probably save this file in your :file:`Downloads` folder.
+*  Open the download link in the browser, or open your :file:`Downloads` folder 
+   in :program:`File Explorer` and :kbd:`right-click` file :file:`vDosPlus.zip`. 
+*  Choose :guilabel:`Extract` from the file menu, and use :file:`C:\\vDosPlus`
+   as the :guilabel:`Destination Folder`.
+*  Open folder :file:`C:\\vDosPlus` in :program:`File Explorer`, :kbd:`right-click` 
+   program :file:`vDosPlus.exe`, and select :menuselection:`Create shortcut` to 
+   create a desktop icon.
+*  In :program:`File Explorer`, copy Consolas font files from folder 
+   :file:`C:\Windows\Fonts\Consolas` to the new :file:`C:\\vDosPlus` folder 
+   created above.
+
+.. Note::
+   Program :program:`vDosPlus` is documented at http://www.vdosplus.org; the 
+   download revision is at http://www.columbia.edu/~em36/wpdos/vdosplus.html.
+   There is also a program installer download available on sourceforge at 
+   https://sourceforge.net/projects/vdosplus/.
+
+Configuring vDosPlus
+=============================
+
+In the same way as traditional DOS programs, :program:`vDosPlus` uses two files 
+to set the system configuration: :file:`config.txt` and :file:`autoexec.txt`. 
+:program:`vDosPlus` ships with a default files :file:`config.txt` and
+:file:`autoexec.txt`, and these files must be replaced to run :program:`WARES`.
+
+The following sample files have been tested to work with :program:`WARES` for 
+most installations. (Call support if these do not work correctly.) Install 
+these files as follows:
+
+*  Open Windows :program:`File Explorer`, and navigate to folder directory
+   :menuselection:`This PC --> Local Disk (C:) --> vDosPlus`
+*  :kbd:`Right-click` file :file:`config.txt`, and rename it something like 
+   :file:`config_orig.txt`
+*  :kbd:`Right-click` file :file:`autoexec.txt`, and rename it something like 
+   :file:`autoexec_orig.txt`
+*  Download :download:`config.txt <../resources/_downloads/config.stxt>`, 
+   saving it to the :file:`C:\vDosPlus` folder
+*  Download :download:`autoexec.txt <../resources/_downloads/autoexec.stxt>`, 
+   saving it to the :file:`C:\vDosPlus` folder
+*  Start :program:`WARES` from the desktop icon for :program:`vDosPlus`
+
+Modifying the Configuration
+=============================
+
+If the message appears, "The WARES.BAT command program cannot be found", then 
+either: 
+
+#. there is a mistake in your :file:`config.txt`, or
+#. your :program:`WARES` installation is non-standard. Change either the 
+   *AREVSHARE* or the *AREVLOCAL* entry in :file:`autoexec.txt` to match the 
+   location where :program:`WARES` is installed. 
+
+If you are running in a multi-user environment, each :program:`WARES` user 
+should have a unique identifier. Edit file :file:`autoexec.txt` and change the 
+*AREVUSER* entry to USER01, USER02, ... as desired.
+
+There are many other display options in :program:`vDosPlus`, some of which are 
+included in the configuration files but commented out (lines starting with '#'
+or 'rem'). If you are good with DOS, change these settings to your liking. But 
+read the :file:`README.TXT` file for :program:`vDosPlus` before making changes.
+
+The sample text for :file:`config.txt` follows::
+
+   XMEM = +32 XMS
+   USEDRVS = ON
+
+   # terminal window settings --
+   MOUSE = ON
+   BLINKC = ON
+   TOPWIN = ON
+   SYSCLOSE = OFF
+   FRAME = ON
+   PADDING = 1
+   TITLE = WARES Warehousing
+   ICON = ..\AREV.ICO
+
+   # display fonts -- 
+   FONT = CONSOLA
+   ITALFONT = CONSOLAI
+   BOLDFONT = CONSOLAB
+   BOITFONT = CONSOLAZ
+
+   # printer settings and fonts --
+   TIMEOUT = OFF
+   TEMPDIR = %TEMP%
+   LPT1 = SEL:"HP_LASERJET" FONT:"Consolas"
+   LPT2 = SEL:"HP_OFFICEJET" FONT:"Consolas"
+   LPT3 = SPOOL SEL:"HP_LASERJET" FONT:"Consolas Bold"
+
+The sample text for :file:`autoexec.txt` follows::
+
+   @ECHO OFF
+   SETLOCAL
+
+   rem -- relative location, username configuration --
+   SET AREVSHARE=..\
+   SET AREVUSER=%VDOSP_ARGS%
+   IF $%AREVUSER%$==$$ SET AREVUSER=WARES
+
+   EMSMAGIC.COM /RAM=MAX
+   PATH %PATH%;.\4DOS;.\DOSZIP;.;..
+   SET TEMP=%%TEMP%%
+   IF NOT EXIST %TEMP%\NUL SET TEMP=C:.
+   IF EXIST %AREVSHARE%WARES.BAT GOTO RUN
+
+   :MISSING
+   ECHO The WARES.BAT command program cannot be found
+   PAUSE .
+   GOTO EXIT
+
+   :RUN
+   CD %AREVSHARE%
+   CALL WARES.BAT %AREVUSER%
+
+   :EXIT
+   ENDLOCAL
+   EXIT
+
+
+Change Desktop Icon
+=============================
+
+*  On the desktop, :kbd:`<Right-Click>` the :program:`VDosPlus` icon and click 
+   the :guilabel:`Change Icon` button
+*  Search either :file:`C:\\Atlas\\` or :file:`W:\\` to find the icon file 
+   :file:`arev.ico`
+*  Click :guilabel:`Apply` and :guilabel:`OK` to save the changes

@@ -1,0 +1,37 @@
+.. _Printing:
+
+###############################
+Printing with WARES in vDosPlus
+###############################
+
+An Epson printer emulator called :program:`DosPrinter` is available for use with
+:program:`vDosPlus`. This program enables printing to Windows printers, email, RTF,
+or PDF. :program:`DosPrinter` is one option for printing from :program:`WARES` in :program:`vDosPlus`, but running a separate program in order to print is not always 
+preferable. Instead, you can configure printing options from within :program:`WARES` 
+with the following instructions in order to streamline the printing process.
+
+Configuring Printing from WARES
+===============================
+
+Notice the last line of :file:`config.txt`. :program:`vDosPlus` ditches 
+printer sharing and the old :file:`netprint.bat` printer mapping, printing 
+directly to named Windows printer devices on your workstation instead. You can 
+map *LPT1*, *LPT2*, and *LPT3* to Windows printer names in :file:`config.txt` 
+as shown, and then :program:`WARES` will print to those printers without having 
+to display the Windows print dialog.
+
+If your default Windows printer is :guilabel:`Microsoft print to PDF`, printing 
+to a :program:`WARES` printer not mapped in :file:`config.txt` will display the Windows 
+print dialog, defaulting to *Microsoft print to PDF*. For example:
+
+#. Copy the :guilabel:`HP-Laserjet` profile to :guilabel:`PDF-Printer` in :program:`WARES`
+   at :menuselection:`Tools --> Reports --> Printer Driver` 
+#. Associate :guilabel:`LPT3` with the :guilabel:`PDF-Printer` driver in :program:`WARES`
+   at :menuselection:`Tools --> Reports --> Setup Printers` 
+#. DO `NOT` assign :guilabel:`LPT3` to a Windows printer in the :program:`vDosPlus` 
+   :file:`config.txt` file 
+#. Optionally, set printer :guilabel:`Microsoft print to PDF` as the default 
+   printer in Windows, assuming the workstation is used primarily for :program:`WARES` 
+#. Simplify PDF printing of specific :program:`WARES` forms or reports by copying the 
+   report definition in :menuselection:`Tools --> Processes --> Report Setup` 
+   to a new name, and adding :guilabel:`LPT3` to the :guilabel:`Driver` entry.
