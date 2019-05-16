@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lot Detail Account Mismatch &mdash; DOS WARES Error Recovery 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/aaltsys.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DOS WARES Error Recovery 1.0 documentation" href="index.html" />
+    <link rel="next" title="Mandatory Picking Charge" href="06_bill-packs.html" />
+    <link rel="prev" title="Moving WARES Data" href="04_move-data.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="06_bill-packs.html" title="Mandatory Picking Charge"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="04_move-data.html" title="Moving WARES Data"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">DOS WARES Error Recovery 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Lot Detail Account Mismatch</a><ul>
+<li><a class="reference internal" href="#preliminary-requirements">Preliminary Requirements</a><ul>
+<li><a class="reference internal" href="#dictionary-lot-account">Dictionary LOT_ACCOUNT</a></li>
+<li><a class="reference internal" href="#report-detail-prod-acct">Report DETAIL.PROD-ACCT</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#correcting-lot-accounts">Correcting Lot Accounts</a><ul>
+<li><a class="reference internal" href="#report-lot-account-mismatches">Report Lot Account Mismatches</a></li>
+<li><a class="reference internal" href="#fix-lot-account-mismatches">Fix Lot Account Mismatches</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="04_move-data.html"
+                        title="previous chapter">Moving WARES Data</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="06_bill-packs.html"
+                        title="next chapter">Mandatory Picking Charge</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/05_detail-acct.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lot-detail-account-mismatch">
+<span id="detail-acct"></span><h1>Lot Detail Account Mismatch<a class="headerlink" href="#lot-detail-account-mismatch" title="Permalink to this headline">¶</a></h1>
+<p>Adjustments are used to transfer product between accounts. If the account
+identifier on an adjustment is not the recipient for the transfer, then lots
+created by the adjustment will be assigned to the wrong account. Use these
+instructions to correct the account on lots.</p>
+<div class="section" id="preliminary-requirements">
+<h2>Preliminary Requirements<a class="headerlink" href="#preliminary-requirements" title="Permalink to this headline">¶</a></h2>
+<p>Before this correction is run the first time, two entries must be added to
+WARES design to identify incorrect lot accounts.</p>
+<div class="section" id="dictionary-lot-account">
+<h3>Dictionary LOT_ACCOUNT<a class="headerlink" href="#dictionary-lot-account" title="Permalink to this headline">¶</a></h3>
+<p>At menu selection <em class="menuselection">Tools ‣ Reports ‣ Dictionary</em>, add an
+entry for the <code class="file docutils literal"><span class="pre">DETAILS</span></code> table, column <code class="file docutils literal"><span class="pre">PROD_ACCOUNT</span></code>, as shown in
+the following screenshot:</p>
+<img alt="_images/PROD_ACCOUNT.png" src="_images/PROD_ACCOUNT.png" />
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">The code expansion is shown by pressing <code class="kbd docutils literal"><span class="pre">&lt;F3&gt;</span></code>. Use <code class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></code> to save
+and <code class="kbd docutils literal"><span class="pre">&lt;Esc&gt;</span></code> to exit the expanded view, then save the dictionary record
+by pressing <code class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></code> again.</p>
+</div>
+</div>
+<div class="section" id="report-detail-prod-acct">
+<h3>Report DETAIL.PROD-ACCT<a class="headerlink" href="#report-detail-prod-acct" title="Permalink to this headline">¶</a></h3>
+<p>At menu selection <em class="menuselection">Tools ‣ Processes ‣ Report Setup</em>, add a
+new report <code class="file docutils literal"><span class="pre">DETAIL.PROD-ACCT</span></code> as shown in the following screenshot:</p>
+<img alt="_images/DETAIL.PROD-ACCT.png" src="_images/DETAIL.PROD-ACCT.png" />
+</div>
+</div>
+<div class="section" id="correcting-lot-accounts">
+<h2>Correcting Lot Accounts<a class="headerlink" href="#correcting-lot-accounts" title="Permalink to this headline">¶</a></h2>
+<p>There are two simple steps to correct account mismatches on lots.</p>
+<div class="section" id="report-lot-account-mismatches">
+<h3>Report Lot Account Mismatches<a class="headerlink" href="#report-lot-account-mismatches" title="Permalink to this headline">¶</a></h3>
+<p>Run report <em class="menuselection">Reports ‣ Miscellaneous ‣ DETAIL.PROD-ACCT</em>,
+viewing the output. If and only if lots are displayed on the report, escape from
+the report viewer and proceed directly to the next step.</p>
+</div>
+<div class="section" id="fix-lot-account-mismatches">
+<h3>Fix Lot Account Mismatches<a class="headerlink" href="#fix-lot-account-mismatches" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The <strong class="program">COPYCOL</strong> utility can make irreversible changes to your data
+system. Do not use this utility without technical support unless you are
+absolutely certain about what you are doing.</p>
+</div>
+<p>From menu selection <em class="menuselection">Tools ‣ General ‣ Copy Columns</em>, enter
+the following command information:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>File Name</td>
+<td>DETAILS</td>
+</tr>
+<tr class="row-even"><td>Source Data</td>
+<td>PROD_ACCOUNT</td>
+</tr>
+<tr class="row-odd"><td>To Field</td>
+<td>ACCOUNT</td>
+</tr>
+</tbody>
+</table>
+<p>Press <code class="kbd docutils literal"><span class="pre">&lt;F9&gt;</span></code> to continue to the <em class="guilabel">Browse Selections</em> list, and
+select (press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code>) <em class="menuselection">Query Table</em>. If the top line of
+the <em class="guilabel">Stored Query Table</em> says <em>SELECT DETAILS WITHOUT ACCOUNT EQ
+PROD_ACCOUNT ...</em> and has the correct number of hits, then press <code class="kbd docutils literal"><span class="pre">&lt;Enter&gt;</span></code>,
+otherwise press <code class="kbd docutils literal"><span class="pre">&lt;Esc&gt;</span></code> and start over.</p>
+<p>Finally, you should see the <em class="guilabel">Copy Columns</em> confirmation message. it
+must read:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Using File:</td>
+<td>DETAILS</td>
+</tr>
+<tr class="row-even"><td>From Field =</td>
+<td>PROD_ACCOUNT</td>
+</tr>
+<tr class="row-odd"><td>To column =</td>
+<td>ACCOUNT</td>
+</tr>
+<tr class="row-even"><td>Match Value =</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>If everything is correct, enter <code class="kbd docutils literal"><span class="pre">Y</span> <span class="pre">&lt;Enter&gt;</span></code> to change the lot account.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="06_bill-packs.html" title="Mandatory Picking Charge"
+             >next</a></li>
+        <li class="right" >
+          <a href="04_move-data.html" title="Moving WARES Data"
+             >previous</a> |</li>
+        <li><a href="index.html">DOS WARES Error Recovery 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013, Gerald Lovel.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>
