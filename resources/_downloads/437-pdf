@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+import codecs, sys
+try:
+    infile, outfile = sys.argv[1], sys.argv[2]
+except IndexError:
+    if sys,argv[1]!="" and sys.argv[2]==""
+        outfile='.'.join(infile,'pdf')
+    else
+        sys.stderr.write('usage: %s input_file output_file\n' % sys.argv[0])
+        sys.exit(1)
+data = codecs.open(infile, encoding='cp437').read()
+codecs.open(outfile, 'w', encoding='utf-8').write(data)
